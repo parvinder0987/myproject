@@ -9,6 +9,9 @@ import OtpVerify from './users/OtpVerify';
 import Login from './users/Login';
 import Userlist from './users/Userlist';
 import Addfrom from './users/Addfrom';
+import Basicdetails from './users/Basicdetails';
+import Teacherlist from './users/Teacherlist';
+import Educationdetails from './users/Educationdetails';
 
 // import Userlist from './users/Userlist'
 
@@ -17,13 +20,16 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Signup/>}/>
+          <Route path='/register' element={<Signup/>}/>
           <Route path='/login' element={<Login />} />
           <Route path='/forgot' element={<ForgotPassword />} />
           <Route path='/verifyOtp' element={<OtpVerify />} />
+          <Route path='/basicdetails' element={<Basicdetails/>}/>
+          <Route path='/educationdetails' element={<Educationdetails/>}/>
           <Route element={<Layout />}>
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/userlist' element={<Userlist />} />
+            <Route path='/teacherlist' element={<Teacherlist/>}/>
             <Route path='/addfrom' element={<Addfrom />}/>
           </Route>
         </Routes>

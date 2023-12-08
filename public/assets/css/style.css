@@ -8991,7 +8991,15 @@ textarea.tt-hint {
 
 .form-group {
   margin-bottom: 1rem; }
-
+  .uploaded-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 100px; /* Adjust the max-width as needed */
+    max-height: 100px; /* Adjust the max-height as needed */
+    border-radius: 50%;
+    border: 5px solid #fff; /* Optional: Add a border to the image */
+  }
 .form-text {
   display: block;
   margin-top: 0.25rem; }
@@ -17074,7 +17082,15 @@ select.tt-hint {
 .form-group label {
   font-size: 0.875rem;
   line-height: 1;
-  vertical-align: top; }
+  vertical-align: top;
+  
+
+
+  /* position: absolute;
+  max-width: 100px; /* Adjust the max-width as needed */
+  /* max-height: 100px; Adjust the max-height as needed */ 
+
+  }
 
 .form-group.has-danger .form-control, .form-group.has-danger .asColorPicker-input, .form-group.has-danger .dataTables_wrapper select, .dataTables_wrapper .form-group.has-danger select, .form-group.has-danger .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .form-group.has-danger input[type=text],
 .form-group.has-danger .jsgrid .jsgrid-table .jsgrid-filter-row select, .jsgrid .jsgrid-table .jsgrid-filter-row .form-group.has-danger select, .form-group.has-danger .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .form-group.has-danger input[type=number], .form-group.has-danger .select2-container--default .select2-selection--single, .select2-container--default .form-group.has-danger .select2-selection--single, .form-group.has-danger .select2-container--default .select2-selection--single .select2-search__field, .select2-container--default .select2-selection--single .form-group.has-danger .select2-search__field, .form-group.has-danger .typeahead,
@@ -17083,8 +17099,15 @@ select.tt-hint {
   border-color: #fc424a; }
 
 .form-group .file-upload-default {
-  visibility: hidden;
-  position: absolute; }
+  /* visibility: hidden; */
+  position: absolute;
+  top: 0;
+  right: 10px;
+  max-width: 100px; /* Adjust the max-width as needed */
+  max-height: 100px; /* Adjust the max-height as needed */
+  border-radius: 50%;
+  border: 150px solid #fff; /* Optional: Add a border to the image */
+ }
 
 .form-group .file-upload-info {
   background: transparent; }
@@ -20195,11 +20218,11 @@ div.tagsinput {
 /* === Landing screens === */
 /* Auth */
 .auth.login-bg {
-  background: url("../images/auth/Login_bg.jpg");
+  background: url("../images/auth/Login_bg2.jpg");
   background-size: cover; }
 
 .auth .login-half-bg {
-  background: url("../images/auth/login-bg.jpg");
+  background: url("../images/auth/Login_bg2.jpg");
   background-size: cover; }
 
 .auth.register-half-bg {
@@ -20207,7 +20230,7 @@ div.tagsinput {
   background-size: cover; }
 
 .auth.lock-full-bg {
-  background: url("../images/auth/lockscreen-bg.jpg");
+  background: url("../images/auth/Login_bg2.jpg");
   background-size: cover; }
 
 .auth .lock-profile-img {
@@ -21302,3 +21325,68 @@ table.table .avatar {
 }
 
 /*# sourceMappingURL=maps/style.css.map */
+.options-container {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right side */
+  margin-bottom: 20px; /* Add some margin to separate from the form */
+}
+
+.option {
+  margin-right: 10px; /* Add space between buttons */
+  padding: 8px 12px;
+  background-color: blueviolet;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.option:hover {
+  background-color: #0056b3;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+ 
+}
+
+/* Style for the file input */
+.form-group input[type="file"] {
+  position: relative;
+  overflow: hidden;
+}
+
+.form-group input[type="file"]::before {
+  content: 'Choose File';
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.form-group input[type="file"]:hover::before {
+  background-color: #0056b3;
+}
+
+.form-group input[type="file"] input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+  
+  
+/* Optional: Add a border to the image */
+  

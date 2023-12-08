@@ -14,7 +14,7 @@ function ForgotPassword() {
             <div className="content-wrapper full-page-wrapper d-flex align-items-center auth login-bg">
               <div className="card col-lg-4 mx-auto">
                 <div className="card-body px-5 py-5">
-                  <h3 className="card-title text-left mb-3">Forgwt password</h3>
+                  <h3 className="card-title text-left mb-3">Forget password</h3>
                   <form>
                     <div className="form-group">
                       <label>Email</label>
@@ -31,7 +31,7 @@ function ForgotPassword() {
                       <br></br>
                     </div>
                     <div className="form-group d-flex align-items-center justify-content-between">
-                      <Link to="/" className="forgot-pass">
+                      <Link to="/login" className="forgot-pass">
                         Back to login
                       </Link>
                     </div>

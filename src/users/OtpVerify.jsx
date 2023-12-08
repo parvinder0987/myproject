@@ -1,9 +1,39 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import * as qs from "qs";
 
-export default function OtpVerify() {
+function OtpVerify() {
+  const router = useNavigate();
+  const [otp, setOtp] = useState();
+  const authData = sessionStorage.getItem("authData");
+  const authDataObj = JSON.parse(authData);
+  const id = authDataObj.id;
 
-  const [otp,setOtp] = useState()
+  const obj = {
+    id: id,
+    OTP: otp,
+  };
+
+  const verifyotps = (e) => {
+    e.preventDefault();
+    axios
+      .post("http://localhost:5000/verifyotp", qs.stringify(obj))
+      .then((response) => {
+        console.log("response===========", response);
+        const role = response?.data?.body?.role;
+        if (role === 1) {
+          router("/basicdetails");
+        } else if (role === 2) {
+          router("/login");
+        }else{
+          router("/")
+        }
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
+  };
 
   return (
     <div>
@@ -17,19 +47,26 @@ export default function OtpVerify() {
                   <form>
                     <div className="form-group">
                       <label>Enter OTP</label>
-                      <input type="email" className="form-control p_input" value={otp} onChange={(e)=>{
-                        setOtp(e.target.value)
-                      }} />
+                      <input
+                        type="text"
+                        className="form-control p_input"
+                        value={otp}
+                        onChange={(e) => {
+                          setOtp(e.target.value);
+                        }}
+                      />
                     </div>
                     <div className="text-center">
-                      <Link                                                                                                                                                                                                                                                                             
-                        to="/login"                                                     
-                        className="btn btn-primary btn-block enter-btn"                 
-                      >                                                                                                                                                 
-                        Login                                                                                                           
-                      </Link>
+                      <button
+                        type="button"
+                        className="btn btn-primary btn-block enter-btn"
+                        onClick={verifyotps}
+                      >
+                        verifyotp
+                      </button>
                       <br></br>
                     </div>
+                    <br></br>
                     <div className="form-group d-flex align-items-center justify-content-between">
                       <Link to="/forgot" className="forgot-pass">
                         Back
@@ -45,3 +82,4 @@ export default function OtpVerify() {
     </div>
   );
 }
+export default OtpVerify;

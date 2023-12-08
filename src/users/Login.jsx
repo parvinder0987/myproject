@@ -8,6 +8,7 @@ import * as qs from "qs";
 function Login() {
   const [email, setEmail] = useState("jhgsdjf");
   const [password, setPassword] = useState("67");
+  const [rememberMe, setRememberMe] = useState("")
 
   const obj = {
     yourEmail: email,
@@ -62,7 +63,7 @@ function Login() {
                     <div className="form-group d-flex align-items-center justify-content-between">
                       <div className="form-check">
                         <label className="form-check-label">
-                          <input type="checkbox" className="form-check-input" />{" "}
+                          <input type="checkbox" className="form-check-input" value={rememberMe} onChange={()=> setRememberMe(!rememberMe)} />{" "}
                           Remember me{" "}
                         </label>
                       </div>
@@ -71,16 +72,16 @@ function Login() {
                       </Link>
                     </div>
                     <div className="text-center">
-                      <Link
+                      {/* <Link
                         to="/login"
                         className="btn btn-primary btn-block enter-btn"
                       >
                         Login
-                      </Link>
+                      </Link> */}
                       <br></br>
                     </div>
                     <div>
-                      <button onClick={loginData}>login</button>
+                      <button className="btn btn-primary btn-block enter-btn" onClick={loginData}>login</button>
                     </div>
                     {/* <div className="d-flex">
                       <button className="btn btn-facebook col mr-2">

@@ -183,6 +183,11 @@ function Sidebar() {
              Userlist
           </Link>
         </li>
+        <li className='nav-item'>
+          <Link className='nav-link' to="/teacherlist">
+             Teacherlist
+          </Link>
+        </li>
             {/* <li className="nav-item">
               {" "}
               <a className="nav-link" href="pages/samples/blank-page.html">

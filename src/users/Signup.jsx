@@ -2,24 +2,28 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import * as qs from "qs";
-// import { response } from "../../../woodlewear/app";
-// import { set } from '../../../woodlewear/app';
 
 function Signup() {
   const router = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("0000000");
-  const [password, setPassword] = useState("");
-  const [confirmpassword, setConfrimpassword] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("9876543210");
+  const [password, setPassword] = useState("123456");
+  const [confirmpassword, setConfrimpassword] = useState("123456");
   const [rememberMe, setRememberMe] = useState(false);
   const [role, setRole] = useState("");
+
+  const userrole = (selectedRole) => {
+    // alert(selectedRole);
+    setRole(selectedRole);
+  };
   const abs = {
     Name: name,
     yourEmail: email,
     phoneNumber: phoneNumber,
     password: password,
     ConfirmPassword: confirmpassword,
+    role: role,
   };
 
   const signupdata = (e) => {
@@ -28,16 +32,15 @@ function Signup() {
       .post("http://localhost:5000/signup", qs.stringify(abs))
       .then((response) => {
         console.log("response..", response);
-        sessionStorage.setItem("name",response.data.data.Name)
-        sessionStorage.setItem("authData", response.data.data);
-        localStorage.setItem("authtoken", response?.data?.token);
+        sessionStorage.setItem("authData", JSON.stringify(response.data.data));
+
         router("/verifyOtp");
       })
       .catch((error) => {
         let message = "";
         if (error?.response?.data?.message)
           message = error?.response?.data?.message;
-        console.log("error", message  );
+        console.log("error", message);
       });
   };
   return (
@@ -48,6 +51,14 @@ function Signup() {
             <div className="content-wrapper full-page-wrapper d-flex align-items-center auth login-bg">
               <div className="card col-lg-4 mx-auto">
                 <div className="card-body px-5 py-5">
+                  <div className="options-container">
+                    <button onClick={() => userrole(1)} className="option">
+                      Teacher
+                    </button>
+                    <button onClick={() => userrole(2)} className="option">
+                      Student
+                    </button>
+                  </div>
                   <h3 className="card-title text-left mb-3">Register</h3>
                   <form>
                     <div className="form-group">
@@ -118,7 +129,7 @@ function Signup() {
                           Remember me
                         </label>
                       </div>
-                      <a href="#" className="forgot-pass">
+                      <a href="/forgot" type="button" className="forgot-pass">
                         Forgot password
                       </a>
                     </div>
@@ -128,7 +139,7 @@ function Signup() {
                         className="btn btn-primary btn-block enter-btn"
                         onClick={signupdata}
                       >
-                        Login
+                        create account
                       </button>
                       <br></br>
                       <br></br>
