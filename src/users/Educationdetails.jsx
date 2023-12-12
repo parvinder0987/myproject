@@ -1,97 +1,149 @@
-import axios from 'axios'
-import React, { useState } from 'react'
+import axios from "axios";
+import React, { useState } from "react";
 
+function EducationDetails() {
+  const [education, setEducation] = useState("");
+  const [stream, setStream] = useState("");
+  const [document, setDocument] = useState("");
+  const [employmentType, setEmploymentType] = useState("");
+  const authData = sessionStorage.getItem("authData");
+  const authDataObj = JSON.parse(authData);
+  const id = authDataObj.id;
 
-function Educationdetails() {
+  const handlechange= (type)=>{
+       setEmploymentType(type)
+  }
 
-    const [education, setEducation]= useState()
-    const [stream , setStream] = useState()
-    const [partime,setPartime] = useState()
-    const [fuulltime,setFulltime] = useState()
-    const [document, setDocument] = useState()
+  const saveData = () => {
+    let data = new FormData();
+    data.append("id", id);
+    data.append("education", education);
+    data.append("stream", stream);
+    data.append("document", document);
+    data.append("employmentType", employmentType);
 
+    axios
+      .post("http://localhost:5000/education", data)
+      .then((response) => {
+        console.log("Data saved successfully:", response.data);
+        sessionStorage.setItem("authData", JSON.stringify(response.data.data));
+      })
+      .catch((error) => {
+        console.error("Error saving data:", error);
+      });
+  };
 
-
-
-    const educateddata = (e)=>{
-      axios.put("/")
-    }
   return (
-    <div>
-    <div className="container-scroller">
-      <div className="container-fluid page-body-wrapper full-page-wrapper">
-        <div className="row w-100 m-0">
-          <div className="content-wrapper full-page-wrapper d-flex align-items-center auth login-bg">
-            <div className="card col-lg-4 mx-auto">
-              <div className="card-body px-5 py-5">
-                <h3 className="card-title text-left mb-3">Education Details</h3>
-                  <p>please upload your certificate, degree of your education </p>
-                <form>
-                  <div className="form-group">
-                
-                    {/* <input
-                      type="text"
-                      className="form-control p_input"
-                      value={gender}
-                      onChange={(e) => setGender(e.target.value)}
-                    /> */}
-                    <select
-                      className="form-control p_input"
-                      value={education}
-                      onChange={(e) => {
-                        setEducation(e.target.value);
-                      }}
-                    >
-                      <option selected disabled>
-                        Select Education
-                      </option>
-                      <option value="#">+2</option>
-                      <option value="#">Bachelor</option>
-                    </select>
-                  </div>
-                  <select 
-                  className='form-control p_input' value={stream} onChange={(e)=>{
-                    setStream(e.target.value)
-                  }}
+    <div className="app-content content">
+      <div className="content-overlay" />
+      <div className="header-navbar-shadow" />
+      <div className="content-wrapper">
+        <div className="content-header row"></div>
+        <div className="content-body">
+          <h1>Education details</h1>
+          <div className="auth-wrapper auth-v1 px-2">
+            <div className="auth-inner py-2">
+              <form>
+                <div className="mb-1">
+                  <label htmlFor="register-education" className="form-label">
+                    <b>Education</b>
+                  </label>
+                  <select
+                    className="form-select"
+                    id="register-education"
+                    name="register-education"
+                    aria-describedby="register-education"
+                    tabIndex={3}
+                    value={education}
+                    onChange={(e) => setEducation(e.target.value)}
                   >
-                    <option selected disabled>
-                      Select stream
+                    <option value="" disabled>
+                      Select Education
                     </option>
-                    <option value="BCA">BCA</option>
-                    <option value="MCA">MCA</option>
-                    <option value="BCOM">BCom</option>
-                    <option value="BSC">BSC</option>
-                    <option value="BA">BA</option>
+                    <option value="bachelors">Bachelors</option>
+                    <option value="masters">Masters</option>
                   </select>
+                </div>
 
-                  <input type='checkbox'  id="parttime" value={partime} >
-                    <label for="checkbox" >Parttime</label>
-                  </input>
-                  
-                  <div className="form-group d-flex align-items-center justify-content-between">
-                    {/* Add any additional form elements or controls here */}
+                <div className="mb-1">
+                  <label htmlFor="register-stream" className="form-label">
+                    <b>Stream</b>
+                  </label>
+                  <select
+                    className="form-select"
+                    id="register-stream"
+                    name="register-stream"
+                    aria-describedby="register-stream"
+                    tabIndex={3}
+                    value={stream}
+                    onChange={(e) => setStream(e.target.value)}
+                  >
+                    <option value="" disabled>
+                      Select Stream
+                    </option>
+                    <option value="engineering">Engineering</option>
+                    <option value="science">Science</option>
+                  </select>
+                </div>
+                <div className="form-group">
+                  <label htmlFor="document">Document</label>
+                  <input
+                    type="file"
+                    className="form-control-image"
+                    id="document"
+                    onChange={(e) => {
+                      setDocument(e.target.files[0]);
+                    }}
+                  />
+                </div>
+                <div className="mb-1">
+                  <label htmlFor="full-time" className="form-label">
+                    <b>Employment Type</b>
+                  </label>
+                  <div className="form-check">
+                    <input
+                      className="form-check-input"
+                      type="radio"
+                      id="full-time"
+                      name="employment-type"
+                      value="full-time"
+                      checked={employmentType === "full-time"}
+                      onChange={() =>handlechange("full-time") }
+                    />
+                    <label className="form-check-label" htmlFor="full-time">
+                      Full-time
+                    </label>
                   </div>
-                  <div className="text-center">
-                    {/* Add any text or links for the form footer */}
-                    <br />
+                  <div className="form-check">
+                    <input
+                      className="form-check-input"
+                      type="radio"
+                      id="part-time"
+                      name="employment-type"
+                      value="part-time"
+                      checked={employmentType === "part-time"}
+                      onChange={() => handlechange("part-time")}
+                    />
+                    <label className="form-check-label" htmlFor="part-time">
+                      Part-time
+                    </label>
                   </div>
-                  <div>
-                    <button
-                      className="btn btn-primary btn-block enter-btn"
-                      onClick={educateddata}
-                    >
-                      Save&Next
-                    </button>
-                  </div>
-                </form>
-              </div>
+                </div>
+
+                <button
+                  className="btn btn-primary w-100"
+                  tabIndex={5}
+                  onClick={saveData}
+                >
+                  Save & Next
+                </button>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  )
+  );
 }
 
-export default Educationdetails
+export default EducationDetails;

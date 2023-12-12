@@ -15,7 +15,7 @@ function OtpVerify() {
     OTP: otp,
   };
 
-  const verifyotps = (e) => {
+  const handleOtpVerification = (e) => {
     e.preventDefault();
     axios
       .post("http://localhost:5000/verifyotp", qs.stringify(obj))
@@ -26,8 +26,8 @@ function OtpVerify() {
           router("/basicdetails");
         } else if (role === 2) {
           router("/login");
-        }else{
-          router("/")
+        } else {
+          router("/");
         }
       })
       .catch((error) => {
@@ -36,45 +36,58 @@ function OtpVerify() {
   };
 
   return (
-    <div>
-      <div className="container-scroller">
-        <div className="container-fluid page-body-wrapper full-page-wrapper">
-          <div className="row w-100 m-0">
-            <div className="content-wrapper full-page-wrapper d-flex align-items-center auth login-bg">
-              <div className="card col-lg-4 mx-auto">
-                <div className="card-body px-5 py-5">
-                  <h3 className="card-title text-left mb-3">Verify OTP</h3>
-                  <form>
-                    <div className="form-group">
-                      <label>Enter OTP</label>
-                      <input
-                        type="text"
-                        className="form-control p_input"
-                        value={otp}
-                        onChange={(e) => {
-                          setOtp(e.target.value);
-                        }}
-                      />
-                    </div>
-                    <div className="text-center">
-                      <button
-                        type="button"
-                        className="btn btn-primary btn-block enter-btn"
-                        onClick={verifyotps}
-                      >
-                        verifyotp
-                      </button>
-                      <br></br>
-                    </div>
+    <div className="app-content content ">
+      <div className="content-overlay" />
+      <div className="header-navbar-shadow" />
+      <div className="content-wrapper">
+        <div className="content-header row"></div>
+        <div className="content-body">
+          <div className="auth-wrapper auth-v1 px-2">
+            <div className="auth-inner py-2">
+              <h4 className="card-title mb-1">Verify Otp</h4>
+              {/* <p className="card-text mb-2">
+                  Make your app management easy and fun!
+                </p> */}
+              <form
+                className="auth-register-form mt-2"
+                action="index.html"
+                method="POST"
+              >
+                <div className="mb-1">
+                  <label htmlFor="otp-verify" className="form-label">
+                    OTP Verification
+                  </label>
+                  <div className="input-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="otp-verify"
+                      name="otp-verify"
+                      placeholder="Enter OTP"
+                      aria-describedby="otp-verify"
+                      tabIndex={1}
+                      value={otp}
+                      onChange={(e) => setOtp(e.target.value)}
+                    />
+                    <button
+                      className="btn btn-primary"
+                      type="button"
+                      onClick={handleOtpVerification}
+                    >
+                      Verify
+                    </button>
                     <br></br>
-                    <div className="form-group d-flex align-items-center justify-content-between">
-                      <Link to="/forgot" className="forgot-pass">
-                        Back
-                      </Link>
-                    </div>
-                  </form>
+                    <Link to="/login">back</Link>
+                  </div>
                 </div>
-              </div>
+              </form>
+            
+            
+
+
+              {/* </div> */}
+              {/* </div> */}
+              {/* /Register v1 */}
             </div>
           </div>
         </div>

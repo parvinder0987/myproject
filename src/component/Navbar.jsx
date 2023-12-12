@@ -2,565 +2,758 @@ import React from "react";
 
 function Navbar() {
   return (
-    <div>
-      <nav className="navbar p-0 fixed-top d-flex flex-row">
-        <div className="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
-          <a className="navbar-brand brand-logo-mini" href="index.html">
-            <img src="assets/images/logo-mini.svg" alt="logo" />
-          </a>
-        </div>
-        <div className="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
-          <button
-            className="navbar-toggler navbar-toggler align-self-center"
-            type="button"
-            data-toggle="minimize"
+    
+  <>
+  <nav className="header-navbar navbar navbar-expand-lg align-items-center floating-nav navbar-light navbar-shadow container-xxl">
+    <div className="navbar-container d-flex content">
+      <div className="bookmark-wrapper d-flex align-items-center">
+        <ul className="nav navbar-nav d-xl-none">
+          <li className="nav-item">
+            <a className="nav-link menu-toggle" href="#">
+              <i className="ficon" data-feather="menu" />
+            </a>
+          </li>
+        </ul>
+        <ul className="nav navbar-nav bookmark-icons">
+          <li className="nav-item d-none d-lg-block">
+            <a
+              className="nav-link"
+              href="app-email.html"
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              title="Email"
+            >
+              <i className="ficon" data-feather="mail" />
+            </a>
+          </li>
+          <li className="nav-item d-none d-lg-block">
+            <a
+              className="nav-link"
+              href="app-chat.html"
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              title="Chat"
+            >
+              <i className="ficon" data-feather="message-square" />
+            </a>
+          </li>
+          <li className="nav-item d-none d-lg-block">
+            <a
+              className="nav-link"
+              href="app-calendar.html"
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              title="Calendar"
+            >
+              <i className="ficon" data-feather="calendar" />
+            </a>
+          </li>
+          <li className="nav-item d-none d-lg-block">
+            <a
+              className="nav-link"
+              href="app-todo.html"
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              title="Todo"
+            >
+              <i className="ficon" data-feather="check-square" />
+            </a>
+          </li>
+        </ul>
+        <ul className="nav navbar-nav">
+          <li className="nav-item d-none d-lg-block">
+            <a className="nav-link bookmark-star">
+              <i className="ficon text-warning" data-feather="star" />
+            </a>
+            <div className="bookmark-input search-input">
+              <div className="bookmark-input-icon">
+                <i data-feather="search" />
+              </div>
+              <input
+                className="form-control input"
+                type="text"
+                placeholder="Bookmark"
+                tabIndex={0}
+                data-search="search"
+              />
+              <ul className="search-list search-list-bookmark" />
+            </div>
+          </li>
+        </ul>
+      </div>
+      <ul className="nav navbar-nav align-items-center ms-auto">
+        <li className="nav-item dropdown dropdown-language">
+          <a
+            className="nav-link dropdown-toggle"
+            id="dropdown-flag"
+            href="#"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
           >
-            <span className="mdi mdi-menu" />
-          </button>
-          <ul className="navbar-nav w-100">
-            <li className="nav-item w-100">
-              <form className="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Search products"
+            <i className="flag-icon flag-icon-us" />
+            <span className="selected-language">English</span>
+          </a>
+          <div
+            className="dropdown-menu dropdown-menu-end"
+            aria-labelledby="dropdown-flag"
+          >
+            <a className="dropdown-item" href="#" data-language="en">
+              <i className="flag-icon flag-icon-us" /> English
+            </a>
+            <a className="dropdown-item" href="#" data-language="fr">
+              <i className="flag-icon flag-icon-fr" /> French
+            </a>
+            <a className="dropdown-item" href="#" data-language="de">
+              <i className="flag-icon flag-icon-de" /> German
+            </a>
+            <a className="dropdown-item" href="#" data-language="pt">
+              <i className="flag-icon flag-icon-pt" /> Portuguese
+            </a>
+          </div>
+        </li>
+        <li className="nav-item d-none d-lg-block">
+          <a className="nav-link nav-link-style">
+            <i className="ficon" data-feather="moon" />
+          </a>
+        </li>
+        <li className="nav-item nav-search">
+          <a className="nav-link nav-link-search">
+            <i className="ficon" data-feather="search" />
+          </a>
+          <div className="search-input">
+            <div className="search-input-icon">
+              <i data-feather="search" />
+            </div>
+            <input
+              className="form-control input"
+              type="text"
+              placeholder="Explore Vuexy..."
+              tabIndex={-1}
+              data-search="search"
+            />
+            <div className="search-input-close">
+              <i data-feather="x" />
+            </div>
+            <ul className="search-list search-list-main" />
+          </div>
+        </li>
+        <li className="nav-item dropdown dropdown-cart me-25">
+          <a className="nav-link" href="#" data-bs-toggle="dropdown">
+            <i className="ficon" data-feather="shopping-cart" />
+            <span className="badge rounded-pill bg-primary badge-up cart-item-count">
+              6
+            </span>
+          </a>
+          <ul className="dropdown-menu dropdown-menu-media dropdown-menu-end">
+            <li className="dropdown-menu-header">
+              <div className="dropdown-header d-flex">
+                <h4 className="notification-title mb-0 me-auto">My Cart</h4>
+                <div className="badge rounded-pill badge-light-primary">
+                  4 Items
+                </div>
+              </div>
+            </li>
+            <li className="scrollable-container media-list">
+              <div className="list-item align-items-center">
+                <img
+                  className="d-block rounded me-1"
+                  src="../../../app-assets/images/pages/eCommerce/1.png"
+                  alt="donuts"
+                  width={62}
                 />
-              </form>
+                <div className="list-item-body flex-grow-1">
+                  <i className="ficon cart-item-remove" data-feather="x" />
+                  <div className="media-heading">
+                    <h6 className="cart-item-title">
+                      <a
+                        className="text-body"
+                        href="app-ecommerce-details.html"
+                      >
+                        {" "}
+                        Apple watch 5
+                      </a>
+                    </h6>
+                    <small className="cart-item-by">By Apple</small>
+                  </div>
+                  <div className="cart-item-qty">
+                    <div className="input-group">
+                      <input
+                        className="touchspin-cart"
+                        type="number"
+                        defaultValue={1}
+                      />
+                    </div>
+                  </div>
+                  <h5 className="cart-item-price">$374.90</h5>
+                </div>
+              </div>
+              <div className="list-item align-items-center">
+                <img
+                  className="d-block rounded me-1"
+                  src="../../../app-assets/images/pages/eCommerce/7.png"
+                  alt="donuts"
+                  width={62}
+                />
+                <div className="list-item-body flex-grow-1">
+                  <i className="ficon cart-item-remove" data-feather="x" />
+                  <div className="media-heading">
+                    <h6 className="cart-item-title">
+                      <a
+                        className="text-body"
+                        href="app-ecommerce-details.html"
+                      >
+                        {" "}
+                        Google Home Mini
+                      </a>
+                    </h6>
+                    <small className="cart-item-by">By Google</small>
+                  </div>
+                  <div className="cart-item-qty">
+                    <div className="input-group">
+                      <input
+                        className="touchspin-cart"
+                        type="number"
+                        defaultValue={3}
+                      />
+                    </div>
+                  </div>
+                  <h5 className="cart-item-price">$129.40</h5>
+                </div>
+              </div>
+              <div className="list-item align-items-center">
+                <img
+                  className="d-block rounded me-1"
+                  src="../../../app-assets/images/pages/eCommerce/2.png"
+                  alt="donuts"
+                  width={62}
+                />
+                <div className="list-item-body flex-grow-1">
+                  <i className="ficon cart-item-remove" data-feather="x" />
+                  <div className="media-heading">
+                    <h6 className="cart-item-title">
+                      <a
+                        className="text-body"
+                        href="app-ecommerce-details.html"
+                      >
+                        {" "}
+                        iPhone 11 Pro
+                      </a>
+                    </h6>
+                    <small className="cart-item-by">By Apple</small>
+                  </div>
+                  <div className="cart-item-qty">
+                    <div className="input-group">
+                      <input
+                        className="touchspin-cart"
+                        type="number"
+                        defaultValue={2}
+                      />
+                    </div>
+                  </div>
+                  <h5 className="cart-item-price">$699.00</h5>
+                </div>
+              </div>
+              <div className="list-item align-items-center">
+                <img
+                  className="d-block rounded me-1"
+                  src="../../../app-assets/images/pages/eCommerce/3.png"
+                  alt="donuts"
+                  width={62}
+                />
+                <div className="list-item-body flex-grow-1">
+                  <i className="ficon cart-item-remove" data-feather="x" />
+                  <div className="media-heading">
+                    <h6 className="cart-item-title">
+                      <a
+                        className="text-body"
+                        href="app-ecommerce-details.html"
+                      >
+                        {" "}
+                        iMac Pro
+                      </a>
+                    </h6>
+                    <small className="cart-item-by">By Apple</small>
+                  </div>
+                  <div className="cart-item-qty">
+                    <div className="input-group">
+                      <input
+                        className="touchspin-cart"
+                        type="number"
+                        defaultValue={1}
+                      />
+                    </div>
+                  </div>
+                  <h5 className="cart-item-price">$4,999.00</h5>
+                </div>
+              </div>
+              <div className="list-item align-items-center">
+                <img
+                  className="d-block rounded me-1"
+                  src="../../../app-assets/images/pages/eCommerce/5.png"
+                  alt="donuts"
+                  width={62}
+                />
+                <div className="list-item-body flex-grow-1">
+                  <i className="ficon cart-item-remove" data-feather="x" />
+                  <div className="media-heading">
+                    <h6 className="cart-item-title">
+                      <a
+                        className="text-body"
+                        href="app-ecommerce-details.html"
+                      >
+                        {" "}
+                        MacBook Pro
+                      </a>
+                    </h6>
+                    <small className="cart-item-by">By Apple</small>
+                  </div>
+                  <div className="cart-item-qty">
+                    <div className="input-group">
+                      <input
+                        className="touchspin-cart"
+                        type="number"
+                        defaultValue={1}
+                      />
+                    </div>
+                  </div>
+                  <h5 className="cart-item-price">$2,999.00</h5>
+                </div>
+              </div>
+            </li>
+            <li className="dropdown-menu-footer">
+              <div className="d-flex justify-content-between mb-1">
+                <h6 className="fw-bolder mb-0">Total:</h6>
+                <h6 className="text-primary fw-bolder mb-0">$10,999.00</h6>
+              </div>
+              <a
+                className="btn btn-primary w-100"
+                href="app-ecommerce-checkout.html"
+              >
+                Checkout
+              </a>
             </li>
           </ul>
-          <ul className="navbar-nav navbar-nav-right">
-            {/* <li className="nav-item dropdown d-none d-lg-block">
-              <a
-                className="nav-link btn btn-success create-new-button"
-                id="createbuttonDropdown"
-                data-toggle="dropdown"
-                aria-expanded="false"
-                href="#"
-              >
-                + Create New Project
-              </a>
-              <div
-                className="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
-                aria-labelledby="createbuttonDropdown"
-              >
-                <h6 className="p-3 mb-0">Projects</h6>
-                <div className="dropdown-divider" />
-                <a className="dropdown-item preview-item">
-                  <div className="preview-thumbnail">
-                    <div className="preview-icon bg-dark rounded-circle">
-                      <i className="mdi mdi-file-outline text-primary" />
-                    </div>
-                  </div>
-                  <div className="preview-item-content">
-                    <p className="preview-subject ellipsis mb-1">
-                      Software Development
-                    </p>
-                  </div>
-                </a>
-                <div className="dropdown-divider" />
-                <a className="dropdown-item preview-item">
-                  <div className="preview-thumbnail">
-                    <div className="preview-icon bg-dark rounded-circle">
-                      <i className="mdi mdi-web text-info" />
-                    </div>
-                  </div>
-                  <div className="preview-item-content">
-                    <p className="preview-subject ellipsis mb-1">
-                      UI Development
-                    </p>
-                  </div>
-                </a>
-                <div className="dropdown-divider" />
-                <a className="dropdown-item preview-item">
-                  <div className="preview-thumbnail">
-                    <div className="preview-icon bg-dark rounded-circle">
-                      <i className="mdi mdi-layers text-danger" />
-                    </div>
-                  </div>
-                  <div className="preview-item-content">
-                    <p className="preview-subject ellipsis mb-1">
-                      Software Testing
-                    </p>
-                  </div>
-                </a>
-                <div className="dropdown-divider" />
-                <p className="p-3 mb-0 text-center">See all projects</p>
+        </li>
+        <li className="nav-item dropdown dropdown-notification me-25">
+          <a className="nav-link" href="#" data-bs-toggle="dropdown">
+            <i className="ficon" data-feather="bell" />
+            <span className="badge rounded-pill bg-danger badge-up">5</span>
+          </a>
+          <ul className="dropdown-menu dropdown-menu-media dropdown-menu-end">
+            <li className="dropdown-menu-header">
+              <div className="dropdown-header d-flex">
+                <h4 className="notification-title mb-0 me-auto">
+                  Notifications
+                </h4>
+                <div className="badge rounded-pill badge-light-primary">
+                  6 New
+                </div>
               </div>
             </li>
-            <li className="nav-item nav-settings d-none d-lg-block">
-              <a className="nav-link" href="#">
-                <i className="mdi mdi-view-grid" />
-              </a>
-            </li>
-            <li className="nav-item dropdown border-left">
-              <a
-                className="nav-link count-indicator dropdown-toggle"
-                id="messageDropdown"
-                href="#"
-                data-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <i className="mdi mdi-email" />
-                <span className="count bg-success" />
-              </a>
-              <div
-                className="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
-                aria-labelledby="messageDropdown"
-              >
-                <h6 className="p-3 mb-0">Messages</h6>
-                <div className="dropdown-divider" />
-                <a className="dropdown-item preview-item">
-                  <div className="preview-thumbnail">
-                    <img
-                      src="assets/images/faces/face4.jpg"
-                      alt="image"
-                      className="rounded-circle profile-pic"
-                    />
-                  </div>
-                  <div className="preview-item-content">
-                    <p className="preview-subject ellipsis mb-1">
-                      Mark send you a message
-                    </p>
-                    <p className="text-muted mb-0"> 1 Minutes ago </p>
-                  </div>
-                </a>
-                <div className="dropdown-divider" />
-                <a className="dropdown-item preview-item">
-                  <div className="preview-thumbnail">
-                    <img
-                      src="assets/images/faces/face2.jpg"
-                      alt="image"
-                      className="rounded-circle profile-pic"
-                    />
-                  </div>
-                  <div className="preview-item-content">
-                    <p className="preview-subject ellipsis mb-1">
-                      Cregh send you a message
-                    </p>
-                    <p className="text-muted mb-0"> 15 Minutes ago </p>
-                  </div>
-                </a>
-                <div className="dropdown-divider" />
-                <a className="dropdown-item preview-item">
-                  <div className="preview-thumbnail">
-                    <img
-                      src="assets/images/faces/face3.jpg"
-                      alt="image"
-                      className="rounded-circle profile-pic"
-                    />
-                  </div>
-                  <div className="preview-item-content">
-                    <p className="preview-subject ellipsis mb-1">
-                      Profile picture updated
-                    </p>
-                    <p className="text-muted mb-0"> 18 Minutes ago </p>
-                  </div>
-                </a>
-                <div className="dropdown-divider" />
-                <p className="p-3 mb-0 text-center">4 new messages</p>
-              </div>
-            </li> */}
-            <li className="nav-item dropdown border-left">
-              <a
-                className="nav-link count-indicator dropdown-toggle"
-                id="notificationDropdown"
-                href="#"
-                data-toggle="dropdown"
-              >
-                <i className="mdi mdi-bell" />
-                <span className="count bg-danger" />
-              </a>
-              <div
-                className="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
-                aria-labelledby="notificationDropdown"
-              >
-                <h6 className="p-3 mb-0">Notifications</h6>
-                <div className="dropdown-divider" />
-                <a className="dropdown-item preview-item">
-                  <div className="preview-thumbnail">
-                    <div className="preview-icon bg-dark rounded-circle">
-                      <i className="mdi mdi-calendar text-success" />
+            <li className="scrollable-container media-list">
+              <a className="d-flex" href="#">
+                <div className="list-item d-flex align-items-start">
+                  <div className="me-1">
+                    <div className="avatar">
+                      <img
+                        src="../../../app-assets/images/portrait/small/avatar-s-15.jpg"
+                        alt="avatar"
+                        width={32}
+                        height={32}
+                      />
                     </div>
                   </div>
-                  <div className="preview-item-content">
-                    <p className="preview-subject mb-1">Event today</p>
-                    <p className="text-muted ellipsis mb-0">
+                  <div className="list-item-body flex-grow-1">
+                    <p className="media-heading">
+                      <span className="fw-bolder">Congratulation Sam 🎉</span>
+                      winner!
+                    </p>
+                    <small className="notification-text">
                       {" "}
-                      Just a reminder that you have an event today{" "}
-                    </p>
+                      Won the monthly best seller badge.
+                    </small>
                   </div>
-                </a>
-                <div className="dropdown-divider" />
-                <a className="dropdown-item preview-item">
-                  <div className="preview-thumbnail">
-                    <div className="preview-icon bg-dark rounded-circle">
-                      <i className="mdi mdi-settings text-danger" />
-                    </div>
-                  </div>
-                  <div className="preview-item-content">
-                    <p className="preview-subject mb-1">Settings</p>
-                    <p className="text-muted ellipsis mb-0">
-                      {" "}
-                      Update dashboard{" "}
-                    </p>
-                  </div>
-                </a>
-                <div className="dropdown-divider" />
-                <a className="dropdown-item preview-item">
-                  <div className="preview-thumbnail">
-                    <div className="preview-icon bg-dark rounded-circle">
-                      <i className="mdi mdi-link-variant text-warning" />
-                    </div>
-                  </div>
-                  <div className="preview-item-content">
-                    <p className="preview-subject mb-1">Launch Admin</p>
-                    <p className="text-muted ellipsis mb-0"> New admin wow! </p>
-                  </div>
-                </a>
-                <div className="dropdown-divider" />
-                <p className="p-3 mb-0 text-center">See all notifications</p>
-              </div>
-            </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link"
-                id="profileDropdown"
-                href="#"
-                data-toggle="dropdown"
-              >
-                <div className="navbar-profile">
-                  <img
-                    className="img-xs rounded-circle"
-                    src="assets/images/download.jpeg"
-                    alt=""
-                  />
-                  <p className="mb-0 d-none d-sm-block navbar-profile-name">
-                    Parvinder Singh
-                  </p>
-                  <i className="mdi mdi-menu-down d-none d-sm-block" />
                 </div>
               </a>
-              <div
-                className="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
-                aria-labelledby="profileDropdown"
-              >
-                <h6 className="p-3 mb-0">Profile</h6>
-                <div className="dropdown-divider" />
-                <a className="dropdown-item preview-item" href="#">
-                  <div className="preview-thumbnail">
-                    <div className="preview-icon bg-dark rounded-circle">
-                      <i className="mdi mdi-settings text-success" />
+              <a className="d-flex" href="#">
+                <div className="list-item d-flex align-items-start">
+                  <div className="me-1">
+                    <div className="avatar">
+                      <img
+                        src="../../../app-assets/images/portrait/small/avatar-s-3.jpg"
+                        alt="avatar"
+                        width={32}
+                        height={32}
+                      />
                     </div>
                   </div>
-                  <div className="preview-item-content">
-                    <p className="preview-subject mb-1">Settings</p>
+                  <div className="list-item-body flex-grow-1">
+                    <p className="media-heading">
+                      <span className="fw-bolder">New message</span>
+                      &nbsp;received
+                    </p>
+                    <small className="notification-text">
+                      {" "}
+                      You have 10 unread messages
+                    </small>
                   </div>
-                </a>
-                <div className="dropdown-divider" />
-                <a className="dropdown-item preview-item" href="#">
-                  <div className="preview-thumbnail">
-                    <div className="preview-icon bg-dark rounded-circle">
-                      <i className="mdi mdi-logout text-danger" />
+                </div>
+              </a>
+              <a className="d-flex" href="#">
+                <div className="list-item d-flex align-items-start">
+                  <div className="me-1">
+                    <div className="avatar bg-light-danger">
+                      <div className="avatar-content">MD</div>
                     </div>
                   </div>
-                  <div className="preview-item-content">
-                    <p className="preview-subject mb-1">Log out</p>
+                  <div className="list-item-body flex-grow-1">
+                    <p className="media-heading">
+                      <span className="fw-bolder">Revised Order 👋</span>
+                      &nbsp;checkout
+                    </p>
+                    <small className="notification-text">
+                      {" "}
+                      MD Inc. order updated
+                    </small>
                   </div>
-                </a>
-                <div className="dropdown-divider" />
-                <p className="p-3 mb-0 text-center">Advanced settings</p>
+                </div>
+              </a>
+              <div className="list-item d-flex align-items-center">
+                <h6 className="fw-bolder me-auto mb-0">System Notifications</h6>
+                <div className="form-check form-check-primary form-switch">
+                  <input
+                    className="form-check-input"
+                    id="systemNotification"
+                    type="checkbox"
+                    defaultChecked=""
+                  />
+                  <label
+                    className="form-check-label"
+                    htmlFor="systemNotification"
+                  />
+                </div>
               </div>
+              <a className="d-flex" href="#">
+                <div className="list-item d-flex align-items-start">
+                  <div className="me-1">
+                    <div className="avatar bg-light-danger">
+                      <div className="avatar-content">
+                        <i className="avatar-icon" data-feather="x" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="list-item-body flex-grow-1">
+                    <p className="media-heading">
+                      <span className="fw-bolder">Server down</span>
+                      &nbsp;registered
+                    </p>
+                    <small className="notification-text">
+                      {" "}
+                      USA Server is down due to high CPU usage
+                    </small>
+                  </div>
+                </div>
+              </a>
+              <a className="d-flex" href="#">
+                <div className="list-item d-flex align-items-start">
+                  <div className="me-1">
+                    <div className="avatar bg-light-success">
+                      <div className="avatar-content">
+                        <i className="avatar-icon" data-feather="check" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="list-item-body flex-grow-1">
+                    <p className="media-heading">
+                      <span className="fw-bolder">Sales report</span>
+                      &nbsp;generated
+                    </p>
+                    <small className="notification-text">
+                      {" "}
+                      Last month sales report generated
+                    </small>
+                  </div>
+                </div>
+              </a>
+              <a className="d-flex" href="#">
+                <div className="list-item d-flex align-items-start">
+                  <div className="me-1">
+                    <div className="avatar bg-light-warning">
+                      <div className="avatar-content">
+                        <i
+                          className="avatar-icon"
+                          data-feather="alert-triangle"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="list-item-body flex-grow-1">
+                    <p className="media-heading">
+                      <span className="fw-bolder">High memory</span>&nbsp;usage
+                    </p>
+                    <small className="notification-text">
+                      {" "}
+                      BLR Server using high memory
+                    </small>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li className="dropdown-menu-footer">
+              <a className="btn btn-primary w-100" href="#">
+                Read all notifications
+              </a>
             </li>
           </ul>
-          <button
-            className="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
-            type="button"
-            data-toggle="offcanvas"
+        </li>
+        <li className="nav-item dropdown dropdown-user">
+          <a
+            className="nav-link dropdown-toggle dropdown-user-link"
+            id="dropdown-user"
+            href="#"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
           >
-            <span className="mdi mdi-format-line-spacing" />
-          </button>
-        </div>
-      </nav>
+            <div className="user-nav d-sm-flex d-none">
+              <span className="user-name fw-bolder">John Doe</span>
+              <span className="user-status">Admin</span>
+            </div>
+            <span className="avatar">
+              <img
+                className="round"
+                src="../../../app-assets/images/portrait/small/avatar-s-11.jpg"
+                alt="avatar"
+                height={40}
+                width={40}
+              />
+              <span className="avatar-status-online" />
+            </span>
+          </a>
+          <div
+            className="dropdown-menu dropdown-menu-end"
+            aria-labelledby="dropdown-user"
+          >
+            <a className="dropdown-item" href="page-profile.html">
+              <i className="me-50" data-feather="user" /> Profile
+            </a>
+            <a className="dropdown-item" href="app-email.html">
+              <i className="me-50" data-feather="mail" /> Inbox
+            </a>
+            <a className="dropdown-item" href="app-todo.html">
+              <i className="me-50" data-feather="check-square" /> Task
+            </a>
+            <a className="dropdown-item" href="app-chat.html">
+              <i className="me-50" data-feather="message-square" /> Chats
+            </a>
+            <div className="dropdown-divider" />
+            <a className="dropdown-item" href="page-account-settings.html">
+              <i className="me-50" data-feather="settings" /> Settings
+            </a>
+            <a className="dropdown-item" href="page-pricing.html">
+              <i className="me-50" data-feather="credit-card" /> Pricing
+            </a>
+            <a className="dropdown-item" href="page-faq.html">
+              <i className="me-50" data-feather="help-circle" /> FAQ
+            </a>
+            <a className="dropdown-item" href="page-auth-login-v2.html">
+              <i className="me-50" data-feather="power" /> Logout
+            </a>
+          </div>
+        </li>
+      </ul>
     </div>
-    //     <div>
-    //       <div className="container-fluid page-body-wrapper">
-    //   {/* partial:partials/_navbar.html */}
-    //   <nav className="navbar p-0 fixed-top d-flex flex-row">
-    //     <div className="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
-    //       <a className="navbar-brand brand-logo-mini" href="index.html">
-    //         <img src="assets/images/logo-mini.svg" alt="logo" />
-    //       </a>
-    //     </div>
-    //     <div className="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
-    //       <button
-    //         className="navbar-toggler navbar-toggler align-self-center"
-    //         type="button"
-    //         data-toggle="minimize"
-    //       >
-    //         <span className="mdi mdi-menu" />
-    //       </button>
-    //       <ul className="navbar-nav w-100">
-    //         <li className="nav-item w-100">
-    //           <form className="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
-    //             <input
-    //               type="text"
-    //               className="form-control"
-    //               placeholder="Search products"
-    //             />
-    //           </form>
-    //         </li>
-    //       </ul>
-    //       <ul className="navbar-nav navbar-nav-right">
-    //         <li className="nav-item dropdown d-none d-lg-block">
-    //           <a
-    //             className="nav-link btn btn-success create-new-button"
-    //             id="createbuttonDropdown"
-    //             data-toggle="dropdown"
-    //             aria-expanded="false"
-    //             href="/"
-    //           >
-    //             + Create New Project
-    //           </a>
-    //           <div
-    //             className="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
-    //             aria-labelledby="createbuttonDropdown"
-    //           >
-    //             <h6 className="p-3 mb-0">Projects</h6>
-    //             <div className="dropdown-divider" />
-    //             <a className="dropdown-item preview-item">
-    //               <div className="preview-thumbnail">
-    //                 <div className="preview-icon bg-dark rounded-circle">
-    //                   <i className="mdi mdi-file-outline text-primary" />
-    //                 </div>
-    //               </div>
-    //               <div className="preview-item-content">
-    //                 <p className="preview-subject ellipsis mb-1">
-    //                   Software Development
-    //                 </p>
-    //               </div>
-    //             </a>
-    //             <div className="dropdown-divider" />
-    //             <a className="dropdown-item preview-item">
-    //               <div className="preview-thumbnail">
-    //                 <div className="preview-icon bg-dark rounded-circle">
-    //                   <i className="mdi mdi-web text-info" />
-    //                 </div>
-    //               </div>
-    //               <div className="preview-item-content">
-    //                 <p className="preview-subject ellipsis mb-1">UI Development</p>
-    //               </div>
-    //             </a>
-    //             <div className="dropdown-divider" />
-    //             <a className="dropdown-item preview-item">
-    //               <div className="preview-thumbnail">
-    //                 <div className="preview-icon bg-dark rounded-circle">
-    //                   <i className="mdi mdi-layers text-danger" />
-    //                 </div>
-    //               </div>
-    //               <div className="preview-item-content">
-    //                 <p className="preview-subject ellipsis mb-1">
-    //                   Software Testing
-    //                 </p>
-    //               </div>
-    //             </a>
-    //             <div className="dropdown-divider" />
-    //             <p className="p-3 mb-0 text-center">See all projects</p>
-    //           </div>
-    //         </li>
-    //         <li className="nav-item nav-settings d-none d-lg-block">
-    //           <a className="nav-link" href="/">
-    //             <i className="mdi mdi-view-grid" />
-    //           </a>
-    //         </li>
-    //         <li className="nav-item dropdown border-left">
-    //           <a
-    //             className="nav-link count-indicator dropdown-toggle"
-    //             id="messageDropdown"
-    //             href="/"
-    //             data-toggle="dropdown"
-    //             aria-expanded="false"
-    //           >
-    //             <i className="mdi mdi-email" />
-    //             <span className="count bg-success" />
-    //           </a>
-    //           <div
-    //             className="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
-    //             aria-labelledby="messageDropdown"
-    //           >
-    //             <h6 className="p-3 mb-0">Messages</h6>
-    //             <div className="dropdown-divider" />
-    //             <a className="dropdown-item preview-item">
-    //               <div className="preview-thumbnail">
-    //                 <img
-    //                   src="assets/images/faces/face4.jpg"
-    //                   alt="image"
-    //                   className="rounded-circle profile-pic"
-    //                 />
-    //               </div>
-    //               <div className="preview-item-content">
-    //                 <p className="preview-subject ellipsis mb-1">
-    //                   Mark send you a message
-    //                 </p>
-    //                 <p className="text-muted mb-0"> 1 Minutes ago </p>
-    //               </div>
-    //             </a>
-    //             <div className="dropdown-divider" />
-    //             <a className="dropdown-item preview-item">
-    //               <div className="preview-thumbnail">
-    //                 <img
-    //                   src="assets/images/faces/face2.jpg"
-    //                   alt="image"
-    //                   className="rounded-circle profile-pic"
-    //                 />
-    //               </div>
-    //               <div className="preview-item-content">
-    //                 <p className="preview-subject ellipsis mb-1">
-    //                   Cregh send you a message
-    //                 </p>
-    //                 <p className="text-muted mb-0"> 15 Minutes ago </p>
-    //               </div>
-    //             </a>
-    //             <div className="dropdown-divider" />
-    //             <a className="dropdown-item preview-item">
-    //               <div className="preview-thumbnail">
-    //                 <img
-    //                   src="assets/images/faces/face3.jpg"
-    //                   alt="image"
-    //                   className="rounded-circle profile-pic"
-    //                 />
-    //               </div>
-    //               <div className="preview-item-content">
-    //                 <p className="preview-subject ellipsis mb-1">
-    //                   Profile picture updated
-    //                 </p>
-    //                 <p className="text-muted mb-0"> 18 Minutes ago </p>
-    //               </div>
-    //             </a>
-    //             <div className="dropdown-divider" />
-    //             <p className="p-3 mb-0 text-center">4 new messages</p>
-    //           </div>
-    //         </li>
-    //         <li className="nav-item dropdown border-left">
-    //           <a
-    //             className="nav-link count-indicator dropdown-toggle"
-    //             id="notificationDropdown"
-    //             href="/"
-    //             data-toggle="dropdown"
-    //           >
-    //             <i className="mdi mdi-bell" />
-    //             <span className="count bg-danger" />
-    //           </a>
-    //           <div
-    //             className="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
-    //             aria-labelledby="notificationDropdown"
-    //           >
-    //             <h6 className="p-3 mb-0">Notifications</h6>
-    //             <div className="dropdown-divider" />
-    //             <a className="dropdown-item preview-item">
-    //               <div className="preview-thumbnail">
-    //                 <div className="preview-icon bg-dark rounded-circle">
-    //                   <i className="mdi mdi-calendar text-success" />
-    //                 </div>
-    //               </div>
-    //               <div className="preview-item-content">
-    //                 <p className="preview-subject mb-1">Event today</p>
-    //                 <p className="text-muted ellipsis mb-0">
-    //                   {" "}
-    //                   Just a reminder that you have an event today{" "}
-    //                 </p>
-    //               </div>
-    //             </a>
-    //             <div className="dropdown-divider" />
-    //             <a className="dropdown-item preview-item">
-    //               <div className="preview-thumbnail">
-    //                 <div className="preview-icon bg-dark rounded-circle">
-    //                   <i className="mdi mdi-settings text-danger" />
-    //                 </div>
-    //               </div>
-    //               <div className="preview-item-content">
-    //                 <p className="preview-subject mb-1">Settings</p>
-    //                 <p className="text-muted ellipsis mb-0"> Update dashboard </p>
-    //               </div>
-    //             </a>
-    //             <div className="dropdown-divider" />
-    //             <a className="dropdown-item preview-item">
-    //               <div className="preview-thumbnail">
-    //                 <div className="preview-icon bg-dark rounded-circle">
-    //                   <i className="mdi mdi-link-variant text-warning" />
-    //                 </div>
-    //               </div>
-    //               <div className="preview-item-content">
-    //                 <p className="preview-subject mb-1">Launch Admin</p>
-    //                 <p className="text-muted ellipsis mb-0"> New admin wow! </p>
-    //               </div>
-    //             </a>
-    //             <div className="dropdown-divider" />
-    //             <p className="p-3 mb-0 text-center">See all notifications</p>
-    //           </div>
-    //         </li>
-    //         <li className="nav-item dropdown">
-    //           <a
-    //             className="nav-link"
-    //             id="profileDropdown"
-    //             href="/"
-    //             data-toggle="dropdown"
-    //           >
-    //             <div className="navbar-profile">
-    //               <img
-    //                 className="img-xs rounded-circle"
-    //                 src="assets/images/faces/face15.jpg"
-    //                 alt=""
-    //               />
-    //               <p className="mb-0 d-none d-sm-block navbar-profile-name">
-    //                 Henry Klein
-    //               </p>
-    //               <i className="mdi mdi-menu-down d-none d-sm-block" />
-    //             </div>
-    //           </a>
-    //           <div
-    //             className="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
-    //             aria-labelledby="profileDropdown"
-    //           >
-    //             <h6 className="p-3 mb-0">Profile</h6>
-    //             <div className="dropdown-divider" />
-    //             <a className="dropdown-item preview-item">
-    //               <div className="preview-thumbnail">
-    //                 <div className="preview-icon bg-dark rounded-circle">
-    //                   <i className="mdi mdi-settings text-success" />
-    //                 </div>
-    //               </div>
-    //               <div className="preview-item-content">
-    //                 <p className="preview-subject mb-1">Settings</p>
-    //               </div>
-    //             </a>
-    //             <div className="dropdown-divider" />
-    //             <a className="dropdown-item preview-item">
-    //               <div className="preview-thumbnail">
-    //                 <div className="preview-icon bg-dark rounded-circle">
-    //                   <i className="mdi mdi-logout text-danger" />
-    //                 </div>
-    //               </div>
-    //               <div className="preview-item-content">
-    //                 <p className="preview-subject mb-1">Log out</p>
-    //               </div>
-    //             </a>
-    //             <div className="dropdown-divider" />
-    //             <p className="p-3 mb-0 text-center">Advanced settings</p>
-    //           </div>
-    //         </li>
-    //       </ul>
-    //       <button
-    //         className="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
-    //         type="button"
-    //         data-toggle="offcanvas"
-    //       >
-    //         <span className="mdi mdi-format-line-spacing" />
-    //       </button>
-    //     </div>
-    //   </nav>
-    // </div>
-
-    //     </div>
+  </nav>
+  <ul className="main-search-list-defaultlist d-none">
+    <li className="d-flex align-items-center">
+      <a href="#">
+        <h6 className="section-label mt-75 mb-0">Files</h6>
+      </a>
+    </li>
+    <li className="auto-suggestion">
+      <a
+        className="d-flex align-items-center justify-content-between w-100"
+        href="app-file-manager.html"
+      >
+        <div className="d-flex">
+          <div className="me-75">
+            <img
+              src="../../../app-assets/images/icons/xls.png"
+              alt="png"
+              height={32}
+            />
+          </div>
+          <div className="search-data">
+            <p className="search-data-title mb-0">Two new item submitted</p>
+            <small className="text-muted">Marketing Manager</small>
+          </div>
+        </div>
+        <small className="search-data-size me-50 text-muted">'17kb</small>
+      </a>
+    </li>
+    <li className="auto-suggestion">
+      <a
+        className="d-flex align-items-center justify-content-between w-100"
+        href="app-file-manager.html"
+      >
+        <div className="d-flex">
+          <div className="me-75">
+            <img
+              src="../../../app-assets/images/icons/jpg.png"
+              alt="png"
+              height={32}
+            />
+          </div>
+          <div className="search-data">
+            <p className="search-data-title mb-0">52 JPG file Generated</p>
+            <small className="text-muted">FontEnd Developer</small>
+          </div>
+        </div>
+        <small className="search-data-size me-50 text-muted">'11kb</small>
+      </a>
+    </li>
+    <li className="auto-suggestion">
+      <a
+        className="d-flex align-items-center justify-content-between w-100"
+        href="app-file-manager.html"
+      >
+        <div className="d-flex">
+          <div className="me-75">
+            <img
+              src="../../../app-assets/images/icons/pdf.png"
+              alt="png"
+              height={32}
+            />
+          </div>
+          <div className="search-data">
+            <p className="search-data-title mb-0">25 PDF File Uploaded</p>
+            <small className="text-muted">Digital Marketing Manager</small>
+          </div>
+        </div>
+        <small className="search-data-size me-50 text-muted">'150kb</small>
+      </a>
+    </li>
+    <li className="auto-suggestion">
+      <a
+        className="d-flex align-items-center justify-content-between w-100"
+        href="app-file-manager.html"
+      >
+        <div className="d-flex">
+          <div className="me-75">
+            <img
+              src="../../../app-assets/images/icons/doc.png"
+              alt="png"
+              height={32}
+            />
+          </div>
+          <div className="search-data">
+            <p className="search-data-title mb-0">Anna_Strong.doc</p>
+            <small className="text-muted">Web Designer</small>
+          </div>
+        </div>
+        <small className="search-data-size me-50 text-muted">'256kb</small>
+      </a>
+    </li>
+    <li className="d-flex align-items-center">
+      <a href="#">
+        <h6 className="section-label mt-75 mb-0">Members</h6>
+      </a>
+    </li>
+    <li className="auto-suggestion">
+      <a
+        className="d-flex align-items-center justify-content-between py-50 w-100"
+        href="app-user-view.html"
+      >
+        <div className="d-flex align-items-center">
+          <div className="avatar me-75">
+            <img
+              src="../../../app-assets/images/portrait/small/avatar-s-8.jpg"
+              alt="png"
+              height={32}
+            />
+          </div>
+          <div className="search-data">
+            <p className="search-data-title mb-0">John Doe</p>
+            <small className="text-muted">UI designer</small>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li className="auto-suggestion">
+      <a
+        className="d-flex align-items-center justify-content-between py-50 w-100"
+        href="app-user-view.html"
+      >
+        <div className="d-flex align-items-center">
+          <div className="avatar me-75">
+            <img
+              src="../../../app-assets/images/portrait/small/avatar-s-1.jpg"
+              alt="png"
+              height={32}
+            />
+          </div>
+          <div className="search-data">
+            <p className="search-data-title mb-0">Michal Clark</p>
+            <small className="text-muted">FontEnd Developer</small>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li className="auto-suggestion">
+      <a
+        className="d-flex align-items-center justify-content-between py-50 w-100"
+        href="app-user-view.html"
+      >
+        <div className="d-flex align-items-center">
+          <div className="avatar me-75">
+            <img
+              src="../../../app-assets/images/portrait/small/avatar-s-14.jpg"
+              alt="png"
+              height={32}
+            />
+          </div>
+          <div className="search-data">
+            <p className="search-data-title mb-0">Milena Gibson</p>
+            <small className="text-muted">Digital Marketing Manager</small>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li className="auto-suggestion">
+      <a
+        className="d-flex align-items-center justify-content-between py-50 w-100"
+        href="app-user-view.html"
+      >
+        <div className="d-flex align-items-center">
+          <div className="avatar me-75">
+            <img
+              src="../../../app-assets/images/portrait/small/avatar-s-6.jpg"
+              alt="png"
+              height={32}
+            />
+          </div>
+          <div className="search-data">
+            <p className="search-data-title mb-0">Anna Strong</p>
+            <small className="text-muted">Web Designer</small>
+          </div>
+        </div>
+      </a>
+    </li>
+  </ul>
+  <ul className="main-search-list-defaultlist-other-list d-none">
+    <li className="auto-suggestion justify-content-between">
+      <a className="d-flex align-items-center justify-content-between w-100 py-50">
+        <div className="d-flex justify-content-start">
+          <span className="me-75" data-feather="alert-circle" />
+          <span>No results found.</span>
+        </div>
+      </a>
+    </li>
+  </ul>
+</>  
+  
+   
   );
 }
 

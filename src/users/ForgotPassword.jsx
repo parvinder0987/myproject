@@ -14,28 +14,33 @@ function ForgotPassword() {
             <div className="content-wrapper full-page-wrapper d-flex align-items-center auth login-bg">
               <div className="card col-lg-4 mx-auto">
                 <div className="card-body px-5 py-5">
-                  <h3 className="card-title text-left mb-3">Forget password</h3>
-                  <form>
-                    <div className="form-group">
-                      <label>Email</label>
-                      <input type="email" className="form-control p_input" />
-                    </div>
-                    <div className="text-center">
+                  <div className="mb-1">
+                    <h4 className="card-title mb-1">Forget Password</h4>
+                    <label htmlFor="email" className="form-label">
+                      Enter your email to receive OTP
+                    </label>
+                    <div className="input-group">
+                      <input
+                        type="email"
+                        className="form-control"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        aria-describedby="email"
+                        tabIndex={1}
+                      
+                      />
                       <button
-                        onClick={handdleForgot}
-                        to="/login"
-                        className="btn btn-primary btn-block enter-btn"
+                        className="btn btn-primary"
+                        type="button"
+                        onClick={handdleForgot} 
                       >
-                        Submit
+                        Send OTP
                       </button>
-                      <br></br>
+                      
                     </div>
-                    <div className="form-group d-flex align-items-center justify-content-between">
-                      <Link to="/login" className="forgot-pass">
-                        Back to login
-                      </Link>
-                    </div>
-                  </form>
+                    <Link to="/login"><b>Back</b></Link>
+                  </div>
                 </div>
               </div>
             </div>

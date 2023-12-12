@@ -3,1664 +3,992 @@ import React from 'react'
 function Dashboard() {
   return (
     <div>
-        <div className="content-wrapper">
-          {/* <div className="row">
-            <div className="col-12 grid-margin stretch-card">
-              <div className="card corona-gradient-card">
-                <div className="card-body py-0 px-0 px-sm-3">
-                  <div className="row align-items-center">
-                    <div className="col-4 col-sm-3 col-xl-2">
-                      <img
-                        src="assets/images/dashboard/Group126@2x.png"
-                        className="gradient-corona-img img-fluid"
-                        alt=""
-                      />
-                    </div>
-                    <div className="col-5 col-sm-7 col-xl-8 p-0">
-                      <h4 className="mb-1 mb-sm-0">Want even more features?</h4>
-                      <p className="mb-0 font-weight-normal d-none d-sm-block">
-                        Check out our Pro version with 5 unique layouts!
-                      </p>
-                    </div>
-                    <div className="col-3 col-sm-2 col-xl-2 pl-0 text-center">
-                      <span>
-                        <a
-                          href="https://www.bootstrapdash.com/product/corona-admin-template/"
-                          target="_blank"
-                          className="btn btn-outline-light btn-rounded get-started-btn"
-                        >
-                          Upgrade to PRO
-                        </a>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
-          <div className="row">
-            <div className="col-xl-3 col-sm-6 grid-margin stretch-card">
-              <div className="card">
-                <div className="card-body">
-                  <div className="row">
-                    <div className="col-9">
-                      <div className="d-flex align-items-center align-self-start">
-                        <h3 className="mb-0">$12.34</h3>
-                        <p className="text-success ml-2 mb-0 font-weight-medium">
-                          +3.5%
-                        </p>
-                      </div>
-                    </div>
-                    <div className="col-3">
-                      <div className="icon icon-box-success ">
-                        <span className="mdi mdi-arrow-top-right icon-item" />
-                      </div>
-                    </div>
-                  </div>
-                  <h6 className="text-muted font-weight-normal">
-                    Potential growth
-                  </h6>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-3 col-sm-6 grid-margin stretch-card">
-              <div className="card">
-                <div className="card-body">
-                  <div className="row">
-                    <div className="col-9">
-                      <div className="d-flex align-items-center align-self-start">
-                        <h3 className="mb-0">$17.34</h3>
-                        <p className="text-success ml-2 mb-0 font-weight-medium">
-                          +11%
-                        </p>
-                      </div>
-                    </div>
-                    <div className="col-3">
-                      <div className="icon icon-box-success">
-                        <span className="mdi mdi-arrow-top-right icon-item" />
-                      </div>
-                    </div>
-                  </div>
-                  <h6 className="text-muted font-weight-normal">
-                    Revenue current
-                  </h6>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-3 col-sm-6 grid-margin stretch-card">
-              <div className="card">
-                <div className="card-body">
-                  <div className="row">
-                    <div className="col-9">
-                      <div className="d-flex align-items-center align-self-start">
-                        <h3 className="mb-0">$12.34</h3>
-                        <p className="text-danger ml-2 mb-0 font-weight-medium">
-                          -2.4%
-                        </p>
-                      </div>
-                    </div>
-                    <div className="col-3">
-                      <div className="icon icon-box-danger">
-                        <span className="mdi mdi-arrow-bottom-left icon-item" />
-                      </div>
-                    </div>
-                  </div>
-                  <h6 className="text-muted font-weight-normal">
-                    Daily Income
-                  </h6>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-3 col-sm-6 grid-margin stretch-card">
-              <div className="card">
-                <div className="card-body">
-                  <div className="row">
-                    <div className="col-9">
-                      <div className="d-flex align-items-center align-self-start">
-                        <h3 className="mb-0">$31.53</h3>
-                        <p className="text-success ml-2 mb-0 font-weight-medium">
-                          +3.5%
-                        </p>
-                      </div>
-                    </div>
-                    <div className="col-3">
-                      <div className="icon icon-box-success ">
-                        <span className="mdi mdi-arrow-top-right icon-item" />
-                      </div>
-                    </div>
-                  </div>
-                  <h6 className="text-muted font-weight-normal">
-                    Expense current
-                  </h6>
-                </div>
+<div className="app-content content ">
+  <div className="content-overlay" />
+  <div className="header-navbar-shadow" />
+  <div className="content-wrapper container-xxl p-0">
+    <div className="content-header row"></div>
+    <div className="content-body">
+      {/* Dashboard Ecommerce Starts */}
+      <section id="dashboard-ecommerce">
+        <div className="row match-height">
+          {/* Medal Card */}
+          <div className="col-xl-4 col-md-6 col-12">
+            <div className="card card-congratulation-medal">
+              <div className="card-body">
+                <h5>Congratulations 🎉 John!</h5>
+                <p className="card-text font-small-3">
+                  You have won gold medal
+                </p>
+                <h3 className="mb-75 mt-2 pt-50">
+                  <a href="#">$48.9k</a>
+                </h3>
+                <button type="button" className="btn btn-primary">
+                  View Sales
+                </button>
+                <img
+                  src="../../../app-assets/images/illustration/badge.svg"
+                  className="congratulation-medal"
+                  alt="Medal Pic"
+                />
               </div>
             </div>
           </div>
-          {/* <div className="row">
-            <div className="col-md-4 grid-margin stretch-card">
-              <div className="card">
-                <div className="card-body">
-                  <h4 className="card-title">Transaction History</h4>
-                  <canvas
-                    id="transaction-history"
-                    className="transaction-chart"
-                  />
-                  <div className="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
-                    <div className="text-md-center text-xl-left">
-                      <h6 className="mb-1">Transfer to Paypal</h6>
-                      <p className="text-muted mb-0">07 Jan 2019, 09:12AM</p>
-                    </div>
-                    <div className="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
-                      <h6 className="font-weight-bold mb-0">$236</h6>
-                    </div>
-                  </div>
-                  <div className="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
-                    <div className="text-md-center text-xl-left">
-                      <h6 className="mb-1">Tranfer to Stripe</h6>
-                      <p className="text-muted mb-0">07 Jan 2019, 09:12AM</p>
-                    </div>
-                    <div className="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
-                      <h6 className="font-weight-bold mb-0">$593</h6>
-                    </div>
-                  </div>
+          {/*/ Medal Card */}
+          {/* Statistics Card */}
+          <div className="col-xl-8 col-md-6 col-12">
+            <div className="card card-statistics">
+              <div className="card-header">
+                <h4 className="card-title">Statistics</h4>
+                <div className="d-flex align-items-center">
+                  <p className="card-text font-small-2 me-25 mb-0">
+                    Updated 1 month ago
+                  </p>
                 </div>
               </div>
-            </div>
-            <div className="col-md-8 grid-margin stretch-card">
-              <div className="card">
-                <div className="card-body">
-                  <div className="d-flex flex-row justify-content-between">
-                    <h4 className="card-title mb-1">Open Projects</h4>
-                    <p className="text-muted mb-1">Your data status</p>
-                  </div>
-                  <div className="row">
-                    <div className="col-12">
-                      <div className="preview-list">
-                        <div className="preview-item border-bottom">
-                          <div className="preview-thumbnail">
-                            <div className="preview-icon bg-primary">
-                              <i className="mdi mdi-file-document" />
-                            </div>
-                          </div>
-                          <div className="preview-item-content d-sm-flex flex-grow">
-                            <div className="flex-grow">
-                              <h6 className="preview-subject">
-                                Admin dashboard design
-                              </h6>
-                              <p className="text-muted mb-0">
-                                Broadcast web app mockup
-                              </p>
-                            </div>
-                            <div className="mr-auto text-sm-right pt-2 pt-sm-0">
-                              <p className="text-muted">15 minutes ago</p>
-                              <p className="text-muted mb-0">
-                                30 tasks, 5 issues{" "}
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="preview-item border-bottom">
-                          <div className="preview-thumbnail">
-                            <div className="preview-icon bg-success">
-                              <i className="mdi mdi-cloud-download" />
-                            </div>
-                          </div>
-                          <div className="preview-item-content d-sm-flex flex-grow">
-                            <div className="flex-grow">
-                              <h6 className="preview-subject">
-                                Wordpress Development
-                              </h6>
-                              <p className="text-muted mb-0">
-                                Upload new design
-                              </p>
-                            </div>
-                            <div className="mr-auto text-sm-right pt-2 pt-sm-0">
-                              <p className="text-muted">1 hour ago</p>
-                              <p className="text-muted mb-0">
-                                23 tasks, 5 issues{" "}
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="preview-item border-bottom">
-                          <div className="preview-thumbnail">
-                            <div className="preview-icon bg-info">
-                              <i className="mdi mdi-clock" />
-                            </div>
-                          </div>
-                          <div className="preview-item-content d-sm-flex flex-grow">
-                            <div className="flex-grow">
-                              <h6 className="preview-subject">
-                                Project meeting
-                              </h6>
-                              <p className="text-muted mb-0">
-                                New project discussion
-                              </p>
-                            </div>
-                            <div className="mr-auto text-sm-right pt-2 pt-sm-0">
-                              <p className="text-muted">35 minutes ago</p>
-                              <p className="text-muted mb-0">
-                                15 tasks, 2 issues
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="preview-item border-bottom">
-                          <div className="preview-thumbnail">
-                            <div className="preview-icon bg-danger">
-                              <i className="mdi mdi-email-open" />
-                            </div>
-                          </div>
-                          <div className="preview-item-content d-sm-flex flex-grow">
-                            <div className="flex-grow">
-                              <h6 className="preview-subject">
-                                Broadcast Mail
-                              </h6>
-                              <p className="text-muted mb-0">
-                                Sent release details to team
-                              </p>
-                            </div>
-                            <div className="mr-auto text-sm-right pt-2 pt-sm-0">
-                              <p className="text-muted">55 minutes ago</p>
-                              <p className="text-muted mb-0">
-                                35 tasks, 7 issues{" "}
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="preview-item">
-                          <div className="preview-thumbnail">
-                            <div className="preview-icon bg-warning">
-                              <i className="mdi mdi-chart-pie" />
-                            </div>
-                          </div>
-                          <div className="preview-item-content d-sm-flex flex-grow">
-                            <div className="flex-grow">
-                              <h6 className="preview-subject">UI Design</h6>
-                              <p className="text-muted mb-0">
-                                New application planning
-                              </p>
-                            </div>
-                            <div className="mr-auto text-sm-right pt-2 pt-sm-0">
-                              <p className="text-muted">50 minutes ago</p>
-                              <p className="text-muted mb-0">
-                                27 tasks, 4 issues{" "}
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
-          {/* <div className="row">
-            <div className="col-sm-4 grid-margin">
-              <div className="card">
-                <div className="card-body">
-                  <h5>Revenue</h5>
-                  <div className="row">
-                    <div className="col-8 col-sm-12 col-xl-8 my-auto">
-                      <div className="d-flex d-sm-block d-md-flex align-items-center">
-                        <h2 className="mb-0">$32123</h2>
-                        <p className="text-success ml-2 mb-0 font-weight-medium">
-                          +3.5%
-                        </p>
-                      </div>
-                      <h6 className="text-muted font-weight-normal">
-                        11.38% Since last month
-                      </h6>
-                    </div>
-                    <div className="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-                      <i className="icon-lg mdi mdi-codepen text-primary ml-auto" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-4 grid-margin">
-              <div className="card">
-                <div className="card-body">
-                  <h5>Sales</h5>
-                  <div className="row">
-                    <div className="col-8 col-sm-12 col-xl-8 my-auto">
-                      <div className="d-flex d-sm-block d-md-flex align-items-center">
-                        <h2 className="mb-0">$45850</h2>
-                        <p className="text-success ml-2 mb-0 font-weight-medium">
-                          +8.3%
-                        </p>
-                      </div>
-                      <h6 className="text-muted font-weight-normal">
-                        {" "}
-                        9.61% Since last month
-                      </h6>
-                    </div>
-                    <div className="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-                      <i className="icon-lg mdi mdi-wallet-travel text-danger ml-auto" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-4 grid-margin">
-              <div className="card">
-                <div className="card-body">
-                  <h5>Purchase</h5>
-                  <div className="row">
-                    <div className="col-8 col-sm-12 col-xl-8 my-auto">
-                      <div className="d-flex d-sm-block d-md-flex align-items-center">
-                        <h2 className="mb-0">$2039</h2>
-                        <p className="text-danger ml-2 mb-0 font-weight-medium">
-                          -2.1%{" "}
-                        </p>
-                      </div>
-                      <h6 className="text-muted font-weight-normal">
-                        2.27% Since last month
-                      </h6>
-                    </div>
-                    <div className="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-                      <i className="icon-lg mdi mdi-monitor text-success ml-auto" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
-          <div className="row ">
-            <div className="col-12 grid-margin">
-              <div className="card">
-                <div className="card-body">
-                  <h4 className="card-title">Order Status</h4>
-                  <div className="table-responsive">
-                    <table className="table">
-                      <thead>
-                        <tr>
-                          <th>
-                            <div className="form-check form-check-muted m-0">
-                              <label className="form-check-label">
-                                <input
-                                  type="checkbox"
-                                  className="form-check-input"
-                                />
-                              </label>
-                            </div>
-                          </th>
-                          <th> Client Name </th>
-                          <th> Order No </th>
-                          <th> Product Cost </th>
-                          <th> Project </th>
-                          <th> Payment Mode </th>
-                          <th> Start Date </th>
-                          <th> Payment Status </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            <div className="form-check form-check-muted m-0">
-                              <label className="form-check-label">
-                                <input
-                                  type="checkbox"
-                                  className="form-check-input"
-                                />
-                              </label>
-                            </div>
-                          </td>
-                          <td>
-                            <img
-                              src="assets/images/faces/face1.jpg"
-                              alt="image"
-                            />
-                            <span className="pl-2">Henry Klein</span>
-                          </td>
-                          <td> 02312 </td>
-                          <td> $14,500 </td>
-                          <td> Dashboard </td>
-                          <td> Credit card </td>
-                          <td> 04 Dec 2019 </td>
-                          <td>
-                            <div className="badge badge-outline-success">
-                              Approved
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div className="form-check form-check-muted m-0">
-                              <label className="form-check-label">
-                                <input
-                                  type="checkbox"
-                                  className="form-check-input"
-                                />
-                              </label>
-                            </div>
-                          </td>
-                          <td>
-                            <img
-                              src="assets/images/faces/face2.jpg"
-                              alt="image"
-                            />
-                            <span className="pl-2">Estella Bryan</span>
-                          </td>
-                          <td> 02312 </td>
-                          <td> $14,500 </td>
-                          <td> Website </td>
-                          <td> Cash on delivered </td>
-                          <td> 04 Dec 2019 </td>
-                          <td>
-                            <div className="badge badge-outline-warning">
-                              Pending
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div className="form-check form-check-muted m-0">
-                              <label className="form-check-label">
-                                <input
-                                  type="checkbox"
-                                  className="form-check-input"
-                                />
-                              </label>
-                            </div>
-                          </td>
-                          <td>
-                            <img
-                              src="assets/images/faces/face5.jpg"
-                              alt="image"
-                            />
-                            <span className="pl-2">Lucy Abbott</span>
-                          </td>
-                          <td> 02312 </td>
-                          <td> $14,500 </td>
-                          <td> App design </td>
-                          <td> Credit card </td>
-                          <td> 04 Dec 2019 </td>
-                          <td>
-                            <div className="badge badge-outline-danger">
-                              Rejected
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div className="form-check form-check-muted m-0">
-                              <label className="form-check-label">
-                                <input
-                                  type="checkbox"
-                                  className="form-check-input"
-                                />
-                              </label>
-                            </div>
-                          </td>
-                          <td>
-                            <img
-                              src="assets/images/faces/face3.jpg"
-                              alt="image"
-                            />
-                            <span className="pl-2">Peter Gill</span>
-                          </td>
-                          <td> 02312 </td>
-                          <td> $14,500 </td>
-                          <td> Development </td>
-                          <td> Online Payment </td>
-                          <td> 04 Dec 2019 </td>
-                          <td>
-                            <div className="badge badge-outline-success">
-                              Approved
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div className="form-check form-check-muted m-0">
-                              <label className="form-check-label">
-                                <input
-                                  type="checkbox"
-                                  className="form-check-input"
-                                />
-                              </label>
-                            </div>
-                          </td>
-                          <td>
-                            <img
-                              src="assets/images/faces/face4.jpg"
-                              alt="image"
-                            />
-                            <span className="pl-2">Sallie Reyes</span>
-                          </td>
-                          <td> 02312 </td>
-                          <td> $14,500 </td>
-                          <td> Website </td>
-                          <td> Credit card </td>
-                          <td> 04 Dec 2019 </td>
-                          <td>
-                            <div className="badge badge-outline-success">
-                              Approved
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            {/* <div className="col-md-6 col-xl-4 grid-margin stretch-card">
-              <div className="card">
-                <div className="card-body">
-                  <div className="d-flex flex-row justify-content-between">
-                    <h4 className="card-title">Messages</h4>
-                    <p className="text-muted mb-1 small">View all</p>
-                  </div>
-                  <div className="preview-list">
-                    <div className="preview-item border-bottom">
-                      <div className="preview-thumbnail">
-                        <img
-                          src="assets/images/faces/face6.jpg"
-                          alt="image"
-                          className="rounded-circle"
-                        />
-                      </div>
-                      <div className="preview-item-content d-flex flex-grow">
-                        <div className="flex-grow">
-                          <div className="d-flex d-md-block d-xl-flex justify-content-between">
-                            <h6 className="preview-subject">Leonard</h6>
-                            <p className="text-muted text-small">
-                              5 minutes ago
-                            </p>
-                          </div>
-                          <p className="text-muted">
-                            Well, it seems to be working now.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="preview-item border-bottom">
-                      <div className="preview-thumbnail">
-                        <img
-                          src="assets/images/faces/face8.jpg"
-                          alt="image"
-                          className="rounded-circle"
-                        />
-                      </div>
-                      <div className="preview-item-content d-flex flex-grow">
-                        <div className="flex-grow">
-                          <div className="d-flex d-md-block d-xl-flex justify-content-between">
-                            <h6 className="preview-subject">Luella Mills</h6>
-                            <p className="text-muted text-small">
-                              10 Minutes Ago
-                            </p>
-                          </div>
-                          <p className="text-muted">
-                            Well, it seems to be working now.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="preview-item border-bottom">
-                      <div className="preview-thumbnail">
-                        <img
-                          src="assets/images/faces/face9.jpg"
-                          alt="image"
-                          className="rounded-circle"
-                        />
-                      </div>
-                      <div className="preview-item-content d-flex flex-grow">
-                        <div className="flex-grow">
-                          <div className="d-flex d-md-block d-xl-flex justify-content-between">
-                            <h6 className="preview-subject">Ethel Kelly</h6>
-                            <p className="text-muted text-small">2 Hours Ago</p>
-                          </div>
-                          <p className="text-muted">
-                            Please review the tickets
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="preview-item border-bottom">
-                      <div className="preview-thumbnail">
-                        <img
-                          src="assets/images/faces/face11.jpg"
-                          alt="image"
-                          className="rounded-circle"
-                        />
-                      </div>
-                      <div className="preview-item-content d-flex flex-grow">
-                        <div className="flex-grow">
-                          <div className="d-flex d-md-block d-xl-flex justify-content-between">
-                            <h6 className="preview-subject">Herman May</h6>
-                            <p className="text-muted text-small">4 Hours Ago</p>
-                          </div>                            
-                          <p className="text-muted">
-                            Thanks a lot. It was easy to fix it .
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-xl-4 grid-margin stretch-card">
-              <div className="card">
-                <div className="card-body">
-                  <h4 className="card-title">Portfolio Slide</h4>
-                  <div
-                    className="owl-carousel owl-theme full-width owl-carousel-dash portfolio-carousel"
-                    id="owl-carousel-basic"
-                  >
-                    <div className="item">
-                      <img src="assets/images/dashboard/Rectangle.jpg" alt="" />
-                    </div>
-                    <div className="item">
-                      <img src="assets/images/dashboard/Img_5.jpg" alt="" />
-                    </div>
-                    <div className="item">
-                      <img src="assets/images/dashboard/img_6.jpg" alt="" />
-                    </div>
-                  </div>
-                  <div className="d-flex py-4">
-                    <div className="preview-list w-100">
-                      <div className="preview-item p-0">
-                        <div className="preview-thumbnail">
-                          <img
-                            src="assets/images/faces/face12.jpg"
-                            className="rounded-circle"
-                            alt=""
+              <div className="card-body statistics-body">
+                <div className="row">
+                  <div className="col-xl-3 col-sm-6 col-12 mb-2 mb-xl-0">
+                    <div className="d-flex flex-row">
+                      <div className="avatar bg-light-primary me-2">
+                        <div className="avatar-content">
+                          <i
+                            data-feather="trending-up"
+                            className="avatar-icon"
                           />
                         </div>
-                        <div className="preview-item-content d-flex flex-grow">
-                          <div className="flex-grow">
-                            <div className="d-flex d-md-block d-xl-flex justify-content-between">
-                              <h6 className="preview-subject">CeeCee Bass</h6>
-                              <p className="text-muted text-small">
-                                4 Hours Ago
-                              </p>
-                            </div>
-                            <p className="text-muted">
-                              Well, it seems to be working now.
-                            </p>
-                          </div>
-                        </div>
+                      </div>
+                      <div className="my-auto">
+                        <h4 className="fw-bolder mb-0">230k</h4>
+                        <p className="card-text font-small-3 mb-0">Sales</p>
                       </div>
                     </div>
                   </div>
-                  <p className="text-muted">
-                    Well, it seems to be working now.{" "}
-                  </p>
-                  <div className="progress progress-md portfolio-progress">
-                    <div
-                      className="progress-bar bg-success"
-                      role="progressbar"
-                      style={{ width: "50%" }}
-                      aria-valuenow={25}
-                      aria-valuemin={0}
-                      aria-valuemax={100}
-                    />
+                  <div className="col-xl-3 col-sm-6 col-12 mb-2 mb-xl-0">
+                    <div className="d-flex flex-row">
+                      <div className="avatar bg-light-info me-2">
+                        <div className="avatar-content">
+                          <i data-feather="user" className="avatar-icon" />
+                        </div>
+                      </div>
+                      <div className="my-auto">
+                        <h4 className="fw-bolder mb-0">8.549k</h4>
+                        <p className="card-text font-small-3 mb-0">Customers</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div> */}
-            <div className="col-md-12 col-xl-4 grid-margin stretch-card">
-              <div className="card">
-                <div className="card-body">
-                  <h4 className="card-title">To do list</h4>
-                  <div className="add-items d-flex">
-                    <input
-                      type="text"
-                      className="form-control todo-list-input"
-                      placeholder="enter task.."
-                    />
-                    <button className="add btn btn-primary todo-list-add-btn">
-                      Add
-                    </button>
+                  <div className="col-xl-3 col-sm-6 col-12 mb-2 mb-sm-0">
+                    <div className="d-flex flex-row">
+                      <div className="avatar bg-light-danger me-2">
+                        <div className="avatar-content">
+                          <i data-feather="box" className="avatar-icon" />
+                        </div>
+                      </div>
+                      <div className="my-auto">
+                        <h4 className="fw-bolder mb-0">1.423k</h4>
+                        <p className="card-text font-small-3 mb-0">Products</p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="list-wrapper">
-                    <ul className="d-flex flex-column-reverse text-white todo-list todo-list-custom">
-                      <li>
-                        <div className="form-check form-check-primary">
-                          <label className="form-check-label">
-                            <input className="checkbox" type="checkbox" />{" "}
-                            Create invoice{" "}
-                          </label>
+                  <div className="col-xl-3 col-sm-6 col-12">
+                    <div className="d-flex flex-row">
+                      <div className="avatar bg-light-success me-2">
+                        <div className="avatar-content">
+                          <i
+                            data-feather="dollar-sign"
+                            className="avatar-icon"
+                          />
                         </div>
-                        <i className="remove mdi mdi-close-box" />
-                      </li>
-                      <li>
-                        <div className="form-check form-check-primary">
-                          <label className="form-check-label">
-                            <input className="checkbox" type="checkbox" />{" "}
-                            Meeting with Alita{" "}
-                          </label>
-                        </div>
-                        <i className="remove mdi mdi-close-box" />
-                      </li>
-                      <li className="completed">
-                        <div className="form-check form-check-primary">
-                          <label className="form-check-label">
-                            <input
-                              className="checkbox"
-                              type="checkbox"
-                              defaultChecked=""
-                            />{" "}
-                            Prepare for presentation{" "}
-                          </label>
-                        </div>
-                        <i className="remove mdi mdi-close-box" />
-                      </li>
-                      <li>
-                        <div className="form-check form-check-primary">
-                          <label className="form-check-label">
-                            <input className="checkbox" type="checkbox" /> Plan
-                            weekend outing{" "}
-                          </label>
-                        </div>
-                        <i className="remove mdi mdi-close-box" />
-                      </li>
-                      <li>
-                        <div className="form-check form-check-primary">
-                          <label className="form-check-label">
-                            <input className="checkbox" type="checkbox" /> Pick
-                            up kids from school{" "}
-                          </label>
-                        </div>
-                        <i className="remove mdi mdi-close-box" />
-                      </li>
-                    </ul>
+                      </div>
+                      <div className="my-auto">
+                        <h4 className="fw-bolder mb-0">$9745</h4>
+                        <p className="card-text font-small-3 mb-0">Revenue</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          {/* <div className="row">
-            <div className="col-12">
-              <div className="card">
-                <div className="card-body">
-                  <h4 className="card-title">Visitors by Countries</h4>
-                  <div className="row">
-                    <div className="col-md-5">
-                      <div className="table-responsive">
-                        <table className="table">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <i className="flag-icon flag-icon-us" />
-                              </td>
-                              <td>USA</td>
-                              <td className="text-right"> 1500 </td>
-                              <td className="text-right font-weight-medium">
-                                {" "}
-                                56.35%{" "}
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <i className="flag-icon flag-icon-de" />
-                              </td>
-                              <td>Germany</td>
-                              <td className="text-right"> 800 </td>
-                              <td className="text-right font-weight-medium">
-                                {" "}
-                                33.25%{" "}
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <i className="flag-icon flag-icon-au" />
-                              </td>
-                              <td>Australia</td>
-                              <td className="text-right"> 760 </td>
-                              <td className="text-right font-weight-medium">
-                                {" "}
-                                15.45%{" "}
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <i className="flag-icon flag-icon-gb" />
-                              </td>
-                              <td>United Kingdom</td>
-                              <td className="text-right"> 450 </td>
-                              <td className="text-right font-weight-medium">
-                                {" "}
-                                25.00%{" "}
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <i className="flag-icon flag-icon-ro" />
-                              </td>
-                              <td>Romania</td>
-                              <td className="text-right"> 620 </td>
-                              <td className="text-right font-weight-medium">
-                                {" "}
-                                10.25%{" "}
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <i className="flag-icon flag-icon-br" />
-                              </td>
-                              <td>Brasil</td>
-                              <td className="text-right"> 230 </td>
-                              <td className="text-right font-weight-medium">
-                                {" "}
-                                75.00%{" "}
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+          {/*/ Statistics Card */}
+        </div>
+        <div className="row match-height">
+          <div className="col-lg-4 col-12">
+            <div className="row match-height">
+              {/* Bar Chart - Orders */}
+              <div className="col-lg-6 col-md-3 col-6">
+                <div className="card">
+                  <div className="card-body pb-50">
+                    <h6>Orders</h6>
+                    <h2 className="fw-bolder mb-1">2,76k</h2>
+                    <div id="statistics-order-chart" />
+                  </div>
+                </div>
+              </div>
+              {/*/ Bar Chart - Orders */}
+              {/* Line Chart - Profit */}
+              <div className="col-lg-6 col-md-3 col-6">
+                <div className="card card-tiny-line-stats">
+                  <div className="card-body pb-50">
+                    <h6>Profit</h6>
+                    <h2 className="fw-bolder mb-1">6,24k</h2>
+                    <div id="statistics-profit-chart" />
+                  </div>
+                </div>
+              </div>
+              {/*/ Line Chart - Profit */}
+              {/* Earnings Card */}
+              <div className="col-lg-12 col-md-6 col-12">
+                <div className="card earnings-card">
+                  <div className="card-body">
+                    <div className="row">
+                      <div className="col-6">
+                        <h4 className="card-title mb-1">Earnings</h4>
+                        <div className="font-small-2">This Month</div>
+                        <h5 className="mb-1">$4055.56</h5>
+                        <p className="card-text text-muted font-small-2">
+                          <span className="fw-bolder">68.2%</span>
+                          <span> more earnings than last month.</span>
+                        </p>
                       </div>
-                    </div>
-                    <div className="col-md-7">
-                      <div id="audience-map" className="vector-map" />
+                      <div className="col-6">
+                        <div id="earnings-chart" />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+              {/*/ Earnings Card */}
             </div>
-          </div> */}
+          </div>
+          {/* Revenue Report Card */}
+          <div className="col-lg-8 col-12">
+            <div className="card card-revenue-budget">
+              <div className="row mx-0">
+                <div className="col-md-8 col-12 revenue-report-wrapper">
+                  <div className="d-sm-flex justify-content-between align-items-center mb-3">
+                    <h4 className="card-title mb-50 mb-sm-0">Revenue Report</h4>
+                    <div className="d-flex align-items-center">
+                      <div className="d-flex align-items-center me-2">
+                        <span className="bullet bullet-primary font-small-3 me-50 cursor-pointer" />
+                        <span>Earning</span>
+                      </div>
+                      <div className="d-flex align-items-center ms-75">
+                        <span className="bullet bullet-warning font-small-3 me-50 cursor-pointer" />
+                        <span>Expense</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="revenue-report-chart" />
+                </div>
+                <div className="col-md-4 col-12 budget-wrapper">
+                  <div className="btn-group">
+                    <button
+                      type="button"
+                      className="btn btn-outline-primary btn-sm dropdown-toggle budget-dropdown"
+                      data-bs-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      2020
+                    </button>
+                    <div className="dropdown-menu">
+                      <a className="dropdown-item" href="#">
+                        2020
+                      </a>
+                      <a className="dropdown-item" href="#">
+                        2019
+                      </a>
+                      <a className="dropdown-item" href="#">
+                        2018
+                      </a>
+                    </div>
+                  </div>
+                  <h2 className="mb-25">$25,852</h2>
+                  <div className="d-flex justify-content-center">
+                    <span className="fw-bolder me-25">Budget:</span>
+                    <span>56,800</span>
+                  </div>
+                  <div id="budget-chart" />
+                  <button type="button" className="btn btn-primary">
+                    Increase Budget
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/*/ Revenue Report Card */}
         </div>
+        <div className="row match-height">
+          {/* Company Table Card */}
+          <div className="col-lg-8 col-12">
+            <div className="card card-company-table">
+              <div className="card-body p-0">
+                <div className="table-responsive">
+                  <table className="table">
+                    <thead>
+                      <tr>
+                        <th>Company</th>
+                        <th>Category</th>
+                        <th>Views</th>
+                        <th>Revenue</th>
+                        <th>Sales</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <div className="avatar rounded">
+                              <div className="avatar-content">
+                                <img
+                                  src="../../../app-assets/images/icons/toolbox.svg"
+                                  alt="Toolbar svg"
+                                />
+                              </div>
+                            </div>
+                            <div>
+                              <div className="fw-bolder">Dixons</div>
+                              <div className="font-small-2 text-muted">
+                                meguc@ruj.io
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <div className="avatar bg-light-primary me-1">
+                              <div className="avatar-content">
+                                <i
+                                  data-feather="monitor"
+                                  className="font-medium-3"
+                                />
+                              </div>
+                            </div>
+                            <span>Technology</span>
+                          </div>
+                        </td>
+                        <td className="text-nowrap">
+                          <div className="d-flex flex-column">
+                            <span className="fw-bolder mb-25">23.4k</span>
+                            <span className="font-small-2 text-muted">
+                              in 24 hours
+                            </span>
+                          </div>
+                        </td>
+                        <td>$891.2</td>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <span className="fw-bolder me-1">68%</span>
+                            <i
+                              data-feather="trending-down"
+                              className="text-danger font-medium-1"
+                            />
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <div className="avatar rounded">
+                              <div className="avatar-content">
+                                <img
+                                  src="../../../app-assets/images/icons/parachute.svg"
+                                  alt="Parachute svg"
+                                />
+                              </div>
+                            </div>
+                            <div>
+                              <div className="fw-bolder">Motels</div>
+                              <div className="font-small-2 text-muted">
+                                vecav@hodzi.co.uk
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <div className="avatar bg-light-success me-1">
+                              <div className="avatar-content">
+                                <i
+                                  data-feather="coffee"
+                                  className="font-medium-3"
+                                />
+                              </div>
+                            </div>
+                            <span>Grocery</span>
+                          </div>
+                        </td>
+                        <td className="text-nowrap">
+                          <div className="d-flex flex-column">
+                            <span className="fw-bolder mb-25">78k</span>
+                            <span className="font-small-2 text-muted">
+                              in 2 days
+                            </span>
+                          </div>
+                        </td>
+                        <td>$668.51</td>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <span className="fw-bolder me-1">97%</span>
+                            <i
+                              data-feather="trending-up"
+                              className="text-success font-medium-1"
+                            />
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <div className="avatar rounded">
+                              <div className="avatar-content">
+                                <img
+                                  src="../../../app-assets/images/icons/brush.svg"
+                                  alt="Brush svg"
+                                />
+                              </div>
+                            </div>
+                            <div>
+                              <div className="fw-bolder">Zipcar</div>
+                              <div className="font-small-2 text-muted">
+                                davcilse@is.gov
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <div className="avatar bg-light-warning me-1">
+                              <div className="avatar-content">
+                                <i
+                                  data-feather="watch"
+                                  className="font-medium-3"
+                                />
+                              </div>
+                            </div>
+                            <span>Fashion</span>
+                          </div>
+                        </td>
+                        <td className="text-nowrap">
+                          <div className="d-flex flex-column">
+                            <span className="fw-bolder mb-25">162</span>
+                            <span className="font-small-2 text-muted">
+                              in 5 days
+                            </span>
+                          </div>
+                        </td>
+                        <td>$522.29</td>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <span className="fw-bolder me-1">62%</span>
+                            <i
+                              data-feather="trending-up"
+                              className="text-success font-medium-1"
+                            />
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <div className="avatar rounded">
+                              <div className="avatar-content">
+                                <img
+                                  src="../../../app-assets/images/icons/star.svg"
+                                  alt="Star svg"
+                                />
+                              </div>
+                            </div>
+                            <div>
+                              <div className="fw-bolder">Owning</div>
+                              <div className="font-small-2 text-muted">
+                                us@cuhil.gov
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <div className="avatar bg-light-primary me-1">
+                              <div className="avatar-content">
+                                <i
+                                  data-feather="monitor"
+                                  className="font-medium-3"
+                                />
+                              </div>
+                            </div>
+                            <span>Technology</span>
+                          </div>
+                        </td>
+                        <td className="text-nowrap">
+                          <div className="d-flex flex-column">
+                            <span className="fw-bolder mb-25">214</span>
+                            <span className="font-small-2 text-muted">
+                              in 24 hours
+                            </span>
+                          </div>
+                        </td>
+                        <td>$291.01</td>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <span className="fw-bolder me-1">88%</span>
+                            <i
+                              data-feather="trending-up"
+                              className="text-success font-medium-1"
+                            />
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <div className="avatar rounded">
+                              <div className="avatar-content">
+                                <img
+                                  src="../../../app-assets/images/icons/book.svg"
+                                  alt="Book svg"
+                                />
+                              </div>
+                            </div>
+                            <div>
+                              <div className="fw-bolder">Cafés</div>
+                              <div className="font-small-2 text-muted">
+                                pudais@jife.com
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <div className="avatar bg-light-success me-1">
+                              <div className="avatar-content">
+                                <i
+                                  data-feather="coffee"
+                                  className="font-medium-3"
+                                />
+                              </div>
+                            </div>
+                            <span>Grocery</span>
+                          </div>
+                        </td>
+                        <td className="text-nowrap">
+                          <div className="d-flex flex-column">
+                            <span className="fw-bolder mb-25">208</span>
+                            <span className="font-small-2 text-muted">
+                              in 1 week
+                            </span>
+                          </div>
+                        </td>
+                        <td>$783.93</td>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <span className="fw-bolder me-1">16%</span>
+                            <i
+                              data-feather="trending-down"
+                              className="text-danger font-medium-1"
+                            />
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <div className="avatar rounded">
+                              <div className="avatar-content">
+                                <img
+                                  src="../../../app-assets/images/icons/rocket.svg"
+                                  alt="Rocket svg"
+                                />
+                              </div>
+                            </div>
+                            <div>
+                              <div className="fw-bolder">Kmart</div>
+                              <div className="font-small-2 text-muted">
+                                bipri@cawiw.com
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <div className="avatar bg-light-warning me-1">
+                              <div className="avatar-content">
+                                <i
+                                  data-feather="watch"
+                                  className="font-medium-3"
+                                />
+                              </div>
+                            </div>
+                            <span>Fashion</span>
+                          </div>
+                        </td>
+                        <td className="text-nowrap">
+                          <div className="d-flex flex-column">
+                            <span className="fw-bolder mb-25">990</span>
+                            <span className="font-small-2 text-muted">
+                              in 1 month
+                            </span>
+                          </div>
+                        </td>
+                        <td>$780.05</td>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <span className="fw-bolder me-1">78%</span>
+                            <i
+                              data-feather="trending-up"
+                              className="text-success font-medium-1"
+                            />
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <div className="avatar rounded">
+                              <div className="avatar-content">
+                                <img
+                                  src="../../../app-assets/images/icons/speaker.svg"
+                                  alt="Speaker svg"
+                                />
+                              </div>
+                            </div>
+                            <div>
+                              <div className="fw-bolder">Payers</div>
+                              <div className="font-small-2 text-muted">
+                                luk@izug.io
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <div className="avatar bg-light-warning me-1">
+                              <div className="avatar-content">
+                                <i
+                                  data-feather="watch"
+                                  className="font-medium-3"
+                                />
+                              </div>
+                            </div>
+                            <span>Fashion</span>
+                          </div>
+                        </td>
+                        <td className="text-nowrap">
+                          <div className="d-flex flex-column">
+                            <span className="fw-bolder mb-25">12.9k</span>
+                            <span className="font-small-2 text-muted">
+                              in 12 hours
+                            </span>
+                          </div>
+                        </td>
+                        <td>$531.49</td>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <span className="fw-bolder me-1">42%</span>
+                            <i
+                              data-feather="trending-up"
+                              className="text-success font-medium-1"
+                            />
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/*/ Company Table Card */}
+          {/* Developer Meetup Card */}
+          <div className="col-lg-4 col-md-6 col-12">
+            <div className="card card-developer-meetup">
+              <div className="meetup-img-wrapper rounded-top text-center">
+                <img
+                  src="../../../app-assets/images/illustration/email.svg"
+                  alt="Meeting Pic"
+                  height={170}
+                />
+              </div>
+              <div className="card-body">
+                <div className="meetup-header d-flex align-items-center">
+                  <div className="meetup-day">
+                    <h6 className="mb-0">THU</h6>
+                    <h3 className="mb-0">24</h3>
+                  </div>
+                  <div className="my-auto">
+                    <h4 className="card-title mb-25">Developer Meetup</h4>
+                    <p className="card-text mb-0">
+                      Meet world popular developers
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-0">
+                  <div className="avatar float-start bg-light-primary rounded me-1">
+                    <div className="avatar-content">
+                      <i
+                        data-feather="calendar"
+                        className="avatar-icon font-medium-3"
+                      />
+                    </div>
+                  </div>
+                  <div className="more-info">
+                    <h6 className="mb-0">Sat, May 25, 2020</h6>
+                    <small>10:AM to 6:PM</small>
+                  </div>
+                </div>
+                <div className="mt-2">
+                  <div className="avatar float-start bg-light-primary rounded me-1">
+                    <div className="avatar-content">
+                      <i
+                        data-feather="map-pin"
+                        className="avatar-icon font-medium-3"
+                      />
+                    </div>
+                  </div>
+                  <div className="more-info">
+                    <h6 className="mb-0">Central Park</h6>
+                    <small>Manhattan, New york City</small>
+                  </div>
+                </div>
+                <div className="avatar-group">
+                  <div
+                    data-bs-toggle="tooltip"
+                    data-popup="tooltip-custom"
+                    data-bs-placement="bottom"
+                    title="Billy Hopkins"
+                    className="avatar pull-up"
+                  >
+                    <img
+                      src="../../../app-assets/images/portrait/small/avatar-s-9.jpg"
+                      alt="Avatar"
+                      width={33}
+                      height={33}
+                    />
+                  </div>
+                  <div
+                    data-bs-toggle="tooltip"
+                    data-popup="tooltip-custom"
+                    data-bs-placement="bottom"
+                    title="Amy Carson"
+                    className="avatar pull-up"
+                  >
+                    <img
+                      src="../../../app-assets/images/portrait/small/avatar-s-6.jpg"
+                      alt="Avatar"
+                      width={33}
+                      height={33}
+                    />
+                  </div>
+                  <div
+                    data-bs-toggle="tooltip"
+                    data-popup="tooltip-custom"
+                    data-bs-placement="bottom"
+                    title="Brandon Miles"
+                    className="avatar pull-up"
+                  >
+                    <img
+                      src="../../../app-assets/images/portrait/small/avatar-s-8.jpg"
+                      alt="Avatar"
+                      width={33}
+                      height={33}
+                    />
+                  </div>
+                  <div
+                    data-bs-toggle="tooltip"
+                    data-popup="tooltip-custom"
+                    data-bs-placement="bottom"
+                    title="Daisy Weber"
+                    className="avatar pull-up"
+                  >
+                    <img
+                      src="../../../app-assets/images/portrait/small/avatar-s-20.jpg"
+                      alt="Avatar"
+                      width={33}
+                      height={33}
+                    />
+                  </div>
+                  <div
+                    data-bs-toggle="tooltip"
+                    data-popup="tooltip-custom"
+                    data-bs-placement="bottom"
+                    title="Jenny Looper"
+                    className="avatar pull-up"
+                  >
+                    <img
+                      src="../../../app-assets/images/portrait/small/avatar-s-20.jpg"
+                      alt="Avatar"
+                      width={33}
+                      height={33}
+                    />
+                  </div>
+                  <h6 className="align-self-center cursor-pointer ms-50 mb-0">
+                    +42
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/*/ Developer Meetup Card */}
+          {/* Browser States Card */}
+          <div className="col-lg-4 col-md-6 col-12">
+            <div className="card card-browser-states">
+              <div className="card-header">
+                <div>
+                  <h4 className="card-title">Browser States</h4>
+                  <p className="card-text font-small-2">Counter August 2020</p>
+                </div>
+                <div className="dropdown chart-dropdown">
+                  <i
+                    data-feather="more-vertical"
+                    className="font-medium-3 cursor-pointer"
+                    data-bs-toggle="dropdown"
+                  />
+                  <div className="dropdown-menu dropdown-menu-end">
+                    <a className="dropdown-item" href="#">
+                      Last 28 Days
+                    </a>
+                    <a className="dropdown-item" href="#">
+                      Last Month
+                    </a>
+                    <a className="dropdown-item" href="#">
+                      Last Year
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="card-body">
+                <div className="browser-states">
+                  <div className="d-flex">
+                    <img
+                      src="../../../app-assets/images/icons/google-chrome.png"
+                      className="rounded me-1"
+                      height={30}
+                      alt="Google Chrome"
+                    />
+                    <h6 className="align-self-center mb-0">Google Chrome</h6>
+                  </div>
+                  <div className="d-flex align-items-center">
+                    <div className="fw-bold text-body-heading me-1">54.4%</div>
+                    <div id="browser-state-chart-primary" />
+                  </div>
+                </div>
+                <div className="browser-states">
+                  <div className="d-flex">
+                    <img
+                      src="../../../app-assets/images/icons/mozila-firefox.png"
+                      className="rounded me-1"
+                      height={30}
+                      alt="Mozila Firefox"
+                    />
+                    <h6 className="align-self-center mb-0">Mozila Firefox</h6>
+                  </div>
+                  <div className="d-flex align-items-center">
+                    <div className="fw-bold text-body-heading me-1">6.1%</div>
+                    <div id="browser-state-chart-warning" />
+                  </div>
+                </div>
+                <div className="browser-states">
+                  <div className="d-flex">
+                    <img
+                      src="../../../app-assets/images/icons/apple-safari.png"
+                      className="rounded me-1"
+                      height={30}
+                      alt="Apple Safari"
+                    />
+                    <h6 className="align-self-center mb-0">Apple Safari</h6>
+                  </div>
+                  <div className="d-flex align-items-center">
+                    <div className="fw-bold text-body-heading me-1">14.6%</div>
+                    <div id="browser-state-chart-secondary" />
+                  </div>
+                </div>
+                <div className="browser-states">
+                  <div className="d-flex">
+                    <img
+                      src="../../../app-assets/images/icons/internet-explorer.png"
+                      className="rounded me-1"
+                      height={30}
+                      alt="Internet Explorer"
+                    />
+                    <h6 className="align-self-center mb-0">
+                      Internet Explorer
+                    </h6>
+                  </div>
+                  <div className="d-flex align-items-center">
+                    <div className="fw-bold text-body-heading me-1">4.2%</div>
+                    <div id="browser-state-chart-info" />
+                  </div>
+                </div>
+                <div className="browser-states">
+                  <div className="d-flex">
+                    <img
+                      src="../../../app-assets/images/icons/opera.png"
+                      className="rounded me-1"
+                      height={30}
+                      alt="Opera Mini"
+                    />
+                    <h6 className="align-self-center mb-0">Opera Mini</h6>
+                  </div>
+                  <div className="d-flex align-items-center">
+                    <div className="fw-bold text-body-heading me-1">8.4%</div>
+                    <div id="browser-state-chart-danger" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/*/ Browser States Card */}
+          {/* Goal Overview Card */}
+          <div className="col-lg-4 col-md-6 col-12">
+            <div className="card">
+              <div className="card-header d-flex justify-content-between align-items-center">
+                <h4 className="card-title">Goal Overview</h4>
+                <i
+                  data-feather="help-circle"
+                  className="font-medium-3 text-muted cursor-pointer"
+                />
+              </div>
+              <div className="card-body p-0">
+                <div id="goal-overview-radial-bar-chart" className="my-2" />
+                <div className="row border-top text-center mx-0">
+                  <div className="col-6 border-end py-1">
+                    <p className="card-text text-muted mb-0">Completed</p>
+                    <h3 className="fw-bolder mb-0">786,617</h3>
+                  </div>
+                  <div className="col-6 py-1">
+                    <p className="card-text text-muted mb-0">In Progress</p>
+                    <h3 className="fw-bolder mb-0">13,561</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/*/ Goal Overview Card */}
+          {/* Transaction Card */}
+          <div className="col-lg-4 col-md-6 col-12">
+            <div className="card card-transaction">
+              <div className="card-header">
+                <h4 className="card-title">Transactions</h4>
+                <div className="dropdown chart-dropdown">
+                  <i
+                    data-feather="more-vertical"
+                    className="font-medium-3 cursor-pointer"
+                    data-bs-toggle="dropdown"
+                  />
+                  <div className="dropdown-menu dropdown-menu-end">
+                    <a className="dropdown-item" href="#">
+                      Last 28 Days
+                    </a>
+                    <a className="dropdown-item" href="#">
+                      Last Month
+                    </a>
+                    <a className="dropdown-item" href="#">
+                      Last Year
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="card-body">
+                <div className="transaction-item">
+                  <div className="d-flex">
+                    <div className="avatar bg-light-primary rounded float-start">
+                      <div className="avatar-content">
+                        <i
+                          data-feather="pocket"
+                          className="avatar-icon font-medium-3"
+                        />
+                      </div>
+                    </div>
+                    <div className="transaction-percentage">
+                      <h6 className="transaction-title">Wallet</h6>
+                      <small>Starbucks</small>
+                    </div>
+                  </div>
+                  <div className="fw-bolder text-danger">- $74</div>
+                </div>
+                <div className="transaction-item">
+                  <div className="d-flex">
+                    <div className="avatar bg-light-success rounded float-start">
+                      <div className="avatar-content">
+                        <i
+                          data-feather="check"
+                          className="avatar-icon font-medium-3"
+                        />
+                      </div>
+                    </div>
+                    <div className="transaction-percentage">
+                      <h6 className="transaction-title">Bank Transfer</h6>
+                      <small>Add Money</small>
+                    </div>
+                  </div>
+                  <div className="fw-bolder text-success">+ $480</div>
+                </div>
+                <div className="transaction-item">
+                  <div className="d-flex">
+                    <div className="avatar bg-light-danger rounded float-start">
+                      <div className="avatar-content">
+                        <i
+                          data-feather="dollar-sign"
+                          className="avatar-icon font-medium-3"
+                        />
+                      </div>
+                    </div>
+                    <div className="transaction-percentage">
+                      <h6 className="transaction-title">Paypal</h6>
+                      <small>Add Money</small>
+                    </div>
+                  </div>
+                  <div className="fw-bolder text-success">+ $590</div>
+                </div>
+                <div className="transaction-item">
+                  <div className="d-flex">
+                    <div className="avatar bg-light-warning rounded float-start">
+                      <div className="avatar-content">
+                        <i
+                          data-feather="credit-card"
+                          className="avatar-icon font-medium-3"
+                        />
+                      </div>
+                    </div>
+                    <div className="transaction-percentage">
+                      <h6 className="transaction-title">Mastercard</h6>
+                      <small>Ordered Food</small>
+                    </div>
+                  </div>
+                  <div className="fw-bolder text-danger">- $23</div>
+                </div>
+                <div className="transaction-item">
+                  <div className="d-flex">
+                    <div className="avatar bg-light-info rounded float-start">
+                      <div className="avatar-content">
+                        <i
+                          data-feather="trending-up"
+                          className="avatar-icon font-medium-3"
+                        />
+                      </div>
+                    </div>
+                    <div className="transaction-percentage">
+                      <h6 className="transaction-title">Transfer</h6>
+                      <small>Refund</small>
+                    </div>
+                  </div>
+                  <div className="fw-bolder text-success">+ $98</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/*/ Transaction Card */}
+        </div>
+      </section>
+      {/* Dashboard Ecommerce ends */}
     </div>
-//     <div>
-//       <div className="main-panel">
-//   <div className="content-wrapper">
-//     <div className="row">
-//       <div className="col-12 grid-margin stretch-card">
-//         <div className="card corona-gradient-card">
-//           <div className="card-body py-0 px-0 px-sm-3">
-//             <div className="row align-items-center">
-//               <div className="col-4 col-sm-3 col-xl-2">
-//                 <img
-//                   src="assets/images/dashboard/Group126@2x.png"
-//                   className="gradient-corona-img img-fluid"
-//                   alt=""
-//                 />
-//               </div>
-//               <div className="col-5 col-sm-7 col-xl-8 p-0">
-//                 <h4 className="mb-1 mb-sm-0">Want even more features?</h4>
-//                 <p className="mb-0 font-weight-normal d-none d-sm-block">
-//                   Check out our Pro version with 5 unique layouts!
-//                 </p>
-//               </div>
-//               <div className="col-3 col-sm-2 col-xl-2 pl-0 text-center">
-//                 <span>
-//                   <a
-//                     href="https://www.bootstrapdash.com/product/corona-admin-template/"
-//                     className="btn btn-outline-light btn-rounded get-started-btn"
-//                   >
-//                     Upgrade to PRO
-//                   </a>
-//                 </span>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//     <div className="row">
-//       <div className="col-xl-3 col-sm-6 grid-margin stretch-card">
-//         <div className="card">
-//           <div className="card-body">
-//             <div className="row">
-//               <div className="col-9">
-//                 <div className="d-flex align-items-center align-self-start">
-//                   <h3 className="mb-0">$12.34</h3>
-//                   <p className="text-success ml-2 mb-0 font-weight-medium">
-//                     +3.5%
-//                   </p>
-//                 </div>
-//               </div>
-//               <div className="col-3">
-//                 <div className="icon icon-box-success ">
-//                   <span className="mdi mdi-arrow-top-right icon-item" />
-//                 </div>
-//               </div>
-//             </div>
-//             <h6 className="text-muted font-weight-normal">Potential growth</h6>
-//           </div>
-//         </div>
-//       </div>
-//       <div className="col-xl-3 col-sm-6 grid-margin stretch-card">
-//         <div className="card">
-//           <div className="card-body">
-//             <div className="row">
-//               <div className="col-9">
-//                 <div className="d-flex align-items-center align-self-start">
-//                   <h3 className="mb-0">$17.34</h3>
-//                   <p className="text-success ml-2 mb-0 font-weight-medium">
-//                     +11%
-//                   </p>
-//                 </div>
-//               </div>
-//               <div className="col-3">
-//                 <div className="icon icon-box-success">
-//                   <span className="mdi mdi-arrow-top-right icon-item" />
-//                 </div>
-//               </div>
-//             </div>
-//             <h6 className="text-muted font-weight-normal">Revenue current</h6>
-//           </div>
-//         </div>
-//       </div>
-//       <div className="col-xl-3 col-sm-6 grid-margin stretch-card">
-//         <div className="card">
-//           <div className="card-body">
-//             <div className="row">
-//               <div className="col-9">
-//                 <div className="d-flex align-items-center align-self-start">
-//                   <h3 className="mb-0">$12.34</h3>
-//                   <p className="text-danger ml-2 mb-0 font-weight-medium">
-//                     -2.4%
-//                   </p>
-//                 </div>
-//               </div>
-//               <div className="col-3">
-//                 <div className="icon icon-box-danger">
-//                   <span className="mdi mdi-arrow-bottom-left icon-item" />
-//                 </div>
-//               </div>
-//             </div>
-//             <h6 className="text-muted font-weight-normal">Daily Income</h6>
-//           </div>
-//         </div>
-//       </div>
-//       <div className="col-xl-3 col-sm-6 grid-margin stretch-card">
-//         <div className="card">
-//           <div className="card-body">
-//             <div className="row">
-//               <div className="col-9">
-//                 <div className="d-flex align-items-center align-self-start">
-//                   <h3 className="mb-0">$31.53</h3>
-//                   <p className="text-success ml-2 mb-0 font-weight-medium">
-//                     +3.5%
-//                   </p>
-//                 </div>
-//               </div>
-//               <div className="col-3">
-//                 <div className="icon icon-box-success ">
-//                   <span className="mdi mdi-arrow-top-right icon-item" />
-//                 </div>
-//               </div>
-//             </div>
-//             <h6 className="text-muted font-weight-normal">Expense current</h6>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//     <div className="row">
-//       <div className="col-md-4 grid-margin stretch-card">
-//         <div className="card">
-//           <div className="card-body">
-//             <h4 className="card-title">Transaction History</h4>
-//             <canvas id="transaction-history" className="transaction-chart" />
-//             <div className="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
-//               <div className="text-md-center text-xl-left">
-//                 <h6 className="mb-1">Transfer to Paypal</h6>
-//                 <p className="text-muted mb-0">07 Jan 2019, 09:12AM</p>
-//               </div>
-//               <div className="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
-//                 <h6 className="font-weight-bold mb-0">$236</h6>
-//               </div>
-//             </div>
-//             <div className="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
-//               <div className="text-md-center text-xl-left">
-//                 <h6 className="mb-1">Tranfer to Stripe</h6>
-//                 <p className="text-muted mb-0">07 Jan 2019, 09:12AM</p>
-//               </div>
-//               <div className="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
-//                 <h6 className="font-weight-bold mb-0">$593</h6>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//       <div className="col-md-8 grid-margin stretch-card">
-//         <div className="card">
-//           <div className="card-body">
-//             <div className="d-flex flex-row justify-content-between">
-//               <h4 className="card-title mb-1">Open Projects</h4>
-//               <p className="text-muted mb-1">Your data status</p>
-//             </div>
-//             <div className="row">
-//               <div className="col-12">
-//                 <div className="preview-list">
-//                   <div className="preview-item border-bottom">
-//                     <div className="preview-thumbnail">
-//                       <div className="preview-icon bg-primary">
-//                         <i className="mdi mdi-file-document" />
-//                       </div>
-//                     </div>
-//                     <div className="preview-item-content d-sm-flex flex-grow">
-//                       <div className="flex-grow">
-//                         <h6 className="preview-subject">
-//                           Admin dashboard design
-//                         </h6>
-//                         <p className="text-muted mb-0">
-//                           Broadcast web app mockup
-//                         </p>
-//                       </div>
-//                       <div className="mr-auto text-sm-right pt-2 pt-sm-0">
-//                         <p className="text-muted">15 minutes ago</p>
-//                         <p className="text-muted mb-0">30 tasks, 5 issues </p>
-//                       </div>
-//                     </div>
-//                   </div>
-//                   <div className="preview-item border-bottom">
-//                     <div className="preview-thumbnail">
-//                       <div className="preview-icon bg-success">
-//                         <i className="mdi mdi-cloud-download" />
-//                       </div>
-//                     </div>
-//                     <div className="preview-item-content d-sm-flex flex-grow">
-//                       <div className="flex-grow">
-//                         <h6 className="preview-subject">
-//                           Wordpress Development
-//                         </h6>
-//                         <p className="text-muted mb-0">Upload new design</p>
-//                       </div>
-//                       <div className="mr-auto text-sm-right pt-2 pt-sm-0">
-//                         <p className="text-muted">1 hour ago</p>
-//                         <p className="text-muted mb-0">23 tasks, 5 issues </p>
-//                       </div>
-//                     </div>
-//                   </div>
-//                   <div className="preview-item border-bottom">
-//                     <div className="preview-thumbnail">
-//                       <div className="preview-icon bg-info">
-//                         <i className="mdi mdi-clock" />
-//                       </div>
-//                     </div>
-//                     <div className="preview-item-content d-sm-flex flex-grow">
-//                       <div className="flex-grow">
-//                         <h6 className="preview-subject">Project meeting</h6>
-//                         <p className="text-muted mb-0">
-//                           New project discussion
-//                         </p>
-//                       </div>
-//                       <div className="mr-auto text-sm-right pt-2 pt-sm-0">
-//                         <p className="text-muted">35 minutes ago</p>
-//                         <p className="text-muted mb-0">15 tasks, 2 issues</p>
-//                       </div>
-//                     </div>
-//                   </div>
-//                   <div className="preview-item border-bottom">
-//                     <div className="preview-thumbnail">
-//                       <div className="preview-icon bg-danger">
-//                         <i className="mdi mdi-email-open" />
-//                       </div>
-//                     </div>
-//                     <div className="preview-item-content d-sm-flex flex-grow">
-//                       <div className="flex-grow">
-//                         <h6 className="preview-subject">Broadcast Mail</h6>
-//                         <p className="text-muted mb-0">
-//                           Sent release details to team
-//                         </p>
-//                       </div>
-//                       <div className="mr-auto text-sm-right pt-2 pt-sm-0">
-//                         <p className="text-muted">55 minutes ago</p>
-//                         <p className="text-muted mb-0">35 tasks, 7 issues </p>
-//                       </div>
-//                     </div>
-//                   </div>
-//                   <div className="preview-item">
-//                     <div className="preview-thumbnail">
-//                       <div className="preview-icon bg-warning">
-//                         <i className="mdi mdi-chart-pie" />
-//                       </div>
-//                     </div>
-//                     <div className="preview-item-content d-sm-flex flex-grow">
-//                       <div className="flex-grow">
-//                         <h6 className="preview-subject">UI Design</h6>
-//                         <p className="text-muted mb-0">
-//                           New application planning
-//                         </p>
-//                       </div>
-//                       <div className="mr-auto text-sm-right pt-2 pt-sm-0">
-//                         <p className="text-muted">50 minutes ago</p>
-//                         <p className="text-muted mb-0">27 tasks, 4 issues </p>
-//                       </div>
-//                     </div>
-//                   </div>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//     <div className="row">
-//       <div className="col-sm-4 grid-margin">
-//         <div className="card">
-//           <div className="card-body">
-//             <h5>Revenue</h5>
-//             <div className="row">
-//               <div className="col-8 col-sm-12 col-xl-8 my-auto">
-//                 <div className="d-flex d-sm-block d-md-flex align-items-center">
-//                   <h2 className="mb-0">$32123</h2>
-//                   <p className="text-success ml-2 mb-0 font-weight-medium">
-//                     +3.5%
-//                   </p>
-//                 </div>
-//                 <h6 className="text-muted font-weight-normal">
-//                   11.38% Since last month
-//                 </h6>
-//               </div>
-//               <div className="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-//                 <i className="icon-lg mdi mdi-codepen text-primary ml-auto" />
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//       <div className="col-sm-4 grid-margin">
-//         <div className="card">
-//           <div className="card-body">
-//             <h5>Sales</h5>
-//             <div className="row">
-//               <div className="col-8 col-sm-12 col-xl-8 my-auto">
-//                 <div className="d-flex d-sm-block d-md-flex align-items-center">
-//                   <h2 className="mb-0">$45850</h2>
-//                   <p className="text-success ml-2 mb-0 font-weight-medium">
-//                     +8.3%
-//                   </p>
-//                 </div>
-//                 <h6 className="text-muted font-weight-normal">
-//                   {" "}
-//                   9.61% Since last month
-//                 </h6>
-//               </div>
-//               <div className="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-//                 <i className="icon-lg mdi mdi-wallet-travel text-danger ml-auto" />
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//       <div className="col-sm-4 grid-margin">
-//         <div className="card">
-//           <div className="card-body">
-//             <h5>Purchase</h5>
-//             <div className="row">
-//               <div className="col-8 col-sm-12 col-xl-8 my-auto">
-//                 <div className="d-flex d-sm-block d-md-flex align-items-center">
-//                   <h2 className="mb-0">$2039</h2>
-//                   <p className="text-danger ml-2 mb-0 font-weight-medium">
-//                     -2.1%{" "}
-//                   </p>
-//                 </div>
-//                 <h6 className="text-muted font-weight-normal">
-//                   2.27% Since last month
-//                 </h6>
-//               </div>
-//               <div className="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-//                 <i className="icon-lg mdi mdi-monitor text-success ml-auto" />
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//     <div className="row ">
-//       <div className="col-12 grid-margin">
-//         <div className="card">
-//           <div className="card-body">
-//             <h4 className="card-title">Order Status</h4>
-//             <div className="table-responsive">
-//               <table className="table">
-//                 <thead>
-//                   <tr>
-//                     <th>
-//                       <div className="form-check form-check-muted m-0">
-//                         <label className="form-check-label">
-//                           <input type="checkbox" className="form-check-input" />
-//                         </label>
-//                       </div>
-//                     </th>
-//                     <th> Client Name </th>
-//                     <th> Order No </th>
-//                     <th> Product Cost </th>
-//                     <th> Project </th>
-//                     <th> Payment Mode </th>
-//                     <th> Start Date </th>
-//                     <th> Payment Status </th>
-//                   </tr>
-//                 </thead>
-//                 <tbody>
-//                   <tr>
-//                     <td>
-//                       <div className="form-check form-check-muted m-0">
-//                         <label className="form-check-label">
-//                           <input type="checkbox" className="form-check-input" />
-//                         </label>
-//                       </div>
-//                     </td>
-//                     <td>
-//                  <img src="assets/images/faces/face1.jpg" />
-//                  <span className="pl-2">Henry Klein</span>
-//                 </td>
+  </div>
+</div>
 
-//                     <td> 02312 </td>
-//                     <td> $14,500 </td>
-//                     <td> Dashboard </td>
-//                     <td> Credit card </td>
-//                     <td> 04 Dec 2019 </td>
-//                     <td>
-//                       <div className="badge badge-outline-success">
-//                         Approved
-//                       </div>
-//                     </td>
-//                   </tr>
-//                   <tr>
-//                     <td>
-//                       <div className="form-check form-check-muted m-0">
-//                         <label className="form-check-label">
-//                           <input type="checkbox" className="form-check-input" />
-//                         </label>
-//                       </div>
-//                     </td>
-//                     <td>
-//                       <img src="assets/images/faces/face2.jpg" alt="image" />
-//                       <span className="pl-2">Estella Bryan</span>
-//                     </td>
-//                     <td> 02312 </td>
-//                     <td> $14,500 </td>
-//                     <td> Website </td>
-//                     <td> Cash on delivered </td>
-//                     <td> 04 Dec 2019 </td>
-//                     <td>
-//                       <div className="badge badge-outline-warning">Pending</div>
-//                     </td>
-//                   </tr>
-//                   <tr>
-//                     <td>
-//                       <div className="form-check form-check-muted m-0">
-//                         <label className="form-check-label">
-//                           <input type="checkbox" className="form-check-input" />
-//                         </label>
-//                       </div>
-//                     </td>
-//                     <td>
-//                       <img src="assets/images/faces/face5.jpg" alt="image" />
-//                       <span className="pl-2">Lucy Abbott</span>
-//                     </td>
-//                     <td> 02312 </td>
-//                     <td> $14,500 </td>
-//                     <td> App design </td>
-//                     <td> Credit card </td>
-//                     <td> 04 Dec 2019 </td>
-//                     <td>
-//                       <div className="badge badge-outline-danger">Rejected</div>
-//                     </td>
-//                   </tr>
-//                   <tr>
-//                     <td>
-//                       <div className="form-check form-check-muted m-0">
-//                         <label className="form-check-label">
-//                           <input type="checkbox" className="form-check-input" />
-//                         </label>
-//                       </div>
-//                     </td>
-//                     <td>
-//                       <img src="assets/images/faces/face3.jpg" alt="image" />
-//                       <span className="pl-2">Peter Gill</span>
-//                     </td>
-//                     <td> 02312 </td>
-//                     <td> $14,500 </td>
-//                     <td> Development </td>
-//                     <td> Online Payment </td>
-//                     <td> 04 Dec 2019 </td>
-//                     <td>
-//                       <div className="badge badge-outline-success">
-//                         Approved
-//                       </div>
-//                     </td>
-//                   </tr>
-//                   <tr>
-//                     <td>
-//                       <div className="form-check form-check-muted m-0">
-//                         <label className="form-check-label">
-//                           <input type="checkbox" className="form-check-input" />
-//                         </label>
-//                       </div>
-//                     </td>
-//                     <td>
-//                       <img src="assets/images/faces/face4.jpg" alt="image" />
-//                       <span className="pl-2">Sallie Reyes</span>
-//                     </td>
-//                     <td> 02312 </td>
-//                     <td> $14,500 </td>
-//                     <td> Website </td>
-//                     <td> Credit card </td>
-//                     <td> 04 Dec 2019 </td>
-//                     <td>
-//                       <div className="badge badge-outline-success">
-//                         Approved
-//                       </div>
-//                     </td>
-//                   </tr>
-//                 </tbody>
-//               </table>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//     <div className="row">
-//       <div className="col-md-6 col-xl-4 grid-margin stretch-card">
-//         <div className="card">
-//           <div className="card-body">
-//             <div className="d-flex flex-row justify-content-between">
-//               <h4 className="card-title">Messages</h4>
-//               <p className="text-muted mb-1 small">View all</p>
-//             </div>
-//             <div className="preview-list">
-//               <div className="preview-item border-bottom">
-//                 <div className="preview-thumbnail">
-//                   <img
-//                     src="assets/images/faces/face6.jpg"
-//                     alt="image"
-//                     className="rounded-circle"
-//                   />
-//                 </div>
-//                 <div className="preview-item-content d-flex flex-grow">
-//                   <div className="flex-grow">
-//                     <div className="d-flex d-md-block d-xl-flex justify-content-between">
-//                       <h6 className="preview-subject">Leonard</h6>
-//                       <p className="text-muted text-small">5 minutes ago</p>
-//                     </div>
-//                     <p className="text-muted">
-//                       Well, it seems to be working now.
-//                     </p>
-//                   </div>
-//                 </div>
-//               </div>
-//               <div className="preview-item border-bottom">
-//                 <div className="preview-thumbnail">
-//                   <img
-//                     src="assets/images/faces/face8.jpg"
-//                     alt="image"
-//                     className="rounded-circle"
-//                   />
-//                 </div>
-//                 <div className="preview-item-content d-flex flex-grow">
-//                   <div className="flex-grow">
-//                     <div className="d-flex d-md-block d-xl-flex justify-content-between">
-//                       <h6 className="preview-subject">Luella Mills</h6>
-//                       <p className="text-muted text-small">10 Minutes Ago</p>
-//                     </div>
-//                     <p className="text-muted">
-//                       Well, it seems to be working now.
-//                     </p>
-//                   </div>
-//                 </div>
-//               </div>
-//               <div className="preview-item border-bottom">
-//                 <div className="preview-thumbnail">
-//                   <img
-//                     src="assets/images/faces/face9.jpg"
-//                     alt="image"
-//                     className="rounded-circle"
-//                   />
-//                 </div>
-//                 <div className="preview-item-content d-flex flex-grow">
-//                   <div className="flex-grow">
-//                     <div className="d-flex d-md-block d-xl-flex justify-content-between">
-//                       <h6 className="preview-subject">Ethel Kelly</h6>
-//                       <p className="text-muted text-small">2 Hours Ago</p>
-//                     </div>
-//                     <p className="text-muted">Please review the tickets</p>
-//                   </div>
-//                 </div>
-//               </div>
-//               <div className="preview-item border-bottom">
-//                 <div className="preview-thumbnail">
-//                   <img
-//                     src="assets/images/faces/face11.jpg"
-//                     alt="image"
-//                     className="rounded-circle"
-//                   />
-//                 </div>
-//                 <div className="preview-item-content d-flex flex-grow">
-//                   <div className="flex-grow">
-//                     <div className="d-flex d-md-block d-xl-flex justify-content-between">
-//                       <h6 className="preview-subject">Herman May</h6>
-//                       <p className="text-muted text-small">4 Hours Ago</p>
-//                     </div>
-//                     <p className="text-muted">
-//                       Thanks a lot. It was easy to fix it .
-//                     </p>
-//                   </div>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//       <div className="col-md-6 col-xl-4 grid-margin stretch-card">
-//         <div className="card">
-//           <div className="card-body">
-//             <h4 className="card-title">Portfolio Slide</h4>
-//             <div
-//               className="owl-carousel owl-theme full-width owl-carousel-dash portfolio-carousel"
-//               id="owl-carousel-basic"
-//             >
-//               <div className="item">
-//                 <img src="assets/images/dashboard/Rectangle.jpg" alt="" />
-//               </div>
-//               <div className="item">
-//                 <img src="assets/images/dashboard/Img_5.jpg" alt="" />
-//               </div>
-//               <div className="item">
-//                 <img src="assets/images/dashboard/img_6.jpg" alt="" />
-//               </div>
-//             </div>
-//             <div className="d-flex py-4">
-//               <div className="preview-list w-100">
-//                 <div className="preview-item p-0">
-//                   <div className="preview-thumbnail">
-//                     <img
-//                       src="assets/images/faces/face12.jpg"
-//                       className="rounded-circle"
-//                       alt=""
-//                     />
-//                   </div>
-//                   <div className="preview-item-content d-flex flex-grow">
-//                     <div className="flex-grow">
-//                       <div className="d-flex d-md-block d-xl-flex justify-content-between">
-//                         <h6 className="preview-subject">CeeCee Bass</h6>
-//                         <p className="text-muted text-small">4 Hours Ago</p>
-//                       </div>
-//                       <p className="text-muted">
-//                         Well, it seems to be working now.
-//                       </p>
-//                     </div>
-//                   </div>
-//                 </div>
-//               </div>
-//             </div>
-//             <p className="text-muted">Well, it seems to be working now. </p>
-//             <div className="progress progress-md portfolio-progress">
-//               <div
-//                 className="progress-bar bg-success"
-//                 role="progressbar"
-//                 style={{ width: "50%" }}
-//                 aria-valuenow={25}
-//                 aria-valuemin={0}
-//                 aria-valuemax={100}
-//               />
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//       <div className="col-md-12 col-xl-4 grid-margin stretch-card">
-//         <div className="card">
-//           <div className="card-body">
-//             <h4 className="card-title">To do list</h4>
-//             <div className="add-items d-flex">
-//               <input
-//                 type="text"
-//                 className="form-control todo-list-input"
-//                 placeholder="enter task.."
-//               />
-//               <button className="add btn btn-primary todo-list-add-btn">
-//                 Add
-//               </button>
-//             </div>
-//             <div className="list-wrapper">
-//               <ul className="d-flex flex-column-reverse text-white todo-list todo-list-custom">
-//                 <li>
-//                   <div className="form-check form-check-primary">
-//                     <label className="form-check-label">
-//                       <input className="checkbox" type="checkbox" /> Create
-//                       invoice{" "}
-//                     </label>
-//                   </div>
-//                   <i className="remove mdi mdi-close-box" />
-//                 </li>
-//                 <li>
-//                   <div className="form-check form-check-primary">
-//                     <label className="form-check-label">
-//                       <input className="checkbox" type="checkbox" /> Meeting
-//                       with Alita{" "}
-//                     </label>
-//                   </div>
-//                   <i className="remove mdi mdi-close-box" />
-//                 </li>
-//                 <li className="completed">
-//                   <div className="form-check form-check-primary">
-//                     <label className="form-check-label">
-//                       <input
-//                         className="checkbox"
-//                         type="checkbox"
-//                         defaultChecked=""
-//                       />{" "}
-//                       Prepare for presentation{" "}
-//                     </label>
-//                   </div>
-//                   <i className="remove mdi mdi-close-box" />
-//                 </li>
-//                 <li>
-//                   <div className="form-check form-check-primary">
-//                     <label className="form-check-label">
-//                       <input className="checkbox" type="checkbox" /> Plan
-//                       weekend outing{" "}
-//                     </label>
-//                   </div>
-//                   <i className="remove mdi mdi-close-box" />
-//                 </li>
-//                 <li>
-//                   <div className="form-check form-check-primary">
-//                     <label className="form-check-label">
-//                       <input className="checkbox" type="checkbox" /> Pick up
-//                       kids from school{" "}
-//                     </label>
-//                   </div>
-//                   <i className="remove mdi mdi-close-box" />
-//                 </li>
-//               </ul>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//     <div className="row">
-//       <div className="col-12">
-//         <div className="card">
-//           <div className="card-body">
-//             <h4 className="card-title">Visitors by Countries</h4>
-//             <div className="row">
-//               <div className="col-md-5">
-//                 <div className="table-responsive">
-//                   <table className="table">
-//                     <tbody>
-//                       <tr>
-//                         <td>
-//                           <i className="flag-icon flag-icon-us" />
-//                         </td>
-//                         <td>USA</td>
-//                         <td className="text-right"> 1500 </td>
-//                         <td className="text-right font-weight-medium">
-//                           {" "}
-//                           56.35%{" "}
-//                         </td>
-//                       </tr>
-//                       <tr>
-//                         <td>
-//                           <i className="flag-icon flag-icon-de" />
-//                         </td>
-//                         <td>Germany</td>
-//                         <td className="text-right"> 800 </td>
-//                         <td className="text-right font-weight-medium">
-//                           {" "}
-//                           33.25%{" "}
-//                         </td>
-//                       </tr>
-//                       <tr>
-//                         <td>
-//                           <i className="flag-icon flag-icon-au" />
-//                         </td>
-//                         <td>Australia</td>
-//                         <td className="text-right"> 760 </td>
-//                         <td className="text-right font-weight-medium">
-//                           {" "}
-//                           15.45%{" "}
-//                         </td>
-//                       </tr>
-//                       <tr>
-//                         <td>
-//                           <i className="flag-icon flag-icon-gb" />
-//                         </td>
-//                         <td>United Kingdom</td>
-//                         <td className="text-right"> 450 </td>
-//                         <td className="text-right font-weight-medium">
-//                           {" "}
-//                           25.00%{" "}
-//                         </td>
-//                       </tr>
-//                       <tr>
-//                         <td>
-//                           <i className="flag-icon flag-icon-ro" />
-//                         </td>
-//                         <td>Romania</td>
-//                         <td className="text-right"> 620 </td>
-//                         <td className="text-right font-weight-medium">
-//                           {" "}
-//                           10.25%{" "}
-//                         </td>
-//                       </tr>
-//                       <tr>
-//                         <td>
-//                           <i className="flag-icon flag-icon-br" />
-//                         </td>
-//                         <td>Brasil</td>
-//                         <td className="text-right"> 230 </td>
-//                         <td className="text-right font-weight-medium">
-//                           {" "}
-//                           75.00%{" "}
-//                         </td>
-//                       </tr>
-//                     </tbody>
-//                   </table>
-//                 </div>
-//               </div>
-//               <div className="col-md-7">
-//                 <div id="audience-map" className="vector-map" />
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   </div>
-// </div>
 
-//     </div>
+    </div>
+// 
   )
 }
 

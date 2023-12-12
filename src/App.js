@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import React, { BrowserRouter, Form, Route, Routes } from 'react-router-dom';
 import Dashboard from './component/Dashboard';
@@ -12,8 +12,9 @@ import Addfrom from './users/Addfrom';
 import Basicdetails from './users/Basicdetails';
 import Teacherlist from './users/Teacherlist';
 import Educationdetails from './users/Educationdetails';
+import Experience from './users/Experience';
 
-// import Userlist from './users/Userlist'
+
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path='/verifyOtp' element={<OtpVerify />} />
           <Route path='/basicdetails' element={<Basicdetails/>}/>
           <Route path='/educationdetails' element={<Educationdetails/>}/>
+          <Route path='/experience' element={<Experience/>}/>
           <Route element={<Layout />}>
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/userlist' element={<Userlist />} />
