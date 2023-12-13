@@ -221,7 +221,7 @@ function Dashboard() {
         </div>
         <div className="row match-height">
           {/* Company Table Card */}
-          <div className="col-lg-8 col-12">
+          {/* <div className="col-lg-8 col-12">
             <div className="card card-company-table">
               <div className="card-body p-0">
                 <div className="table-responsive">
@@ -598,10 +598,10 @@ function Dashboard() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           {/*/ Company Table Card */}
           {/* Developer Meetup Card */}
-          <div className="col-lg-4 col-md-6 col-12">
+          {/* <div className="col-lg-4 col-md-6 col-12">
             <div className="card card-developer-meetup">
               <div className="meetup-img-wrapper rounded-top text-center">
                 <img
@@ -728,10 +728,10 @@ function Dashboard() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           {/*/ Developer Meetup Card */}
           {/* Browser States Card */}
-          <div className="col-lg-4 col-md-6 col-12">
+          {/* <div className="col-lg-4 col-md-6 col-12">
             <div className="card card-browser-states">
               <div className="card-header">
                 <div>
@@ -837,10 +837,10 @@ function Dashboard() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           {/*/ Browser States Card */}
           {/* Goal Overview Card */}
-          <div className="col-lg-4 col-md-6 col-12">
+          {/* <div className="col-lg-4 col-md-6 col-12">
             <div className="card">
               <div className="card-header d-flex justify-content-between align-items-center">
                 <h4 className="card-title">Goal Overview</h4>
@@ -863,10 +863,10 @@ function Dashboard() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           {/*/ Goal Overview Card */}
           {/* Transaction Card */}
-          <div className="col-lg-4 col-md-6 col-12">
+          {/* <div className="col-lg-4 col-md-6 col-12">
             <div className="card card-transaction">
               <div className="card-header">
                 <h4 className="card-title">Transactions</h4>
@@ -977,7 +977,7 @@ function Dashboard() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           {/*/ Transaction Card */}
         </div>
       </section>

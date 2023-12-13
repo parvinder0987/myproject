@@ -28,11 +28,12 @@ function App() {
           <Route path='/basicdetails' element={<Basicdetails/>}/>
           <Route path='/educationdetails' element={<Educationdetails/>}/>
           <Route path='/experience' element={<Experience/>}/>
+          <Route path='/addform' element={<Addfrom/>}/>
           <Route element={<Layout />}>
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/userlist' element={<Userlist />} />
             <Route path='/teacherlist' element={<Teacherlist/>}/>
-            <Route path='/addfrom' element={<Addfrom />}/>
+            {/* <Route path='/addfrom' element={<Addfrom />}/> */}
           </Route>
         </Routes>
       </BrowserRouter>
