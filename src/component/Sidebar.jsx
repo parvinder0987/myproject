@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 function Sidebar() {
   return (
@@ -12,7 +12,7 @@ function Sidebar() {
         <li className="nav-item me-auto">
           <a
             className="navbar-brand"
-            href="../../../html/ltr/vertical-collapsed-menu-template/index.html"
+            href="/html/ltr/vertical-collapsed-menu-template/index.html"
           >
             <span className="brand-logo">
               <svg
@@ -91,7 +91,7 @@ function Sidebar() {
                 </g>
               </svg>
             </span>
-            <h2 className="brand-text">Vuexy</h2>
+            <h2 className="brand-text">wood wear</h2>
           </a>
         </li>
         <li className="nav-item nav-toggle">
@@ -125,12 +125,12 @@ function Sidebar() {
             <span className="menu-title text-truncate" data-i18n="Dashboards">
               Dashboards
             </span>
-            <span className="badge badge-light-warning rounded-pill ms-auto me-1">
+            {/* <span className="badge badge-light-warning rounded-pill ms-auto me-1">
               2
-            </span>
+            </span> */}
           </a>
           <ul className="menu-content">
-            <li>
+            {/* <li>
               <a
                 className="d-flex align-items-center"
                 href="dashboard-analytics.html"
@@ -140,7 +140,7 @@ function Sidebar() {
                   Analytics
                 </span>
               </a>
-            </li>
+            </li> */}
             <li className="active">
               <a
                 className="d-flex align-items-center"
@@ -159,6 +159,14 @@ function Sidebar() {
           <i data-feather="more-horizontal" />
         </li>
         <li className=" nav-item">
+          <a className="d-flex align-items-center" href="/teacherlist">
+            <i data-feather="user" />
+            <span className="menu-title text-truncate" data-i18n="User">
+              Teacher
+            </span>
+          </a>
+          </li>
+        {/* <li className=" nav-item">
           <a className="d-flex align-items-center" href="app-email.html">
             <i data-feather="mail" />
             <span className="menu-title text-truncate" data-i18n="Email">
@@ -313,7 +321,7 @@ function Sidebar() {
               </a>
             </li>
           </ul>
-        </li>
+        </li> */}
         <li className=" nav-item">
           <a className="d-flex align-items-center" href="#">
             <i data-feather="user" />
@@ -323,7 +331,7 @@ function Sidebar() {
           </a>
           <ul className="menu-content">
             <li>
-              <a className="d-flex align-items-center" href="app-user-list.html">
+              <a className="d-flex align-items-center" href="/userlist">
                 <i data-feather="circle" />
                 <span className="menu-item text-truncate" data-i18n="List">
                   List
@@ -338,14 +346,14 @@ function Sidebar() {
                 </span>
               </a>
             </li>
-            <li>
+            {/* <li>
               <a className="d-flex align-items-center" href="app-user-edit.html">
                 <i data-feather="circle" />
                 <span className="menu-item text-truncate" data-i18n="Edit">
                   Edit
                 </span>
               </a>
-            </li>
+            </li> */}
           </ul>
         </li>
         <li className=" nav-item">
@@ -726,7 +734,7 @@ function Sidebar() {
             </li>
           </ul>
         </li>
-        <li className=" navigation-header">
+        {/* <li className=" navigation-header">
           <span data-i18n="User Interface">User Interface</span>
           <i data-feather="more-horizontal" />
         </li>
@@ -1651,7 +1659,7 @@ function Sidebar() {
               Documentation
             </span>
           </a>
-        </li>
+        </li> */}
         <li className=" nav-item">
           <a
             className="d-flex align-items-center"

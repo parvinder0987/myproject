@@ -13,6 +13,7 @@ import Basicdetails from './users/Basicdetails';
 import Teacherlist from './users/Teacherlist';
 import Educationdetails from './users/Educationdetails';
 import Experience from './users/Experience';
+import Logout from './users/Logout';
 
 
 
@@ -29,6 +30,7 @@ function App() {
           <Route path='/educationdetails' element={<Educationdetails/>}/>
           <Route path='/experience' element={<Experience/>}/>
           <Route path='/addform' element={<Addfrom/>}/>
+          <Route path='/logout' element={<Logout/>}/>
           <Route element={<Layout />}>
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/userlist' element={<Userlist />} />

@@ -27,7 +27,7 @@ function Signup() {
   };
 
   const signupdata = (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
     axios
       .post("http://localhost:5000/signup", qs.stringify(abs))
       .then((response) => {
@@ -203,7 +203,8 @@ function Signup() {
                         placeholder="Your phone number"
                         aria-describedby="register-phone"
                         tabIndex={3}
-                        value={phoneNumber} onChange={(e)=>setPhoneNumber(e.target.value)}
+                        value={phoneNumber}
+                        onChange={(e) => setPhoneNumber(e.target.value)}
                       />
                     </div>
 
@@ -220,7 +221,8 @@ function Signup() {
                           placeholder="············"
                           aria-describedby="register-password"
                           tabIndex={3}
-                          value={password} onChange={(e)=>setPassword(e.target.value)}
+                          value={password}
+                          onChange={(e) => setPassword(e.target.value)}
                         />
                         <span className="input-group-text cursor-pointer">
                           <i data-feather="eye" />
@@ -241,7 +243,8 @@ function Signup() {
                           placeholder="············"
                           aria-describedby="confirm-password"
                           tabIndex={5}
-                          value={confirmpassword} onChange={(e)=>setConfrimpassword(e.target.value)}
+                          value={confirmpassword}
+                          onChange={(e) => setConfrimpassword(e.target.value)}
                         />
                         <span className="input-group-text cursor-pointer">
                           <i data-feather="eye" />
@@ -264,7 +267,11 @@ function Signup() {
                         </label>
                       </div>
                     </div>
-                    <button className="btn btn-primary w-100" tabIndex={5} onClick={signupdata}>
+                    <button
+                      className="btn btn-primary w-100"
+                      tabIndex={5}
+                      onClick={signupdata}
+                    >
                       Sign up
                     </button>
                   </form>

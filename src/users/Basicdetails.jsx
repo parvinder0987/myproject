@@ -19,14 +19,6 @@ function Basicdetails() {
 
   const formattedDob = moment(dob).format("YYYY-MM-DD");
 
-  // const obj = {
-  //   id,
-  //   Gender: gender,
-  //   DOB: dob,
-  //   about: about,
-  //   image: image,
-  // };
-
   const basicdata = (e) => {
     e.preventDefault();
     let data = new FormData();

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import axios from 'axios'
 
 function Experience() {
 
@@ -10,7 +11,7 @@ function Experience() {
     const id = authDataObj.id
 
 
-    const saveData = () => {
+    const experincedata = () => {
         let data = new FormData();
         data.append("id", id);
         data.append("expereince",expereince);
@@ -26,10 +27,6 @@ function Experience() {
             console.error("Error saving data:", error);
           });
       };
-
-
-    
-   
   return (
     <div className="app-content content">
     <div className="content-overlay" />

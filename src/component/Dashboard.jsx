@@ -4,7 +4,7 @@ function Dashboard() {
   return (
     <div>
 <div className="app-content content ">
-  <div className="content-overlay" />
+  <div className="content-overlay" />    
   <div className="header-navbar-shadow" />
   <div className="content-wrapper container-xxl p-0">
     <div className="content-header row"></div>
@@ -27,7 +27,7 @@ function Dashboard() {
                   View Sales
                 </button>
                 <img
-                  src="../../../app-assets/images/illustration/badge.svg"
+                  src="/app-assets/images/illustration/badge.svg"
                   className="congratulation-medal"
                   alt="Medal Pic"
                 />
@@ -242,7 +242,7 @@ function Dashboard() {
                             <div className="avatar rounded">
                               <div className="avatar-content">
                                 <img
-                                  src="../../../app-assets/images/icons/toolbox.svg"
+                                  src="/app-assets/images/icons/toolbox.svg"
                                   alt="Toolbar svg"
                                 />
                               </div>
@@ -293,7 +293,7 @@ function Dashboard() {
                             <div className="avatar rounded">
                               <div className="avatar-content">
                                 <img
-                                  src="../../../app-assets/images/icons/parachute.svg"
+                                  src="/app-assets/images/icons/parachute.svg"
                                   alt="Parachute svg"
                                 />
                               </div>
@@ -344,7 +344,7 @@ function Dashboard() {
                             <div className="avatar rounded">
                               <div className="avatar-content">
                                 <img
-                                  src="../../../app-assets/images/icons/brush.svg"
+                                  src="/app-assets/images/icons/brush.svg"
                                   alt="Brush svg"
                                 />
                               </div>
@@ -395,7 +395,7 @@ function Dashboard() {
                             <div className="avatar rounded">
                               <div className="avatar-content">
                                 <img
-                                  src="../../../app-assets/images/icons/star.svg"
+                                  src="/app-assets/images/icons/star.svg"
                                   alt="Star svg"
                                 />
                               </div>
@@ -446,7 +446,7 @@ function Dashboard() {
                             <div className="avatar rounded">
                               <div className="avatar-content">
                                 <img
-                                  src="../../../app-assets/images/icons/book.svg"
+                                  src="/app-assets/images/icons/book.svg"
                                   alt="Book svg"
                                 />
                               </div>
@@ -497,7 +497,7 @@ function Dashboard() {
                             <div className="avatar rounded">
                               <div className="avatar-content">
                                 <img
-                                  src="../../../app-assets/images/icons/rocket.svg"
+                                  src="/app-assets/images/icons/rocket.svg"
                                   alt="Rocket svg"
                                 />
                               </div>
@@ -548,7 +548,7 @@ function Dashboard() {
                             <div className="avatar rounded">
                               <div className="avatar-content">
                                 <img
-                                  src="../../../app-assets/images/icons/speaker.svg"
+                                  src="/app-assets/images/icons/speaker.svg"
                                   alt="Speaker svg"
                                 />
                               </div>
@@ -605,7 +605,7 @@ function Dashboard() {
             <div className="card card-developer-meetup">
               <div className="meetup-img-wrapper rounded-top text-center">
                 <img
-                  src="../../../app-assets/images/illustration/email.svg"
+                  src="/app-assets/images/illustration/email.svg"
                   alt="Meeting Pic"
                   height={170}
                 />
@@ -660,7 +660,7 @@ function Dashboard() {
                     className="avatar pull-up"
                   >
                     <img
-                      src="../../../app-assets/images/portrait/small/avatar-s-9.jpg"
+                      src="/app-assets/images/portrait/small/avatar-s-9.jpg"
                       alt="Avatar"
                       width={33}
                       height={33}
@@ -674,7 +674,7 @@ function Dashboard() {
                     className="avatar pull-up"
                   >
                     <img
-                      src="../../../app-assets/images/portrait/small/avatar-s-6.jpg"
+                      src="/app-assets/images/portrait/small/avatar-s-6.jpg"
                       alt="Avatar"
                       width={33}
                       height={33}
@@ -688,7 +688,7 @@ function Dashboard() {
                     className="avatar pull-up"
                   >
                     <img
-                      src="../../../app-assets/images/portrait/small/avatar-s-8.jpg"
+                      src="/app-assets/images/portrait/small/avatar-s-8.jpg"
                       alt="Avatar"
                       width={33}
                       height={33}
@@ -702,7 +702,7 @@ function Dashboard() {
                     className="avatar pull-up"
                   >
                     <img
-                      src="../../../app-assets/images/portrait/small/avatar-s-20.jpg"
+                      src="/app-assets/images/portrait/small/avatar-s-20.jpg"
                       alt="Avatar"
                       width={33}
                       height={33}
@@ -716,7 +716,7 @@ function Dashboard() {
                     className="avatar pull-up"
                   >
                     <img
-                      src="../../../app-assets/images/portrait/small/avatar-s-20.jpg"
+                      src="/app-assets/images/portrait/small/avatar-s-20.jpg"
                       alt="Avatar"
                       width={33}
                       height={33}
@@ -761,7 +761,7 @@ function Dashboard() {
                 <div className="browser-states">
                   <div className="d-flex">
                     <img
-                      src="../../../app-assets/images/icons/google-chrome.png"
+                      src="/app-assets/images/icons/google-chrome.png"
                       className="rounded me-1"
                       height={30}
                       alt="Google Chrome"
@@ -776,7 +776,7 @@ function Dashboard() {
                 <div className="browser-states">
                   <div className="d-flex">
                     <img
-                      src="../../../app-assets/images/icons/mozila-firefox.png"
+                      src="/app-assets/images/icons/mozila-firefox.png"
                       className="rounded me-1"
                       height={30}
                       alt="Mozila Firefox"
@@ -791,7 +791,7 @@ function Dashboard() {
                 <div className="browser-states">
                   <div className="d-flex">
                     <img
-                      src="../../../app-assets/images/icons/apple-safari.png"
+                      src="/app-assets/images/icons/apple-safari.png"
                       className="rounded me-1"
                       height={30}
                       alt="Apple Safari"
@@ -806,7 +806,7 @@ function Dashboard() {
                 <div className="browser-states">
                   <div className="d-flex">
                     <img
-                      src="../../../app-assets/images/icons/internet-explorer.png"
+                      src="/app-assets/images/icons/internet-explorer.png"
                       className="rounded me-1"
                       height={30}
                       alt="Internet Explorer"
@@ -823,7 +823,7 @@ function Dashboard() {
                 <div className="browser-states">
                   <div className="d-flex">
                     <img
-                      src="../../../app-assets/images/icons/opera.png"
+                      src="/app-assets/images/icons/opera.png"
                       className="rounded me-1"
                       height={30}
                       alt="Opera Mini"

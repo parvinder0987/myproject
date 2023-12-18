@@ -8,13 +8,13 @@ function Navbar() {
     <div className="navbar-container d-flex content">
       <div className="bookmark-wrapper d-flex align-items-center">
         <ul className="nav navbar-nav d-xl-none">
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <a className="nav-link menu-toggle" href="#">
               <i className="ficon" data-feather="menu" />
             </a>
-          </li>
+          </li> */}
         </ul>
-        <ul className="nav navbar-nav bookmark-icons">
+        {/* <ul className="nav navbar-nav bookmark-icons">
           <li className="nav-item d-none d-lg-block">
             <a
               className="nav-link"
@@ -59,8 +59,8 @@ function Navbar() {
               <i className="ficon" data-feather="check-square" />
             </a>
           </li>
-        </ul>
-        <ul className="nav navbar-nav">
+        </ul> */}
+        {/* <ul className="nav navbar-nav">
           <li className="nav-item d-none d-lg-block">
             <a className="nav-link bookmark-star">
               <i className="ficon text-warning" data-feather="star" />
@@ -79,10 +79,10 @@ function Navbar() {
               <ul className="search-list search-list-bookmark" />
             </div>
           </li>
-        </ul>
+        </ul> */}
       </div>
       <ul className="nav navbar-nav align-items-center ms-auto">
-        <li className="nav-item dropdown dropdown-language">
+        {/* <li className="nav-item dropdown dropdown-language">
           <a
             className="nav-link dropdown-toggle"
             id="dropdown-flag"
@@ -116,7 +116,7 @@ function Navbar() {
           <a className="nav-link nav-link-style">
             <i className="ficon" data-feather="moon" />
           </a>
-        </li>
+        </li> */}
         <li className="nav-item nav-search">
           <a className="nav-link nav-link-search">
             <i className="ficon" data-feather="search" />
@@ -129,7 +129,7 @@ function Navbar() {
               className="form-control input"
               type="text"
               placeholder="Explore Vuexy..."
-              tabIndex={-1}
+              tabIndex={-2}
               data-search="search"
             />
             <div className="search-input-close">
@@ -138,7 +138,7 @@ function Navbar() {
             <ul className="search-list search-list-main" />
           </div>
         </li>
-        <li className="nav-item dropdown dropdown-cart me-25">
+        {/* <li className="nav-item dropdown dropdown-cart me-25">
           <a className="nav-link" href="#" data-bs-toggle="dropdown">
             <i className="ficon" data-feather="shopping-cart" />
             <span className="badge rounded-pill bg-primary badge-up cart-item-count">
@@ -158,7 +158,7 @@ function Navbar() {
               <div className="list-item align-items-center">
                 <img
                   className="d-block rounded me-1"
-                  src="../../../app-assets/images/pages/eCommerce/1.png"
+                  src="/app-assets/images/pages/eCommerce/1.png"
                   alt="donuts"
                   width={62}
                 />
@@ -191,7 +191,7 @@ function Navbar() {
               <div className="list-item align-items-center">
                 <img
                   className="d-block rounded me-1"
-                  src="../../../app-assets/images/pages/eCommerce/7.png"
+                  src="/app-assets/images/pages/eCommerce/7.png"
                   alt="donuts"
                   width={62}
                 />
@@ -224,7 +224,7 @@ function Navbar() {
               <div className="list-item align-items-center">
                 <img
                   className="d-block rounded me-1"
-                  src="../../../app-assets/images/pages/eCommerce/2.png"
+                  src="/app-assets/images/pages/eCommerce/2.png"
                   alt="donuts"
                   width={62}
                 />
@@ -257,7 +257,7 @@ function Navbar() {
               <div className="list-item align-items-center">
                 <img
                   className="d-block rounded me-1"
-                  src="../../../app-assets/images/pages/eCommerce/3.png"
+                  src="/app-assets/images/pages/eCommerce/3.png"
                   alt="donuts"
                   width={62}
                 />
@@ -290,7 +290,7 @@ function Navbar() {
               <div className="list-item align-items-center">
                 <img
                   className="d-block rounded me-1"
-                  src="../../../app-assets/images/pages/eCommerce/5.png"
+                  src="/app-assets/images/pages/eCommerce/5.png"
                   alt="donuts"
                   width={62}
                 />
@@ -357,7 +357,7 @@ function Navbar() {
                   <div className="me-1">
                     <div className="avatar">
                       <img
-                        src="../../../app-assets/images/portrait/small/avatar-s-15.jpg"
+                        src="/app-assets/images/portrait/small/avatar-s-15.jpg"
                         alt="avatar"
                         width={32}
                         height={32}
@@ -381,7 +381,7 @@ function Navbar() {
                   <div className="me-1">
                     <div className="avatar">
                       <img
-                        src="../../../app-assets/images/portrait/small/avatar-s-3.jpg"
+                        src="/app-assets/images/portrait/small/avatar-s-3.jpg"
                         alt="avatar"
                         width={32}
                         height={32}
@@ -506,7 +506,7 @@ function Navbar() {
               </a>
             </li>
           </ul>
-        </li>
+        </li> */}
         <li className="nav-item dropdown dropdown-user">
           <a
             className="nav-link dropdown-toggle dropdown-user-link"
@@ -517,13 +517,13 @@ function Navbar() {
             aria-expanded="false"
           >
             <div className="user-nav d-sm-flex d-none">
-              <span className="user-name fw-bolder">John Doe</span>
-              <span className="user-status">Admin</span>
+              <span className="user-name fw-bolder">Admin</span>
+              <span className="user-status">parvinder singh</span>
             </div>
             <span className="avatar">
               <img
                 className="round"
-                src="../../../app-assets/images/portrait/small/avatar-s-11.jpg"
+                src="/app-assets/images/portrait/small/avatar-s-11.jpg"
                 alt="avatar"
                 height={40}
                 width={40}
@@ -538,26 +538,26 @@ function Navbar() {
             <a className="dropdown-item" href="page-profile.html">
               <i className="me-50" data-feather="user" /> Profile
             </a>
-            <a className="dropdown-item" href="app-email.html">
+            {/* <a className="dropdown-item" href="app-email.html">
               <i className="me-50" data-feather="mail" /> Inbox
-            </a>
-            <a className="dropdown-item" href="app-todo.html">
+            </a> */}
+            {/* <a className="dropdown-item" href="app-todo.html">
               <i className="me-50" data-feather="check-square" /> Task
-            </a>
-            <a className="dropdown-item" href="app-chat.html">
+            </a> */}
+            {/* <a className="dropdown-item" href="app-chat.html">
               <i className="me-50" data-feather="message-square" /> Chats
-            </a>
+            </a> */}
             <div className="dropdown-divider" />
             <a className="dropdown-item" href="page-account-settings.html">
               <i className="me-50" data-feather="settings" /> Settings
             </a>
-            <a className="dropdown-item" href="page-pricing.html">
+            {/* <a className="dropdown-item" href="page-pricing.html">
               <i className="me-50" data-feather="credit-card" /> Pricing
-            </a>
+            </a> */}
             <a className="dropdown-item" href="page-faq.html">
               <i className="me-50" data-feather="help-circle" /> FAQ
             </a>
-            <a className="dropdown-item" href="page-auth-login-v2.html">
+            <a className="dropdown-item" href="/login">
               <i className="me-50" data-feather="power" /> Logout
             </a>
           </div>
@@ -579,7 +579,7 @@ function Navbar() {
         <div className="d-flex">
           <div className="me-75">
             <img
-              src="../../../app-assets/images/icons/xls.png"
+              src="/app-assets/images/icons/xls.png"
               alt="png"
               height={32}
             />
@@ -600,7 +600,7 @@ function Navbar() {
         <div className="d-flex">
           <div className="me-75">
             <img
-              src="../../../app-assets/images/icons/jpg.png"
+              src="/app-assets/images/icons/jpg.png"
               alt="png"
               height={32}
             />
@@ -621,7 +621,7 @@ function Navbar() {
         <div className="d-flex">
           <div className="me-75">
             <img
-              src="../../../app-assets/images/icons/pdf.png"
+              src="/app-assets/images/icons/pdf.png"
               alt="png"
               height={32}
             />
@@ -642,7 +642,7 @@ function Navbar() {
         <div className="d-flex">
           <div className="me-75">
             <img
-              src="../../../app-assets/images/icons/doc.png"
+              src="/app-assets/images/icons/doc.png"
               alt="png"
               height={32}
             />
@@ -668,7 +668,7 @@ function Navbar() {
         <div className="d-flex align-items-center">
           <div className="avatar me-75">
             <img
-              src="../../../app-assets/images/portrait/small/avatar-s-8.jpg"
+              src="/app-assets/images/portrait/small/avatar-s-8.jpg"
               alt="png"
               height={32}
             />
@@ -688,7 +688,7 @@ function Navbar() {
         <div className="d-flex align-items-center">
           <div className="avatar me-75">
             <img
-              src="../../../app-assets/images/portrait/small/avatar-s-1.jpg"
+              src="/app-assets/images/portrait/small/avatar-s-1.jpg"
               alt="png"
               height={32}
             />
@@ -708,7 +708,7 @@ function Navbar() {
         <div className="d-flex align-items-center">
           <div className="avatar me-75">
             <img
-              src="../../../app-assets/images/portrait/small/avatar-s-14.jpg"
+              src="/app-assets/images/portrait/small/avatar-s-14.jpg"
               alt="png"
               height={32}
             />
@@ -728,7 +728,7 @@ function Navbar() {
         <div className="d-flex align-items-center">
           <div className="avatar me-75">
             <img
-              src="../../../app-assets/images/portrait/small/avatar-s-6.jpg"
+              src="/app-assets/images/portrait/small/avatar-s-6.jpg"
               alt="png"
               height={32}
             />

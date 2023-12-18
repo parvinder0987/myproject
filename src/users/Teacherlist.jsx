@@ -1,238 +1,161 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { FaEye, FaTrash } from "react-icons/fa";
+import axios from "axios";
+import * as qs from "qs";
 
 function Teacherlist() {
+  const [teacher, setTeacher] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const abc = {
+    role: 1,
+  };
+
+  useEffect(() => {
+    axios.post("http://localhost:5000/rolelistening", qs.stringify(abc))
+    .then((response)=>{
+      console.log("response",response)
+      setTeacher(response.data.user);
+    }).catch((error)=>{
+      console.log("error",error)
+    })
+
+  },[]);
+  const handleDelete = (userData) => {
+    console.log("row will be deleted", userData);
+  };
+
   return (
-    <div className="row ">
-            <div className="col-12 grid-margin">
-              <div className="card">
-                {/* <div className='card-container'> */}
-                <div className="card-body">
-                  <h4 className="card-title"><b>Teacher Listening</b></h4>
-                  <div className="table-responsive">
-                    <table className="table">
-                      <thead>
-                        <tr>
-                          <th>
-                            {/* <div className="form-check form-check-muted m-0">
-                              <label className="form-check-label">
-                                <input
-                                  type="checkbox"
-                                  className="form-check-input"
-                                />
-                              </label>
-                            </div> */}
-                          </th>
-                          <th><b>id</b></th>
-                          <th><b>Name</b></th>
-                          <th><b>yourEmail</b></th>
-                          <th><b>Gender</b></th>
-                          <th><b>Profile<br></br>Image</b></th>
-                          <th><b>Experience</b></th>
-                          <th><b>stream</b></th>
-                          <th><b>Fulltime& <br></br>Parttime</b></th>
-                          {/* <th><b>Parttime</b></th> */}
-                          <th><b>Total<br></br>Experience</b></th>
-                          <th><b>Address</b></th>
-                          <th><b>Upload id aproof</b></th>
-                          <th><b>Status</b></th>
-                          <th><b>Action</b></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {/* <tr>
-                          <td>
-                            <div className="form-check form-check-muted m-0">
-                              <label className="form-check-label">
-                                <input
-                                  type="checkbox"
-                                  className="form-check-input"
-                                />
-                              </label>
-                            </div>
-                          </td>
-                          <td>
-                            <img
-                              src="assets/images/faces/face1.jpg"
-                              alt="image"
+    <div className="app-content content">
+      <div className="content-overlay" />
+      <div className="header-navbar-shadow" />
+      <div className="content-wrapper">
+        <div className="content-header row"></div>
+        <div className="content-body">
+          <div className="auth-wrapper auth-v1 px-2">
+            <div className="container-xl">
+              <div className="table-responsive">
+                <div className="table-wrapper">
+                  <div className="table-title">
+                    <div className="row">
+                      <div className="col-sm-5">
+                        <h2>
+                          <b>Teacher Listing</b>
+                        </h2>
+                      </div>
+                      <div className="col-sm-7">
+                        <div className="row">
+                          <div className="col">
+                            <input
+                              type="text"
+                              className="form-control"
+                              placeholder="Search..."
+                              value={searchQuery}
+                              onChange={(e) => setSearchQuery(e.target.value)}
                             />
-                            <span className="pl-2">Henry Klein</span>
-                          </td>
-                          <td> 02312 </td>
-                          <td> $14,500 </td>
-                          <td> Dashboard </td>
-                          <td> Credit card </td>
-                          <td> 04 Dec 2019 </td>
+                          </div>
+                          <div className="col">
+                            <a href="/addfrom" className="btn btn-secondary">
+                              <i className="material-icons"></i>{" "}
+                              <span>Add New User</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <table className="table table-striped table-hover">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>PhoneNumber</th>
+                        <th>Gender</th>
+                        <th>image</th>
+                        <th>education</th>
+                        <th>stream</th>
+                        <th>employmentType</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {teacher.map((userData) => (
+                        <tr key={userData?.id}>
+                          <td>{userData?.id}</td>
+                          <td>{userData?.Name}</td>
+                          <td>{userData?.phoneNumber}</td>
+                          <td>{userData?.Gender}</td>
+                          <td>{userData?.image}</td>
+                          <td>{userData?.education}</td>
+                          <td>{userData?.stream}</td>
+                          <td>{userData?.employmentType}</td>
                           <td>
-                            <div className="badge badge-outline-success">
-                              Approved
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div className="form-check form-check-muted m-0">
-                              <label className="form-check-label">
-                                <input
-                                  type="checkbox"
-                                  className="form-check-input"
-                                />
-                              </label>
-                            </div>
-                          </td>
-                          <td>
-                            <img
-                              src="assets/images/faces/face2.jpg"
-                              alt="image"
-                            />
-                            <span className="pl-2">Estella Bryan</span>
-                          </td>
-                          <td> 02312 </td>
-                          <td> $14,500 </td>
-                          <td> Website </td>
-                          <td> Cash on delivered </td>
-                          <td> 04 Dec 2019 </td>
-                          <td>
-                            <div className="badge badge-outline-warning">
-                              Pending
-                            </div>
+                            <Link
+                              to={`/view/${userData?.id}`}
+                              className="btn btn-primary"
+                            >
+                              <FaEye />
+                            </Link>
+                            <button
+                              className="btn btn-danger"
+                              onClick={() => handleDelete(userData?.id)}
+                            >
+                              <FaTrash />
+                            </button>
                           </td>
                         </tr>
-                        <tr>
-                          <td>
-                            <div className="form-check form-check-muted m-0">
-                              <label className="form-check-label">
-                                <input
-                                  type="checkbox"
-                                  className="form-check-input"
-                                />
-                              </label>
-                            </div>
-                          </td>
-                          <td>
-                            <img
-                              src="assets/images/faces/face5.jpg"
-                              alt="image"
-                            />
-                            <span className="pl-2">Lucy Abbott</span>
-                          </td>
-                          <td> 02312 </td>
-                          <td> $14,500 </td>
-                          <td> App design </td>
-                          <td> Credit card </td>
-                          <td> 04 Dec 2019 </td>
-                          <td>
-                            <div className="badge badge-outline-danger">
-                              Rejected
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div className="form-check form-check-muted m-0">
-                              <label className="form-check-label">
-                                <input
-                                  type="checkbox"
-                                  className="form-check-input"
-                                />
-                              </label>
-                            </div>
-                          </td>
-                          <td>
-                            <img
-                              src="assets/images/faces/face3.jpg"
-                              alt="image"
-                            />
-                            <span className="pl-2">Peter Gill</span>
-                          </td>
-                          <td> 02312 </td>
-                          <td> $14,500 </td>
-                          <td> Development </td>
-                          <td> Online Payment </td>
-                          <td> 04 Dec 2019 </td>
-                          <td>
-                            <div className="badge badge-outline-success">
-                              Approved
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div className="form-check form-check-muted m-0">
-                              <label className="form-check-label">
-                                <input
-                                  type="checkbox"
-                                  className="form-check-input"
-                                />
-                              </label>
-                            </div>
-                          </td>
-                          <td>
-                            <img
-                              src="assets/images/faces/face4.jpg"
-                              alt="image"
-                            />
-                            <span className="pl-2">Sallie Reyes</span>
-                          </td>
-                          <td> 02312 </td>
-                          <td> $14,500 </td>
-                          <td> Website </td>
-                          <td> Credit card </td>
-                          <td> 04 Dec 2019 </td>
-                          <td>
-                            <div className="badge badge-outline-success">
-                              Approved
-                            </div>
-                          </td>
-                        </tr> */}
-                      </tbody>
-                    </table>
+                      ))}
+                    </tbody>
+                  </table>
+                  <div className="clearfix">
+                    <div className="hint-text">
+                      Showing <b>5</b> out of <b>25</b> entries
+                    </div>
+                    <ul className="pagination">
+                      <li className="page-item disabled">
+                        <a href="#">Previous</a>
+                      </li>
+                      <li className="page-item">
+                        <a href="#" className="page-link">
+                          1
+                        </a>
+                      </li>
+                      <li className="page-item">
+                        <a href="#" className="page-link">
+                          2
+                        </a>
+                      </li>
+                      <li className="page-item active">
+                        <a href="#" className="page-link">
+                          3
+                        </a>
+                      </li>
+                      <li className="page-item">
+                        <a href="#" className="page-link">
+                          4
+                        </a>
+                      </li>
+                      <li className="page-item">
+                        <a href="#" className="page-link">
+                          5
+                        </a>
+                      </li>
+                      <li className="page-item">
+                        <a href="#" className="page-link">
+                          Next
+                        </a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
-              <div className="clearfix">
-          <div className="hint-text">
-            Showing <b>5</b> out of <b>25</b> entries
-          </div>
-          <ul className="pagination">
-            <li className="page-item disabled">
-              <a href="#">Previous</a>
-            </li>
-            <li className="page-item">
-              <a href="#" className="page-link">
-                1
-              </a>
-            </li>
-            <li className="page-item">
-              <a href="#" className="page-link">
-                2
-              </a>
-            </li>
-            <li className="page-item active">
-              <a href="#" className="page-link">
-                3
-              </a>
-            </li>
-            <li className="page-item">
-              <a href="#" className="page-link">
-                4
-              </a>
-            </li>
-            <li className="page-item">
-              <a href="#" className="page-link">
-                5
-              </a>
-            </li>
-            <li className="page-item">
-              <a href="#" className="page-link">
-                Next
-              </a>
-            </li>
-          </ul>
-        </div>
-              {/* </div> */}
             </div>
           </div>
-  )
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Teacherlist
+export default Teacherlist;

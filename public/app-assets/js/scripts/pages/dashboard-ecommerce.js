@@ -134,8 +134,8 @@ $(window).on('load', function () {
       }
     }
   };
-  statisticsOrderChart = new ApexCharts($statisticsOrderChart, statisticsOrderChartOptions);
-  statisticsOrderChart.render();
+  // statisticsOrderChart = new ApexCharts($statisticsOrderChart, statisticsOrderChartOptions);
+  // statisticsOrderC hart.render();
 
   //------------ Statistics Line Chart ------------
   //-----------------------------------------------
@@ -223,8 +223,8 @@ $(window).on('load', function () {
       }
     }
   };
-  statisticsProfitChart = new ApexCharts($statisticsProfitChart, statisticsProfitChartOptions);
-  statisticsProfitChart.render();
+  // statisticsProfitChart = new ApexCharts($statisticsProfitChart, statisticsProfitChartOptions);
+  // statisticsProfitChart.render();
 
   //--------------- Earnings Chart ---------------
   //----------------------------------------------
@@ -314,8 +314,8 @@ $(window).on('load', function () {
       }
     ]
   };
-  earningsChart = new ApexCharts($earningsChart, earningsChartOptions);
-  earningsChart.render();
+  // earningsChart = new ApexCharts($earningsChart, earningsChartOptions);
+  // earningsChart.render();
 
   //------------ Revenue Report Chart ------------
   //----------------------------------------------
@@ -383,8 +383,8 @@ $(window).on('load', function () {
       }
     }
   };
-  revenueReportChart = new ApexCharts($revenueReportChart, revenueReportChartOptions);
-  revenueReportChart.render();
+  // revenueReportChart = new ApexCharts($revenueReportChart, revenueReportChartOptions);
+  // revenueReportChart.render();
 
   //---------------- Budget Chart ----------------
   //----------------------------------------------
@@ -414,8 +414,8 @@ $(window).on('load', function () {
       enabled: false
     }
   };
-  budgetChart = new ApexCharts($budgetChart, budgetChartOptions);
-  budgetChart.render();
+  // budgetChart = new ApexCharts($budgetChart, budgetChartOptions);
+  // budgetChart.render();
 
   //------------ Browser State Charts ------------
   //----------------------------------------------
@@ -461,8 +461,8 @@ $(window).on('load', function () {
       lineCap: 'round'
     }
   };
-  browserStatePrimaryChart = new ApexCharts($browserStateChartPrimary, browserStatePrimaryChartOptions);
-  browserStatePrimaryChart.render();
+  // browserStatePrimaryChart = new ApexCharts($browserStateChartPrimary, browserStatePrimaryChartOptions);
+  // browserStatePrimaryChart.render();
 
   // State Warning Chart
   browserStateWarningChartOptions = {
@@ -505,8 +505,8 @@ $(window).on('load', function () {
       lineCap: 'round'
     }
   };
-  browserStateWarningChart = new ApexCharts($browserStateChartWarning, browserStateWarningChartOptions);
-  browserStateWarningChart.render();
+  // browserStateWarningChart = new ApexCharts($browserStateChartWarning, browserStateWarningChartOptions);
+  // browserStateWarningChart.render();
 
   // State Secondary Chart 1
   browserStateSecondaryChartOptions = {
@@ -549,8 +549,8 @@ $(window).on('load', function () {
       lineCap: 'round'
     }
   };
-  browserStateSecondaryChart = new ApexCharts($browserStateChartSecondary, browserStateSecondaryChartOptions);
-  browserStateSecondaryChart.render();
+  // browserStateSecondaryChart = new ApexCharts($browserStateChartSecondary, browserStateSecondaryChartOptions);
+  // browserStateSecondaryChart.render();
 
   // State Info Chart
   browserStateInfoChartOptions = {
@@ -593,8 +593,8 @@ $(window).on('load', function () {
       lineCap: 'round'
     }
   };
-  browserStateInfoChart = new ApexCharts($browserStateChartInfo, browserStateInfoChartOptions);
-  browserStateInfoChart.render();
+  // browserStateInfoChart = new ApexCharts($browserStateChartInfo, browserStateInfoChartOptions);
+  // browserStateInfoChart.render();
 
   // State Danger Chart
   browserStateDangerChartOptions = {
@@ -637,8 +637,8 @@ $(window).on('load', function () {
       lineCap: 'round'
     }
   };
-  browserStateDangerChart = new ApexCharts($browserStateChartDanger, browserStateDangerChartOptions);
-  browserStateDangerChart.render();
+  // browserStateDangerChart = new ApexCharts($browserStateChartDanger, browserStateDangerChartOptions);
+  // browserStateDangerChart.render();
 
   //------------ Goal Overview Chart ------------
   //---------------------------------------------
@@ -705,6 +705,6 @@ $(window).on('load', function () {
       }
     }
   };
-  goalOverviewChart = new ApexCharts($goalOverviewChart, goalOverviewChartOptions);
-  goalOverviewChart.render();
+  // goalOverviewChart = new ApexCharts($goalOverviewChart, goalOverviewChartOptions);
+  // goalOverviewChart.render();
 });
