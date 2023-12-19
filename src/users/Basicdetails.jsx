@@ -1,23 +1,18 @@
 import React, { useState } from "react";
 import axios from "axios";
-// import * as qs from "qs";
-import moment from "moment";
 import { useNavigate } from "react-router-dom";
-
 function Basicdetails() {
   const router = useNavigate();
-  const [gender, setGender] = useState();
-  const [dob, setDob] = useState();
-  const [about, setAbout] = useState();
-  const [image, setImage] = useState();
+  const [gender, setGender] = useState("");
+  const [dob, setDob] = useState("");
+  const [about, setAbout] = useState("");
+  const [image, setImage] = useState("");
   const authData = sessionStorage.getItem("authData");
   const authDataObj = JSON.parse(authData);
   const id = authDataObj.id;
   const name = authDataObj.Name;
   const email = authDataObj.yourEmail;
   const phonenumber = authDataObj.phoneNumber;
-
-  const formattedDob = moment(dob).format("YYYY-MM-DD");
 
   const basicdata = (e) => {
     e.preventDefault();
@@ -31,22 +26,21 @@ function Basicdetails() {
     axios
       .post("http://localhost:5000/updatedetails", data)
       .then((response) => {
-        console.log(response, "response==========>");
-        sessionStorage.setItem("autData", JSON.stringify(response.data.data));
+        console.log(response, "response basicdetail==========>");
+        // sessionStorage.setItem("authData", JSON.stringify(response.data.data));
         router("/educationdetails");
       })
       .catch((error) => {
-        console.log(error, "errro=======>");
+        console.log(error, "error=======>");
       });
   };
-
   return (
     <div className="app-content content ">
       <div className="content-overlay" />
       <div className="header-navbar-shadow" />
-       <div className="content-wrapper">
-         <div className="content-header row"></div>
-         <div className="content-body">
+      <div className="content-wrapper">
+        <div className="content-header row"></div>
+        <div className="content-body">
           <h1>Basic Details </h1>
           <div className="auth-wrapper auth-v1 px-2">
             <div className="auth-inner py-2">
@@ -81,8 +75,6 @@ function Basicdetails() {
                   Phone Number: <br />
                   {phonenumber}
                 </p>
-
-            
 
                 <div className="mb-1">
                   <label htmlFor="register-gender" className="form-label">
@@ -136,7 +128,7 @@ function Basicdetails() {
                     />
                   </div>
                 </div>
-               
+
                 <button
                   className="btn btn-primary w-100"
                   tabIndex={5}
@@ -145,11 +137,8 @@ function Basicdetails() {
                   Save & Next
                 </button>
               </form>
-        
-          
             </div>
           </div>
-         
         </div>
       </div>
     </div>

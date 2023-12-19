@@ -2,24 +2,36 @@ import React from "react";
 import { useState } from "react";
 // import { Link } from "react-router-dom";
 import axios from "axios";
-import * as qs from "qs";
+// import * as qs from "qs";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const [email, setEmail] = useState("jhgsdjf");
-  const [password, setPassword] = useState("67");
+  const router = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
-
-  const obj = {
-    yourEmail: email,
-    password: password,
-  };
 
   const loginData = (e) => {
     e.preventDefault();
+
+    const obj = {
+      yourEmail: email,
+      password: password,
+    };
     axios
-      .post("http://localhost:5000/login", qs.stringify(obj))
+      .post("http://localhost:5000/login", obj)
       .then((response) => {
-        console.log("response ============================> ", response);
+        const role = response?.data?.role;
+        localStorage.setItem("userdata", JSON.stringify(response?.data));
+        console.log("response ============================> ", role);
+        if (role === 0) {
+          router("/dashboard");
+        } else if (role === 1) {
+          router("/dummy");
+        } else if (role === 2) {
+          router("/dummy");
+        } else {
+        }
       })
       .catch((err) => {
         console.log("Error =======================> ", err);
@@ -183,18 +195,21 @@ function Login() {
                           id="remember-me"
                           tabIndex={3}
                           checked={rememberMe}
-                          onChange={(e)=>setRememberMe(e.target.value)}
+                          onChange={(e) => setRememberMe(e.target.checked)}
                         />
                         <label
                           className="form-check-label"
                           htmlFor="remember-me"
                         >
-                          {" "}
-                          Remember Me{" "}
+                          Remember Me
                         </label>
                       </div>
                     </div>
-                    <button className="btn btn-primary w-100" tabIndex={4} onClick={loginData}>
+                    <button
+                      className="btn btn-primary w-100"
+                      tabIndex={4}
+                      onClick={loginData}
+                    >
                       Sign in
                     </button>
                   </form>

@@ -1,39 +1,47 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaEye, FaTrash } from "react-icons/fa";
+import axios from "axios";
+import * as qs from "qs";
 
 function Userlist() {
   const [user, setUser] = useState([]);
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState("");
 
-  useEffect(() => {
-    const authData = sessionStorage.getItem("authData");
-  
-    if (authData) {
-      const authDataObj = JSON.parse(authData);
-      const id = authDataObj.id;
-      const name = authDataObj.Name;
-      const email = authDataObj.yourEmail;
-      const phonenumber = authDataObj.phoneNumber;
-  
-      const newuser = {
-        id: id,
-        Name: name,
-        yourEmail: email,
-        phoneNumber: phonenumber,
-      };
-  
-      setUser([newuser]);
-    } else {
-      setUser([])
-    }
-  }, []);
-
-  const handleDelete = (userData) => {
-    console.log(`Deleting user with ID: ${userData}`);
+  const abc = {
+    role: 2,
   };
 
+  useEffect(() => {
+    axios
+      .post("http://localhost:5000/rolelistening", qs.stringify(abc))
+      .then((response) => {
+        const usersWithStatus = response.data.user.map((userData) => ({
+          ...userData,
+          status: userData.listening ? "Active" : "Inactive",
+        }));
+        setUser(usersWithStatus);
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
+  }, []);
 
+  const handleDelete = (userId) => {
+    alert(userId)
+    const data = {
+      id: userId,
+    };
+  
+    axios
+      .delete('http://localhost:5000/delete', { data })
+      .then((response) => {
+        console.log('User deleted successfully:', response.data);
+      })
+      .catch((error) => {
+        console.error('Error deleting user:', error);
+      });
+  };
 
   return (
     <div className="app-content content">
@@ -65,9 +73,10 @@ function Userlist() {
                             />
                           </div>
                           <div className="col">
-                            <a href="/addfrom" className="btn btn-secondary">
-                              <i className="material-icons"></i> <span>Add New User</span>
-                            </a>
+                            <Link to="/addfrom" className="btn btn-secondary">
+                              <i className="material-icons"></i>{" "}
+                              <span>Add New User</span>
+                            </Link>
                           </div>
                         </div>
                       </div>
@@ -80,35 +89,40 @@ function Userlist() {
                         <th>Name</th>
                         <th>Email</th>
                         <th>PhoneNumber</th>
+                        <th>Status</th>
                         <th>Action</th>
                       </tr>
                     </thead>
                     <tbody>
-                      {
-                        user.map((userData) => (
-                          <tr key={userData?.id}>
-                            <td>{userData?.id}</td>
-                            <td>{userData?.Name}</td>
-                            <td>{userData?.yourEmail}</td>
-                            <td>{userData?.phoneNumber}</td>
-                            <td>
-                              <Link
-                                to={`/view/${userData?.id}`}
-                                className="btn btn-primary"
-                              >
-                                <FaEye />
-                              </Link>
-                              <button
-                                className="btn btn-danger"
-                                onClick={() => handleDelete(userData?.id)}
-                              >
-                                <FaTrash />
-                              </button>
-                            </td>
-                          </tr>
-                        ))}
+                      {user.map((userData) => (
+                        <tr key={userData?.id}>
+                          <td>{userData?.id}</td>
+                          <td>{userData?.Name}</td>
+                          <td>{userData?.yourEmail}</td>
+                          <td>{userData?.phoneNumber}</td>
+                          <td>{userData?.status}</td>
+                          <td>
+                            <Link
+                              to={`/view/${userData?.id}`}
+                              className="btn btn-primary"
+                            >
+                              <FaEye />
+                            </Link>
+                            <button
+                              className="btn btn-danger"
+                              onClick={() => handleDelete(userData?.id)}
+                            >
+                              <FaTrash />
+                            </button>
+                          </td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
+                  {/* <div className="clearfix">
+                    <div className="hint-text">
+                      Showing <b>{user.length}</b> out of <b>{user.length}</b> entries
+                    </div> */}
                   <div className="clearfix">
                     <div className="hint-text">
                       Showing <b>5</b> out of <b>25</b> entries
@@ -156,9 +170,6 @@ function Userlist() {
         </div>
       </div>
     </div>
-
-    // <>
-    // <h1>hello</h1></>
   );
 }
 

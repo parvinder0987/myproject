@@ -120,14 +120,12 @@ function Sidebar() {
         data-menu="menu-navigation"
       >
         <li className=" nav-item">
-          <a className="d-flex align-items-center" href="index.html">
+          <a className="d-flex align-items-center" href="/dashboard">
             <i data-feather="home" />
             <span className="menu-title text-truncate" data-i18n="Dashboards">
               Dashboards
             </span>
-            {/* <span className="badge badge-light-warning rounded-pill ms-auto me-1">
-              2
-            </span> */}
+           
           </a>
           <ul className="menu-content">
             {/* <li>
@@ -144,7 +142,7 @@ function Sidebar() {
             <li className="active">
               <a
                 className="d-flex align-items-center"
-                href="dashboard-ecommerce.html"
+                href="/dashboard"
               >
                 <i data-feather="circle" />
                 <span className="menu-item text-truncate" data-i18n="eCommerce">

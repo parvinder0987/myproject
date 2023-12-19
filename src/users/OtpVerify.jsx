@@ -18,18 +18,18 @@ function OtpVerify() {
   const handleOtpVerification = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/verifyotp", qs.stringify(obj))
-      .then((response) => {
-        console.log("response===========", response);
-        const role = response?.data?.body?.role;
-        if (role === 1) {
-          router("/basicdetails");
-        } else if (role === 2) {
-          router("/login");
-        } else {
-          router("/");
-        }
-      })
+    .post("http://localhost:5000/verifyotp", qs.stringify(obj))
+    .then((response) => {
+      const role = response?.data?.body?.role;
+      console.log("response===========", response);
+      if (role === 1) {
+        router("/basicdetails");
+      } else if (role === 2) {
+        router("/login");
+      } else {
+        router("/");
+      }
+    })
       .catch((error) => {
         console.log("error", error);
       });

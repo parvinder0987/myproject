@@ -27,7 +27,17 @@ function Signup() {
   };
 
   const signupdata = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
+
+    if (!role) {
+      console.log("Role is required");
+      return;
+    }
+
+    if(password!==confirmpassword){
+      console.log("confrim password do not match");
+      return;
+    }
     axios
       .post("http://localhost:5000/signup", qs.stringify(abs))
       .then((response) => {
@@ -138,7 +148,7 @@ function Signup() {
                         </g>
                       </g>
                     </svg>
-                    <h2 className="brand-text text-primary ms-1">Vuexy</h2>
+                    <h2 className="brand-text text-primary ms-1">wood wear</h2>
                   </a>
                   <div className="options-container">
                     <button onClick={() => userrole(1)} className="option">
@@ -224,7 +234,18 @@ function Signup() {
                           value={password}
                           onChange={(e) => setPassword(e.target.value)}
                         />
-                        <span className="input-group-text cursor-pointer">
+                        <span
+                          className="input-group-text cursor-pointer"
+                          onClick={() => {
+                            const passwordInput =
+                              document.getElementById("register-password");
+                            if (passwordInput.type === "password") {
+                              passwordInput.type = "text";
+                            } else {
+                              passwordInput.type = "password";
+                            }
+                          }}
+                        >
                           <i data-feather="eye" />
                         </span>
                       </div>
@@ -246,7 +267,18 @@ function Signup() {
                           value={confirmpassword}
                           onChange={(e) => setConfrimpassword(e.target.value)}
                         />
-                        <span className="input-group-text cursor-pointer">
+                        <span
+                          className="input-group-text cursor-pointer"
+                          onClick={() => {
+                            const confirmPasswordInput =
+                              document.getElementById("confirm-password");
+                            if (confirmPasswordInput.type === "password") {
+                              confirmPasswordInput.type = "text";
+                            } else {
+                              confirmPasswordInput.type = "password";
+                            }
+                          }}
+                        >
                           <i data-feather="eye" />
                         </span>
                       </div>

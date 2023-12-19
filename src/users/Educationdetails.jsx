@@ -5,14 +5,14 @@ function EducationDetails() {
   const [education, setEducation] = useState("");
   const [stream, setStream] = useState("");
   const [document, setDocument] = useState("");
-  const [employmentType, setEmploymentType] = useState("");
+  const [employmentType, setEmploymentType] = useState("full-time");
   const authData = sessionStorage.getItem("authData");
   const authDataObj = JSON.parse(authData);
   const id = authDataObj.id;
 
-  const handlechange= (type)=>{
-       setEmploymentType(type)
-  }
+  const handlechange = (type) => {
+    setEmploymentType(type);
+  };
 
   const saveData = () => {
     let data = new FormData();
@@ -108,7 +108,7 @@ function EducationDetails() {
                       name="employment-type"
                       value="full-time"
                       checked={employmentType === "full-time"}
-                      onChange={() =>handlechange("full-time") }
+                      onChange={() => handlechange("full-time")}
                     />
                     <label className="form-check-label" htmlFor="full-time">
                       Full-time

@@ -13,18 +13,39 @@ function Teacherlist() {
   };
 
   useEffect(() => {
-    axios.post("http://localhost:5000/rolelistening", qs.stringify(abc))
+    axios
+      .post("http://localhost:5000/rolelistening", qs.stringify(abc))
+      .then((response) => { 
+        const teacherwithstatus = response.data.user.map((userData)=>({
+          ...userData,
+          status: userData.listening ? "Active" : "Inactive",
+        }))
+        console.log("response", response);
+        setTeacher(teacherwithstatus);
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
+  }, []);
+  const handleDelete = (userId) => {
+ alert(userId)
+    const obj = {
+      id: userId,
+    }
+    axios.delete("http://localhost:5000/delete",{ obj })
     .then((response)=>{
-      console.log("response",response)
-      setTeacher(response.data.user);
+      console.log("data will be deleted",response)
     }).catch((error)=>{
       console.log("error",error)
     })
-
-  },[]);
-  const handleDelete = (userData) => {
-    console.log("row will be deleted", userData);
   };
+  const filteredTeacher = teacher.filter((userData) => {
+    const searchTerm = searchQuery.toLowerCase();
+    return (
+      userData.Name.toLowerCase().includes(searchTerm) ||
+      userData.id.toString().includes(searchTerm)
+    );
+  });
 
   return (
     <div className="app-content content">
@@ -75,21 +96,24 @@ function Teacherlist() {
                         <th>image</th>
                         <th>education</th>
                         <th>stream</th>
-                        <th>employmentType</th>
+                        <th>employeType</th>
                         <th>Action</th>
                       </tr>
                     </thead>
                     <tbody>
-                      {teacher.map((userData) => (
+                      {filteredTeacher.map((userData) => (
                         <tr key={userData?.id}>
                           <td>{userData?.id}</td>
                           <td>{userData?.Name}</td>
                           <td>{userData?.phoneNumber}</td>
                           <td>{userData?.Gender}</td>
-                          <td>{userData?.image}</td>
+                          {/* <td>{userData?.image}</td> */}
+                          <td>
+                            <img src={userData?.image} />
+                          </td>
                           <td>{userData?.education}</td>
                           <td>{userData?.stream}</td>
-                          <td>{userData?.employmentType}</td>
+                          <td>{userData?.employeType}</td>
                           <td>
                             <Link
                               to={`/view/${userData?.id}`}
