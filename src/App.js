@@ -15,6 +15,7 @@ import Educationdetails from './users/Educationdetails';
 import Experience from './users/Experience';
 import Logout from './users/Logout';
 import Dummy from './users/Dummy';
+import Addnewuser from './users/Addnewuser';
 
 
 
@@ -37,6 +38,7 @@ function App() {
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/userlist' element={<Userlist />} />
             <Route path='/teacherlist' element={<Teacherlist/>}/>
+            <Route path='/addnewuser' element={<Addnewuser/>}/>
             {/* <Route path='/addfrom' element={<Addfrom />}/> */}
           </Route>
         </Routes>

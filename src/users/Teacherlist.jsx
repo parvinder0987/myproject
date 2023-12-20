@@ -20,7 +20,7 @@ function Teacherlist() {
           ...userData,
           status: userData.listening ? "Active" : "Inactive",
         }))
-        console.log("response", response);
+        // console.log("response", response);
         setTeacher(teacherwithstatus);
       })
       .catch((error) => {
@@ -34,7 +34,7 @@ function Teacherlist() {
     }
     axios.delete("http://localhost:5000/delete",{ obj })
     .then((response)=>{
-      console.log("data will be deleted",response)
+      console.log("data will be deleted",response.obj)
     }).catch((error)=>{
       console.log("error",error)
     })
@@ -77,7 +77,7 @@ function Teacherlist() {
                             />
                           </div>
                           <div className="col">
-                            <a href="/addfrom" className="btn btn-secondary">
+                            <a href="/addnewuser" className="btn btn-secondary">
                               <i className="material-icons"></i>{" "}
                               <span>Add New User</span>
                             </a>
@@ -97,6 +97,7 @@ function Teacherlist() {
                         <th>education</th>
                         <th>stream</th>
                         <th>employeType</th>
+                        <th>Status</th>
                         <th>Action</th>
                       </tr>
                     </thead>

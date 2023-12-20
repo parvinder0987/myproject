@@ -18,7 +18,7 @@ function Userlist() {
       .then((response) => {
         const usersWithStatus = response.data.user.map((userData) => ({
           ...userData,
-          status: userData.listening ? "Active" : "Inactive",
+          status: userData.listening ? "Active" : "active",
         }));
         setUser(usersWithStatus);
       })
@@ -28,20 +28,28 @@ function Userlist() {
   }, []);
 
   const handleDelete = (userId) => {
-    alert(userId)
+    alert(userId);
     const data = {
       id: userId,
     };
-  
+
     axios
-      .delete('http://localhost:5000/delete', { data })
+      .delete("http://localhost:5000/delete", { data })
       .then((response) => {
-        console.log('User deleted successfully:', response.data);
+        console.log("User deleted successfully:", response.data);
       })
       .catch((error) => {
-        console.error('Error deleting user:', error);
+        console.error("Error deleting user:", error);
       });
   };
+
+  const filteruser = user.filter((userData) => {
+    const seachterm = search.toLowerCase();
+    return (
+      userData.name.toLowerCase().includes(seachterm) ||
+      userData.email.toLowerCase().includes(seachterm)
+    );
+  });
 
   return (
     <div className="app-content content">
@@ -73,7 +81,7 @@ function Userlist() {
                             />
                           </div>
                           <div className="col">
-                            <Link to="/addfrom" className="btn btn-secondary">
+                            <Link to="/addnewuser" className="btn btn-secondary">
                               <i className="material-icons"></i>{" "}
                               <span>Add New User</span>
                             </Link>
@@ -94,7 +102,7 @@ function Userlist() {
                       </tr>
                     </thead>
                     <tbody>
-                      {user.map((userData) => (
+                      {filteruser.map((userData) => (
                         <tr key={userData?.id}>
                           <td>{userData?.id}</td>
                           <td>{userData?.Name}</td>

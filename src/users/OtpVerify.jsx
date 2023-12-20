@@ -36,63 +36,28 @@ function OtpVerify() {
   };
 
   return (
-    <div className="app-content content ">
-      <div className="content-overlay" />
-      <div className="header-navbar-shadow" />
-      <div className="content-wrapper">
-        <div className="content-header row"></div>
-        <div className="content-body">
-          <div className="auth-wrapper auth-v1 px-2">
-            <div className="auth-inner py-2">
-              <h4 className="card-title mb-1">Verify Otp</h4>
-              {/* <p className="card-text mb-2">
-                  Make your app management easy and fun!
-                </p> */}
-              <form
-                className="auth-register-form mt-2"
-                action="index.html"
-                method="POST"
-              >
-                <div className="mb-1">
-                  <label htmlFor="otp-verify" className="form-label">
-                    OTP Verification
-                  </label>
-                  <div className="input-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="otp-verify"
-                      name="otp-verify"
-                      placeholder="Enter OTP"
-                      aria-describedby="otp-verify"
-                      tabIndex={1}
-                      value={otp}
-                      onChange={(e) => setOtp(e.target.value)}
-                    />
-                    <button
-                      className="btn btn-primary"
-                      type="button"
-                      onClick={handleOtpVerification}
-                    >
-                      Verify
-                    </button>
-                    <br></br>
-                    <Link to="/login">back</Link>
-                  </div>
-                </div>
-              </form>
-            
-            
-
-
-              {/* </div> */}
-              {/* </div> */}
-              {/* /Register v1 */}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div className="otp-verification-form">
+    <h2>OTP Verification</h2>
+    <form>
+      <label htmlFor="otpInput">Enter OTP:</label>
+      <input
+        type="text"
+        id="otpInput"
+        className="otp-input"
+        value={otp}
+        onChange={(e) => setOtp(e.target.value)}
+      />
+      <button
+        className="btn btn-primary"
+        type="button"
+        onClick={handleOtpVerification}
+      >
+        Verify
+      </button>
+      <br></br>
+      <Link to="/login">back</Link>
+    </form>
+  </div>
   );
 }
 export default OtpVerify;
