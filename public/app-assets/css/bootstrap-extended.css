@@ -127,7 +127,8 @@ pre code {
 
 .table:not(.table-dark):not(.table-light) thead:not(.table-dark) th,
 .table:not(.table-dark):not(.table-light) tfoot:not(.table-dark) th {
-  background-color: #f3f2f7; }
+  background-color: #000000;
+color: #ffff; }
 
 .table-hover tbody tr {
   cursor: pointer; }

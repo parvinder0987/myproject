@@ -159,8 +159,9 @@ function Signup() {
             checked={remember}
             onChange={() => setRemember(!remember)}
           />
-          <label htmlFor="rememberCheckbox">Remember me</label>
+          <label For="rememberCheckbox">Remember me</label>
         </div>
+  
         <br />
         <button
           className="btn btn-primary w-100"

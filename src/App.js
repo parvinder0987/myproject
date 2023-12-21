@@ -16,6 +16,9 @@ import Experience from './users/Experience';
 import Logout from './users/Logout';
 import Dummy from './users/Dummy';
 import Addnewuser from './users/Addnewuser';
+import View from './users/Teacherview';
+import Changepassword from './users/Changepassword';
+import Userview from './users/Userview';
 
 
 
@@ -24,21 +27,24 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/register' element={<Signup/>}/>
+          <Route path='/register' element={<Signup />} />
           <Route path='/login' element={<Login />} />
           <Route path='/forgot' element={<ForgotPassword />} />
           <Route path='/verifyOtp' element={<OtpVerify />} />
-          <Route path='/basicdetails' element={<Basicdetails/>}/>
-          <Route path='/educationdetails' element={<Educationdetails/>}/>
-          <Route path='/experience' element={<Experience/>}/>
-          <Route path='/addform' element={<Addfrom/>}/>
-          <Route path='/logout' element={<Logout/>}/>
-          <Route path='/dummy' element={<Dummy/>}/>
+          <Route path='/basicdetails' element={<Basicdetails />} />
+          <Route path='/educationdetails' element={<Educationdetails />} />
+          <Route path='/experience' element={<Experience />} />
+          <Route path='/addform' element={<Addfrom />} />
+          <Route path='/logout' element={<Logout />} />
+          <Route path='/dummy' element={<Dummy />} />
           <Route element={<Layout />}>
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/userlist' element={<Userlist />} />
-            <Route path='/teacherlist' element={<Teacherlist/>}/>
-            <Route path='/addnewuser' element={<Addnewuser/>}/>
+            <Route path='/teacherlist' element={<Teacherlist />} />
+            <Route path='/addnewuser' element={<Addnewuser />} />
+            <Route path='/viewdata' element={<View />} />
+            <Route path='/userviewdata' element={<Userview />} />
+            <Route path='/chnagepassword' element={<Changepassword />} />
             {/* <Route path='/addfrom' element={<Addfrom />}/> */}
           </Route>
         </Routes>

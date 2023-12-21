@@ -139,7 +139,7 @@ function Sidebar() {
                 </span>
               </a>
             </li> */}
-            <li className="active">
+            {/* <li className="active">
               <a
                 className="d-flex align-items-center"
                 href="/dashboard"
@@ -149,7 +149,7 @@ function Sidebar() {
                   eCommerce
                 </span>
               </a>
-            </li>
+            </li> */}
           </ul>
         </li>
         <li className=" navigation-header">

@@ -37,7 +37,7 @@ function Basicdetails() {
   return (
     <div className="app-content content ">
       <div className="content-overlay" />
-      <div className="header-navbar-shadow" />
+      {/* <div className="header-navbar-shadow" /> */}
       <div className="content-wrapper">
         <div className="content-header row"></div>
         <div className="content-body">
@@ -56,7 +56,7 @@ function Basicdetails() {
                   <input
                     type="file"
                     className="form-control-image"
-                    id="from control file"
+                    id="form control file"
                     // value={image}
                     onChange={(e) => {
                       setImage(e.target.files[0]);

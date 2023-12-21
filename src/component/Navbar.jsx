@@ -2,19 +2,18 @@ import React from "react";
 
 function Navbar() {
   return (
-    
-  <>
-  <nav className="header-navbar navbar navbar-expand-lg align-items-center floating-nav navbar-light navbar-shadow container-xxl">
-    <div className="navbar-container d-flex content">
-      <div className="bookmark-wrapper d-flex align-items-center">
-        <ul className="nav navbar-nav d-xl-none">
-          {/* <li className="nav-item">
+    <>
+      <nav className="header-navbar navbar navbar-expand-lg align-items-center floating-nav navbar-light navbar-shadow container-xxl">
+        <div className="navbar-container d-flex content">
+          <div className="bookmark-wrapper d-flex align-items-center">
+            <ul className="nav navbar-nav d-xl-none">
+              {/* <li className="nav-item">
             <a className="nav-link menu-toggle" href="#">
               <i className="ficon" data-feather="menu" />
             </a>
           </li> */}
-        </ul>
-        {/* <ul className="nav navbar-nav bookmark-icons">
+            </ul>
+            {/* <ul className="nav navbar-nav bookmark-icons">
           <li className="nav-item d-none d-lg-block">
             <a
               className="nav-link"
@@ -60,7 +59,7 @@ function Navbar() {
             </a>
           </li>
         </ul> */}
-        {/* <ul className="nav navbar-nav">
+            {/* <ul className="nav navbar-nav">
           <li className="nav-item d-none d-lg-block">
             <a className="nav-link bookmark-star">
               <i className="ficon text-warning" data-feather="star" />
@@ -80,9 +79,9 @@ function Navbar() {
             </div>
           </li>
         </ul> */}
-      </div>
-      <ul className="nav navbar-nav align-items-center ms-auto">
-        {/* <li className="nav-item dropdown dropdown-language">
+          </div>
+          <ul className="nav navbar-nav align-items-center ms-auto">
+            {/* <li className="nav-item dropdown dropdown-language">
           <a
             className="nav-link dropdown-toggle"
             id="dropdown-flag"
@@ -117,28 +116,28 @@ function Navbar() {
             <i className="ficon" data-feather="moon" />
           </a>
         </li> */}
-        <li className="nav-item nav-search">
-          <a className="nav-link nav-link-search">
-            <i className="ficon" data-feather="search" />
-          </a>
-          <div className="search-input">
-            <div className="search-input-icon">
-              <i data-feather="search" />
-            </div>
-            <input
-              className="form-control input"
-              type="text"
-              placeholder="Explore Vuexy..."
-              tabIndex={-2}
-              data-search="search"
-            />
-            <div className="search-input-close">
-              <i data-feather="x" />
-            </div>
-            <ul className="search-list search-list-main" />
-          </div>
-        </li>
-        {/* <li className="nav-item dropdown dropdown-cart me-25">
+            <li className="nav-item nav-search">
+              <a className="nav-link nav-link-search">
+                <i className="ficon" data-feather="search" />
+              </a>
+              <div className="search-input">
+                <div className="search-input-icon">
+                  <i data-feather="search" />
+                </div>
+                <input
+                  className="form-control input"
+                  type="text"
+                  placeholder="Explore Vuexy..."
+                  tabIndex={-2}
+                  data-search="search"
+                />
+                <div className="search-input-close">
+                  <i data-feather="x" />
+                </div>
+                <ul className="search-list search-list-main" />
+              </div>
+            </li>
+            {/* <li className="nav-item dropdown dropdown-cart me-25">
           <a className="nav-link" href="#" data-bs-toggle="dropdown">
             <i className="ficon" data-feather="shopping-cart" />
             <span className="badge rounded-pill bg-primary badge-up cart-item-count">
@@ -507,253 +506,252 @@ function Navbar() {
             </li>
           </ul>
         </li> */}
-        <li className="nav-item dropdown dropdown-user">
-          <a
-            className="nav-link dropdown-toggle dropdown-user-link"
-            id="dropdown-user"
-            href="#"
-            data-bs-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            <div className="user-nav d-sm-flex d-none">
-              <span className="user-name fw-bolder">Admin</span>
-              <span className="user-status">parvinder singh</span>
-            </div>
-            <span className="avatar">
-              <img
-                className="round"
-                src="/app-assets/images/portrait/small/avatar-s-11.jpg"
-                alt="avatar"
-                height={40}
-                width={40}
-              />
-              <span className="avatar-status-online" />
-            </span>
-          </a>
-          <div
-            className="dropdown-menu dropdown-menu-end"
-            aria-labelledby="dropdown-user"
-          >
-            <a className="dropdown-item" href="page-profile.html">
-              <i className="me-50" data-feather="user" /> Profile
-            </a>
-            {/* <a className="dropdown-item" href="app-email.html">
+            <li className="nav-item dropdown dropdown-user">
+              <a
+                className="nav-link dropdown-toggle dropdown-user-link"
+                id="dropdown-user"
+                href="#"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <div className="user-nav d-sm-flex d-none">
+                  <span className="user-name fw-bolder">Admin</span>
+                  <span className="user-status">parvinder singh</span>
+                </div>
+                <span className="avatar">
+                  <img
+                    className="round"
+                    src="/app-assets/images/portrait/small/avatar-s-11.jpg"
+                    alt="avatar"
+                    height={40}
+                    width={40}
+                  />
+                  <span className="avatar-status-online" />
+                </span>
+              </a>
+              <div
+                className="dropdown-menu dropdown-menu-end"
+                aria-labelledby="dropdown-user"
+              >
+                <a className="dropdown-item" href="page-profile.html">
+                  <i className="me-50" data-feather="user" /> Profile
+                </a>
+                {/* <a className="dropdown-item" href="app-email.html">
               <i className="me-50" data-feather="mail" /> Inbox
             </a> */}
-            {/* <a className="dropdown-item" href="app-todo.html">
-              <i className="me-50" data-feather="check-square" /> Task
-            </a> */}
-            {/* <a className="dropdown-item" href="app-chat.html">
+                <a className="dropdown-item" href="/chnagepassword">
+                  <i className="me-50" data-feather="key" />ChangePassword
+                </a>
+
+                {/* <a className="dropdown-item" href="app-chat.html">
               <i className="me-50" data-feather="message-square" /> Chats
             </a> */}
-            <div className="dropdown-divider" />
-            <a className="dropdown-item" href="page-account-settings.html">
-              <i className="me-50" data-feather="settings" /> Settings
-            </a>
-            {/* <a className="dropdown-item" href="page-pricing.html">
+                <div className="dropdown-divider" />
+                <a className="dropdown-item" href="page-account-settings.html">
+                  <i className="me-50" data-feather="settings" /> Settings
+                </a>
+                {/* <a className="dropdown-item" href="page-pricing.html">
               <i className="me-50" data-feather="credit-card" /> Pricing
             </a> */}
-            <a className="dropdown-item" href="page-faq.html">
-              <i className="me-50" data-feather="help-circle" /> FAQ
-            </a>
-            <a className="dropdown-item" href="/login">
-              <i className="me-50" data-feather="power" /> Logout
-            </a>
-          </div>
+                <a className="dropdown-item" href="page-faq.html">
+                  <i className="me-50" data-feather="help-circle" /> FAQ
+                </a>
+                <a className="dropdown-item" href="/login">
+                  <i className="me-50" data-feather="power" /> Logout
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <ul className="main-search-list-defaultlist d-none">
+        <li className="d-flex align-items-center">
+          <a href="#">
+            <h6 className="section-label mt-75 mb-0">Files</h6>
+          </a>
+        </li>
+        <li className="auto-suggestion">
+          <a
+            className="d-flex align-items-center justify-content-between w-100"
+            href="app-file-manager.html"
+          >
+            <div className="d-flex">
+              <div className="me-75">
+                <img
+                  src="/app-assets/images/icons/xls.png"
+                  alt="png"
+                  height={32}
+                />
+              </div>
+              <div className="search-data">
+                <p className="search-data-title mb-0">Two new item submitted</p>
+                <small className="text-muted">Marketing Manager</small>
+              </div>
+            </div>
+            <small className="search-data-size me-50 text-muted">'17kb</small>
+          </a>
+        </li>
+        <li className="auto-suggestion">
+          <a
+            className="d-flex align-items-center justify-content-between w-100"
+            href="app-file-manager.html"
+          >
+            <div className="d-flex">
+              <div className="me-75">
+                <img
+                  src="/app-assets/images/icons/jpg.png"
+                  alt="png"
+                  height={32}
+                />
+              </div>
+              <div className="search-data">
+                <p className="search-data-title mb-0">52 JPG file Generated</p>
+                <small className="text-muted">FontEnd Developer</small>
+              </div>
+            </div>
+            <small className="search-data-size me-50 text-muted">'11kb</small>
+          </a>
+        </li>
+        <li className="auto-suggestion">
+          <a
+            className="d-flex align-items-center justify-content-between w-100"
+            href="app-file-manager.html"
+          >
+            <div className="d-flex">
+              <div className="me-75">
+                <img
+                  src="/app-assets/images/icons/pdf.png"
+                  alt="png"
+                  height={32}
+                />
+              </div>
+              <div className="search-data">
+                <p className="search-data-title mb-0">25 PDF File Uploaded</p>
+                <small className="text-muted">Digital Marketing Manager</small>
+              </div>
+            </div>
+            <small className="search-data-size me-50 text-muted">'150kb</small>
+          </a>
+        </li>
+        <li className="auto-suggestion">
+          <a
+            className="d-flex align-items-center justify-content-between w-100"
+            href="app-file-manager.html"
+          >
+            <div className="d-flex">
+              <div className="me-75">
+                <img
+                  src="/app-assets/images/icons/doc.png"
+                  alt="png"
+                  height={32}
+                />
+              </div>
+              <div className="search-data">
+                <p className="search-data-title mb-0">Anna_Strong.doc</p>
+                <small className="text-muted">Web Designer</small>
+              </div>
+            </div>
+            <small className="search-data-size me-50 text-muted">'256kb</small>
+          </a>
+        </li>
+        <li className="d-flex align-items-center">
+          <a href="#">
+            <h6 className="section-label mt-75 mb-0">Members</h6>
+          </a>
+        </li>
+        <li className="auto-suggestion">
+          <a
+            className="d-flex align-items-center justify-content-between py-50 w-100"
+            href="app-user-view.html"
+          >
+            <div className="d-flex align-items-center">
+              <div className="avatar me-75">
+                <img
+                  src="/app-assets/images/portrait/small/avatar-s-8.jpg"
+                  alt="png"
+                  height={32}
+                />
+              </div>
+              <div className="search-data">
+                <p className="search-data-title mb-0">John Doe</p>
+                <small className="text-muted">UI designer</small>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li className="auto-suggestion">
+          <a
+            className="d-flex align-items-center justify-content-between py-50 w-100"
+            href="app-user-view.html"
+          >
+            <div className="d-flex align-items-center">
+              <div className="avatar me-75">
+                <img
+                  src="/app-assets/images/portrait/small/avatar-s-1.jpg"
+                  alt="png"
+                  height={32}
+                />
+              </div>
+              <div className="search-data">
+                <p className="search-data-title mb-0">Michal Clark</p>
+                <small className="text-muted">FontEnd Developer</small>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li className="auto-suggestion">
+          <a
+            className="d-flex align-items-center justify-content-between py-50 w-100"
+            href="app-user-view.html"
+          >
+            <div className="d-flex align-items-center">
+              <div className="avatar me-75">
+                <img
+                  src="/app-assets/images/portrait/small/avatar-s-14.jpg"
+                  alt="png"
+                  height={32}
+                />
+              </div>
+              <div className="search-data">
+                <p className="search-data-title mb-0">Milena Gibson</p>
+                <small className="text-muted">Digital Marketing Manager</small>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li className="auto-suggestion">
+          <a
+            className="d-flex align-items-center justify-content-between py-50 w-100"
+            href="app-user-view.html"
+          >
+            <div className="d-flex align-items-center">
+              <div className="avatar me-75">
+                <img
+                  src="/app-assets/images/portrait/small/avatar-s-6.jpg"
+                  alt="png"
+                  height={32}
+                />
+              </div>
+              <div className="search-data">
+                <p className="search-data-title mb-0">Anna Strong</p>
+                <small className="text-muted">Web Designer</small>
+              </div>
+            </div>
+          </a>
         </li>
       </ul>
-    </div>
-  </nav>
-  <ul className="main-search-list-defaultlist d-none">
-    <li className="d-flex align-items-center">
-      <a href="#">
-        <h6 className="section-label mt-75 mb-0">Files</h6>
-      </a>
-    </li>
-    <li className="auto-suggestion">
-      <a
-        className="d-flex align-items-center justify-content-between w-100"
-        href="app-file-manager.html"
-      >
-        <div className="d-flex">
-          <div className="me-75">
-            <img
-              src="/app-assets/images/icons/xls.png"
-              alt="png"
-              height={32}
-            />
-          </div>
-          <div className="search-data">
-            <p className="search-data-title mb-0">Two new item submitted</p>
-            <small className="text-muted">Marketing Manager</small>
-          </div>
-        </div>
-        <small className="search-data-size me-50 text-muted">'17kb</small>
-      </a>
-    </li>
-    <li className="auto-suggestion">
-      <a
-        className="d-flex align-items-center justify-content-between w-100"
-        href="app-file-manager.html"
-      >
-        <div className="d-flex">
-          <div className="me-75">
-            <img
-              src="/app-assets/images/icons/jpg.png"
-              alt="png"
-              height={32}
-            />
-          </div>
-          <div className="search-data">
-            <p className="search-data-title mb-0">52 JPG file Generated</p>
-            <small className="text-muted">FontEnd Developer</small>
-          </div>
-        </div>
-        <small className="search-data-size me-50 text-muted">'11kb</small>
-      </a>
-    </li>
-    <li className="auto-suggestion">
-      <a
-        className="d-flex align-items-center justify-content-between w-100"
-        href="app-file-manager.html"
-      >
-        <div className="d-flex">
-          <div className="me-75">
-            <img
-              src="/app-assets/images/icons/pdf.png"
-              alt="png"
-              height={32}
-            />
-          </div>
-          <div className="search-data">
-            <p className="search-data-title mb-0">25 PDF File Uploaded</p>
-            <small className="text-muted">Digital Marketing Manager</small>
-          </div>
-        </div>
-        <small className="search-data-size me-50 text-muted">'150kb</small>
-      </a>
-    </li>
-    <li className="auto-suggestion">
-      <a
-        className="d-flex align-items-center justify-content-between w-100"
-        href="app-file-manager.html"
-      >
-        <div className="d-flex">
-          <div className="me-75">
-            <img
-              src="/app-assets/images/icons/doc.png"
-              alt="png"
-              height={32}
-            />
-          </div>
-          <div className="search-data">
-            <p className="search-data-title mb-0">Anna_Strong.doc</p>
-            <small className="text-muted">Web Designer</small>
-          </div>
-        </div>
-        <small className="search-data-size me-50 text-muted">'256kb</small>
-      </a>
-    </li>
-    <li className="d-flex align-items-center">
-      <a href="#">
-        <h6 className="section-label mt-75 mb-0">Members</h6>
-      </a>
-    </li>
-    <li className="auto-suggestion">
-      <a
-        className="d-flex align-items-center justify-content-between py-50 w-100"
-        href="app-user-view.html"
-      >
-        <div className="d-flex align-items-center">
-          <div className="avatar me-75">
-            <img
-              src="/app-assets/images/portrait/small/avatar-s-8.jpg"
-              alt="png"
-              height={32}
-            />
-          </div>
-          <div className="search-data">
-            <p className="search-data-title mb-0">John Doe</p>
-            <small className="text-muted">UI designer</small>
-          </div>
-        </div>
-      </a>
-    </li>
-    <li className="auto-suggestion">
-      <a
-        className="d-flex align-items-center justify-content-between py-50 w-100"
-        href="app-user-view.html"
-      >
-        <div className="d-flex align-items-center">
-          <div className="avatar me-75">
-            <img
-              src="/app-assets/images/portrait/small/avatar-s-1.jpg"
-              alt="png"
-              height={32}
-            />
-          </div>
-          <div className="search-data">
-            <p className="search-data-title mb-0">Michal Clark</p>
-            <small className="text-muted">FontEnd Developer</small>
-          </div>
-        </div>
-      </a>
-    </li>
-    <li className="auto-suggestion">
-      <a
-        className="d-flex align-items-center justify-content-between py-50 w-100"
-        href="app-user-view.html"
-      >
-        <div className="d-flex align-items-center">
-          <div className="avatar me-75">
-            <img
-              src="/app-assets/images/portrait/small/avatar-s-14.jpg"
-              alt="png"
-              height={32}
-            />
-          </div>
-          <div className="search-data">
-            <p className="search-data-title mb-0">Milena Gibson</p>
-            <small className="text-muted">Digital Marketing Manager</small>
-          </div>
-        </div>
-      </a>
-    </li>
-    <li className="auto-suggestion">
-      <a
-        className="d-flex align-items-center justify-content-between py-50 w-100"
-        href="app-user-view.html"
-      >
-        <div className="d-flex align-items-center">
-          <div className="avatar me-75">
-            <img
-              src="/app-assets/images/portrait/small/avatar-s-6.jpg"
-              alt="png"
-              height={32}
-            />
-          </div>
-          <div className="search-data">
-            <p className="search-data-title mb-0">Anna Strong</p>
-            <small className="text-muted">Web Designer</small>
-          </div>
-        </div>
-      </a>
-    </li>
-  </ul>
-  <ul className="main-search-list-defaultlist-other-list d-none">
-    <li className="auto-suggestion justify-content-between">
-      <a className="d-flex align-items-center justify-content-between w-100 py-50">
-        <div className="d-flex justify-content-start">
-          <span className="me-75" data-feather="alert-circle" />
-          <span>No results found.</span>
-        </div>
-      </a>
-    </li>
-  </ul>
-</>  
-  
-   
+      <ul className="main-search-list-defaultlist-other-list d-none">
+        <li className="auto-suggestion justify-content-between">
+          <a className="d-flex align-items-center justify-content-between w-100 py-50">
+            <div className="d-flex justify-content-start">
+              <span className="me-75" data-feather="alert-circle" />
+              <span>No results found.</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </>
   );
 }
 
