@@ -42,9 +42,9 @@ function App() {
             <Route path='/userlist' element={<Userlist />} />
             <Route path='/teacherlist' element={<Teacherlist />} />
             <Route path='/addnewuser' element={<Addnewuser />} />
-            <Route path='/viewdata' element={<View />} />
-            <Route path='/userviewdata' element={<Userview />} />
             <Route path='/chnagepassword' element={<Changepassword />} />
+            <Route path='/userviewdata' element={<Userview />} />
+            <Route path='/viewdata' element={<View />} />
             {/* <Route path='/addfrom' element={<Addfrom />}/> */}
           </Route>
         </Routes>

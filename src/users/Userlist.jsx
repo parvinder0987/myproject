@@ -70,9 +70,9 @@ function Userlist() {
                 <div className="card-header">
                   <div className="row">
                     <div className="col-sm-5">
-                      <h2>
+                    `  <h2>
                         <b>User Listing</b>
-                      </h2>
+                      </h2>`
                     </div>
                     <div className="col-sm-7">
                       <div className="row">
@@ -85,12 +85,13 @@ function Userlist() {
                             onChange={(e) => setSearch(e.target.value)}
                           />
                         </div>
-                        <div className="col">
+                    <div className="col">
                           <Link to="/addnewuser" className="btn btn-secondary">
-                            {/* <i className="material-icons"></i>{" "} */}
+                            
                             <span>Add New User</span>
                           </Link>
                         </div>
+                       
                       </div>
                     </div>
                   </div>

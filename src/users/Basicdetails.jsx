@@ -27,7 +27,6 @@ function Basicdetails() {
       .post("http://localhost:5000/updatedetails", data)
       .then((response) => {
         console.log(response, "response basicdetail==========>");
-        // sessionStorage.setItem("authData", JSON.stringify(response.data.data));
         router("/educationdetails");
       })
       .catch((error) => {
