@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { FaEye, FaTrash } from "react-icons/fa";
+import { FaEye, FaTrash, FaToggleOn, FaToggleOff } from "react-icons/fa";
 import axios from "axios";
 import * as qs from "qs";
 
@@ -49,6 +49,21 @@ function Userlist() {
     router("/userviewdata");
   };
 
+  const changestatus = (userId, currentStatus) => {
+    axios
+      .put("http://localhost:5000/statuschange", { id: userId, status: !currentStatus })
+      .then((response) => {
+        console.log(response)
+        setUser((prevTeachers) =>
+          prevTeachers.map((t) =>
+            t.id === userId ? { ...t, status: !currentStatus ? "Active" : "Inactive" } : t
+          )
+        );
+      })
+      .catch((error) => {
+        console.error("Error toggling status", error);
+      });
+  };
   const filteruser = user.filter((userData) => {
     const searchTerm = search.toLowerCase();
     return (
@@ -116,7 +131,12 @@ function Userlist() {
                             <td>{userData?.Name}</td>
                             <td>{userData?.yourEmail}</td>
                             <td>{userData?.phoneNumber}</td>
-                            <td>{userData?.status}</td>
+                            <td>  <button
+                                className={`btn ${userData.status === 'Active' ? 'btn-success' : 'btn-secondary'}`}
+                                onClick={() => changestatus(userData.id, userData.status === 'Active')}
+                              >
+                                {userData.status === 'Active' ? <FaToggleOn /> : <FaToggleOff />}
+                              </button></td>
                             <td>
                               <button
                                 className="btn btn-primary"

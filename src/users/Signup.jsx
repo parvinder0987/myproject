@@ -44,6 +44,7 @@ function Signup() {
       .then((response) => {
         console.log("response..", response);
         sessionStorage.setItem("authData", JSON.stringify(response.data.data));
+        sessionStorage.setItem("tokenData", JSON.stringify(response.data.token));
         router("/verifyOtp");
       })
       .catch((error) => {

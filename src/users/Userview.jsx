@@ -36,50 +36,9 @@ function Userview() {
         <section className="app-user-edit">
           <div className="card card-class2">
             <div className="card-body">
-              {/* <ul className="nav nav-pills" role="tablist">
-                <li className="nav-item">
-                  <a
-                    className="nav-link d-flex align-items-center active"
-                    id="account-tab"
-                    data-bs-toggle="tab"
-                    href="#account"
-                    aria-controls="account"
-                    role="tab"
-                    aria-selected="true"
-                  >
-                    <i data-feather="user" />
-                    <span className="d-none d-sm-block">Account</span>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    className="nav-link d-flex align-items-center"
-                    id="information-tab"
-                    data-bs-toggle="tab"
-                    href="#information"
-                    aria-controls="information"
-                    role="tab"
-                    aria-selected="false"
-                  >
-                    <i data-feather="info" />
-                    <span className="d-none d-sm-block">Information</span>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    className="nav-link d-flex align-items-center"
-                    id="social-tab"
-                    data-bs-toggle="tab"
-                    href="#social"
-                    aria-controls="social"
-                    role="tab"
-                    aria-selected="false"
-                  >
-                    <i data-feather="share-2" />
-                    <span className="d-none d-sm-block">Social</span>
-                  </a>
-                </li>
-              </ul> */}
+             <h1>
+              <b>Student</b>
+             </h1>
               <div className="tab-content">
                 {/* Account Tab starts */}
                 <div
@@ -88,18 +47,7 @@ function Userview() {
                   aria-labelledby="account-tab"
                   role="tabpanel"
                 >
-                  {/* users edit start */}
-                  {/* <div className="d-flex mb-2">
-                    <img
-                      src="/app-assets/images/avatars/7.png"
-                      alt="users avatar"
-                      className="user-avatar users-avatar-shadow rounded me-2 my-25 cursor-pointer"
-                      height={90}
-                      width={90}
-                    />
-                  </div> */}
-                  {/* users edit ends */}
-                  {/* users edit account form start */}
+    
                   <form className="form-validate">
                     <div className="row">
                       <div className="col-md-4">

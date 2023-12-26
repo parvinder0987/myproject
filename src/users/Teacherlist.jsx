@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { FaEye, FaTrash } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import { FaEye, FaTrash, FaToggleOn, FaToggleOff } from "react-icons/fa";
 import axios from "axios";
 import * as qs from "qs";
 
@@ -21,13 +21,13 @@ function Teacherlist() {
           ...userData,
           status: userData.listening ? "Active" : "Inactive",
         }));
-        // console.log("response", response);
         setTeacher(teacherwithstatus);
       })
       .catch((error) => {
         console.log("error", error);
       });
   }, []);
+
   const handleDelete = (userId) => {
     alert(userId);
     const data = {
@@ -46,6 +46,22 @@ function Teacherlist() {
   const viewData = (id) => {
     sessionStorage.setItem("teacherId", id);
     router("/viewdata");
+  };
+
+  const changestatus = (userId, currentStatus) => {
+    axios
+      .put("http://localhost:5000/statuschange", { id: userId, status: !currentStatus })
+      .then((response) => {
+        console.log(response)
+        setTeacher((prevTeachers) =>
+          prevTeachers.map((t) =>
+            t.id === userId ? { ...t, status: !currentStatus ? "Active" : "Inactive" } : t
+          )
+        );
+      })
+      .catch((error) => {
+        console.error("Error toggling status", error);
+      });
   };
 
   const filteredTeacher = teacher.filter((userData) => {
@@ -103,10 +119,10 @@ function Teacherlist() {
                           <th>Name</th>
                           <th>PhoneNumber</th>
                           <th>Gender</th>
-                          <th>image</th>
-                          <th>education</th>
-                          <th>stream</th>
-                          <th>employeType</th>
+                          <th>Image</th>
+                          <th>Education</th>
+                          <th>Stream</th>
+                          <th>Employee Type</th>
                           <th>Status</th>
                           <th>Action</th>
                         </tr>
@@ -119,22 +135,26 @@ function Teacherlist() {
                             <td>{userData?.phoneNumber}</td>
                             <td>{userData?.Gender}</td>
                             <td>
-                              <img src={userData?.image} />
+                              <img src={userData?.image}  style={{ width: '50px', height: '50px' }} />
                             </td>
                             <td>{userData?.education}</td>
                             <td>{userData?.stream}</td>
                             <td>{userData?.employeType}</td>
-                            <td>{userData?.status}</td>
+                            <td>
+                              <button
+                                className={`btn ${userData.status === 'Active' ? 'btn-success' : 'btn-secondary'}`}
+                                onClick={() => changestatus(userData.id, userData.status === 'Active')}
+                              >
+                                {userData.status === 'Active' ? <FaToggleOn /> : <FaToggleOff />}
+                              </button>
+                              </td>
                             <td>
                               <button
                                 className="btn btn-primary"
-                                onClick={() => {
-                                  viewData(userData?.id);
-                                }}
+                                onClick={() => viewData(userData?.id)}
                               >
                                 <FaEye />
                               </button>
-
                               <button
                                 className="btn btn-danger"
                                 onClick={() => handleDelete(userData?.id)}
