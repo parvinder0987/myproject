@@ -23,7 +23,13 @@ function Login() {
       .then((response) => {
         const role = response?.data?.role;
         localStorage.setItem("userdata", JSON.stringify(response?.data));
-        console.log("response ============================> ", role);
+        // sessionStorage.setItem("tokenview",JSON.stringify(response?.token))
+        console.log(
+          "response ============================> ",
+          response.data,
+          role
+        );
+        console.log("response ============================> ", response.data);
         if (role === 0) {
           router("/dashboard");
         } else if (role === 1) {

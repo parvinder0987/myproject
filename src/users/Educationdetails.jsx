@@ -1,7 +1,9 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function EducationDetails() {
+  const router = useNavigate()
   const [education, setEducation] = useState("");
   const [stream, setStream] = useState("");
   const [document, setDocument] = useState("");
@@ -14,7 +16,8 @@ function EducationDetails() {
     setEmploymentType(type);
   };
 
-  const saveData = () => {
+  const saveData = (e) => {
+    e.preventDefault()
     let data = new FormData();
     data.append("id", id);
     data.append("education", education);
@@ -27,6 +30,7 @@ function EducationDetails() {
       .then((response) => {
         console.log("Data saved successfully:", response.data);
         sessionStorage.setItem("authData", JSON.stringify(response.data.data));
+        router("/login")
       })
       .catch((error) => {
         console.error("Error saving data:", error);
@@ -107,7 +111,7 @@ function EducationDetails() {
                       id="full-time"
                       name="employment-type"
                       value="full-time"
-                      checked={employmentType === "full-time"}
+                      checked={employmentType === 1}
                       onChange={() => handlechange("full-time")}
                     />
                     <label className="form-check-label" htmlFor="full-time">
@@ -121,7 +125,7 @@ function EducationDetails() {
                       id="part-time"
                       name="employment-type"
                       value="part-time"
-                      checked={employmentType === "part-time"}
+                      checked={employmentType === 2}
                       onChange={() => handlechange("part-time")}
                     />
                     <label className="form-check-label" htmlFor="part-time">

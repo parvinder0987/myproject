@@ -540,7 +540,7 @@ function Navbar() {
                 {/* <a className="dropdown-item" href="app-email.html">
               <i className="me-50" data-feather="mail" /> Inbox
             </a> */}
-                <a className="dropdown-item" href="/chnagepassword">
+                <a className="dropdown-item" href="/changepassword">
                   <i className="me-50" data-feather="key" />ChangePassword
                 </a>
 

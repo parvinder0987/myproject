@@ -8,6 +8,9 @@ function Teacherlist() {
   const router = useNavigate();
   const [teacher, setTeacher] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+  // const tokenData = sessionStorage.getItem("tokenData")
+  // const tokenobject = JSON.parse(tokenData)
+  // const token = tokenobject.token
 
   const abc = {
     role: 1,
@@ -19,8 +22,8 @@ function Teacherlist() {
       .then((response) => {
         const teacherwithstatus = response.data.user.map((userData) => ({
           ...userData,
-          status: userData.listening ? "Active" : "Inactive",
-        }));
+          status: userData.listening
+        }))
         setTeacher(teacherwithstatus);
       })
       .catch((error) => {
@@ -50,7 +53,7 @@ function Teacherlist() {
 
   const changestatus = (userId, currentStatus) => {
     axios
-      .put("http://localhost:5000/statuschange", { id: userId, status: !currentStatus })
+      .put("http://localhost:5000/statuschange")
       .then((response) => {
         console.log(response)
         setTeacher((prevTeachers) =>
@@ -61,7 +64,7 @@ function Teacherlist() {
       })
       .catch((error) => {
         console.error("Error toggling status", error);
-      });
+      }); 
   };
 
   const filteredTeacher = teacher.filter((userData) => {

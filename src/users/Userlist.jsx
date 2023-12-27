@@ -8,6 +8,9 @@ function Userlist() {
   const router = useNavigate();
   const [user, setUser] = useState([]);
   const [search, setSearch] = useState("");
+  // const tokenData = sessionStorage.getItem("tokenData")
+  // const tokenobject = JSON.parse(tokenData)
+  // const token = tokenobject.id
 
   const abc = {
     role: 2,
@@ -17,9 +20,10 @@ function Userlist() {
     axios
       .post("http://localhost:5000/rolelistening", qs.stringify(abc))
       .then((response) => {
+        console.log(response,"response==============")
         const usersWithStatus = response.data.user.map((userData) => ({
           ...userData,
-          status: userData.listening ? "Active" : "Inactive",
+          status: userData.listening
         }));
         setUser(usersWithStatus);
       })
@@ -51,7 +55,7 @@ function Userlist() {
 
   const changestatus = (userId, currentStatus) => {
     axios
-      .put("http://localhost:5000/statuschange", { id: userId, status: !currentStatus })
+      .put("http://localhost:5000/statuschange")
       .then((response) => {
         console.log(response)
         setUser((prevTeachers) =>
@@ -61,9 +65,10 @@ function Userlist() {
         );
       })
       .catch((error) => {
-        console.error("Error toggling status", error);
+        console.error("Error  status", error);
       });
   };
+  
   const filteruser = user.filter((userData) => {
     const searchTerm = search.toLowerCase();
     return (

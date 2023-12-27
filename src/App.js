@@ -19,6 +19,7 @@ import Addnewuser from './users/Addnewuser';
 import View from './users/Teacherview';
 import Changepassword from './users/Changepassword';
 import Userview from './users/Userview';
+import Resetpassword from './users/Resetpassword';
 
 
 
@@ -37,12 +38,13 @@ function App() {
           <Route path='/addform' element={<Addfrom />} />
           <Route path='/logout' element={<Logout />} />
           <Route path='/dummy' element={<Dummy />} />
+          <Route path='/resetpassword' element={<Resetpassword />} />
           <Route element={<Layout />}>
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/userlist' element={<Userlist />} />
             <Route path='/teacherlist' element={<Teacherlist />} />
             <Route path='/addnewuser' element={<Addnewuser />} />
-            <Route path='/chnagepassword' element={<Changepassword />} />
+            <Route path='/changepassword' element={<Changepassword />} />
             <Route path='/userviewdata' element={<Userview />} />
             <Route path='/viewdata' element={<View />} />
             {/* <Route path='/addfrom' element={<Addfrom />}/> */}
