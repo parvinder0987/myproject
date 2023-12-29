@@ -1,0 +1,73 @@
+/* Main styling */
+
+.card-from-group {
+  background: rgba(228, 191, 191, 0.8);
+  padding: 35px;
+  border-radius: 10px;
+  box-shadow: 5px 9px rgba(0, 0, 0, 0.2); 
+  width: 400px;
+  max-width: 90%;
+  text-align: center;
+  /* justify-content: center; */
+  margin-left: 30%;
+  margin-top: 10%;
+}
+
+header {
+  margin-bottom: 20px;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+.field label {
+  margin-bottom: 5px;
+  display: block;
+}
+
+.field input[type="text"],
+.field input[type="password"],
+.field input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: 1.5px solid #ff5e00;
+  border-radius: 5px;
+}
+
+.field input[type="submit"] {
+  background-color: #007bff;
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+}
+
+.field.space {
+  margin-top: 10px;
+}
+
+.pass a,
+.signup a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 600px) {
+  .card-from-group  {
+    padding: 20px;
+    width: 90%;
+  }
+
+  header {
+    font-size: 1.5em;
+  }
+}
