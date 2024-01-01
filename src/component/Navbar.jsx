@@ -537,7 +537,7 @@ function Navbar() {
                 className="dropdown-menu dropdown-menu-end"
                 aria-labelledby="dropdown-user"
               >
-                <a className="dropdown-item" href="page-profile.html">
+                <a className="dropdown-item" href="/profile">
                   <i className="me-50" data-feather="user" /> Profile
                 </a>
                 {/* <a className="dropdown-item" href="app-email.html">

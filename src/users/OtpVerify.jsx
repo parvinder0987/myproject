@@ -58,7 +58,8 @@ function OtpVerify() {
   };
 
   return (
-    <div className="otp-verification-form">
+    <div className="card-otp-group">
+    <div className="otp-succes-form">
       <h2>OTP Verification</h2>
       <form>
         <label htmlFor="otpInput">Enter OTP:</label>
@@ -70,7 +71,7 @@ function OtpVerify() {
           onChange={(e) => setOtp(e.target.value)}
         />
         <button
-          className="btn btn-primary"
+          className="btn btn-btn"
           type="button"
           onClick={handleOtpVerification}
         >
@@ -84,6 +85,7 @@ function OtpVerify() {
         <br></br>
         <Link to="/login">back</Link>
       </form>
+    </div>
     </div>
   );
 }

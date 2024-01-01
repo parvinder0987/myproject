@@ -20,6 +20,7 @@ import View from './users/Teacherview';
 import Changepassword from './users/Changepassword';
 import Userview from './users/Userview';
 import Resetpassword from './users/Resetpassword';
+import Profile from './users/Profile';
 
 
 
@@ -47,6 +48,7 @@ function App() {
             <Route path='/changepassword' element={<Changepassword />} />
             <Route path='/userviewdata' element={<Userview />} />
             <Route path='/viewdata' element={<View />} />
+            <Route path='/profile' element={<Profile/>}/>
             {/* <Route path='/addfrom' element={<Addfrom />}/> */}
           </Route>
         </Routes>

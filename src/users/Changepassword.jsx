@@ -1,7 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Changepassword() {
+  const router = useNavigate("")
   const [oldpassword, setOldPassword] = useState('');
   const [newpassword, setNewPassword] = useState('');
   const [confirmpassword, setConfirmPassword] = useState('');
@@ -16,6 +18,7 @@ function Changepassword() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    router("/dashboard")
     if (!id || newpassword !== confirmpassword) {
       console.log('Invalid data or passwords do not match');
       return;

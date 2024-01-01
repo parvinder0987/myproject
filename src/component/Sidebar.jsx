@@ -321,13 +321,13 @@ function Sidebar() {
           </ul>
         </li> */}
         <li className=" nav-item">
-          <a className="d-flex align-items-center" href="#">
+            <a className="d-flex align-items-center" href="/userlist">
             <i data-feather="user" />
             <span className="menu-title text-truncate" data-i18n="User">
               User
             </span>
           </a>
-          <ul className="menu-content">
+          {/* <ul className="menu-content">
             <li>
               <a className="d-flex align-items-center" href="/userlist">
                 <i data-feather="circle" />
@@ -344,15 +344,8 @@ function Sidebar() {
                 </span>
               </a>
             </li>
-            {/* <li>
-              <a className="d-flex align-items-center" href="app-user-edit.html">
-                <i data-feather="circle" />
-                <span className="menu-item text-truncate" data-i18n="Edit">
-                  Edit
-                </span>
-              </a>
-            </li> */}
-          </ul>
+     
+          </ul> */}
         </li>
         <li className=" nav-item">
           <a className="d-flex align-items-center" href="#">

@@ -1,108 +1,114 @@
-.signup-form {
-    max-width: 400px;
-    margin-top: 10%;
-    margin-left: 30%;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .options-container {
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 20px;
-  }
-  
-  .option {
-    padding: 10px;
-    margin-right: 15px; /* Adjust the margin between options as needed */
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .form-group {
-    margin-bottom: 15px; 
-    position: relative;
-  }
-  
-  label {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 3px; /* Adjust the margin between label and input fields as needed */
-    text-align: left; 
-  }
-  
-  input {
-    width: calc(100% - 20px);
-    padding: 10px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  .input-group-text {
-    position: absolute;
-    outline: none;
-    right: 11px;
-    top: 60%;
-    transform: translateY(-50%);
-    cursor: pointer;
-  }
-  
-  .remember-checkbox {
-    display: flex;
-    margin-bottom: -26px;
-    justify-content: flex-st;
-    text-align: left;
-    align-content: space-between;
-    /* flex-wrap: nowrap; */
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  /* .remember-checkbox input {
-    margin-right: 70%;
-  } */
+.bg-img {
+  background-image: url('/myproject/public/app-assets/th.jpeg');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
 
-  .remember-checkbox label {
-    margin-right: 10px;
+}
+
+.card-register-group1 {
+  background: rgba(228, 191, 191, 0.8); 
+  backdrop-filter: blur(8px); 
+  -webkit-backdrop-filter: blur(8px); 
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 5px 9px rgba(0, 0, 0, 0.2);
+}
+/* Rest of your CSS */
+
+.card-register-group1 header {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.options-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.option {
+  background-color: #007bff;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.regsiter-group {
+  margin-bottom: 15px;
+}
+
+.regsiter-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.regsiter-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ff0000;
+  border-radius: 4px;
+}
+
+.toggle-password {
+  position: absolute;
+  height: 1px;
+  margin-right: 10px;
+  justify-content: center;
+  /* right: -px; */
+  left: 350px;
+  /* top: 80%; */
+  /* bottom: 100px; */
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px; 
+}
+
+.remember-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+}
+
+.remember-checkbox input {
+  margin-right: 10px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  /* padding: 10px 20px; */
+  border-radius: 5px;
+  cursor: pointer;
+  /* width: 100%; */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .card-register-group1 {
+    width: 100%;
+    max-width: none;
+    padding: 15px;
   }
-  
-  
-  button {
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
+
+  .options-container {
+    flex-direction: column;
   }
-  
-  button:hover {
-    background-color: #2980b9;
+
+  .option {
+    width: 100%;
+    margin-bottom: 10px;
   }
-  
-  @media (max-width: 600px) {
-    .signup-form {
-      max-width: 100%;
-    }
-  
-    .options-container {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .option {
-      margin-bottom: 10px;
-      margin-right: 0; /* Adjust the margin between options in mobile view */
-    }
-  }
-/* CSS for Userview component */
-/* Add your global styles here if needed */
+}
 
 .app-user-edit {
   padding: 120px;

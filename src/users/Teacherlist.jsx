@@ -141,7 +141,7 @@ function Teacherlist() {
                           </td>
                           <td>
                             <button
-                              className="btn btn-primary"
+                              className="btn btn-view"
                               onClick={() => viewData(userData?.id)}
                             >
                               <FaEye />

@@ -7,6 +7,7 @@ function Basicdetails() {
   const [dob, setDob] = useState("");
   const [about, setAbout] = useState("");
   const [image, setImage] = useState("");
+  // const [file, setFile] = useState(null);
   const authData = sessionStorage.getItem("authData");
   const authDataObj = JSON.parse(authData);
   const id = authDataObj.id;
@@ -14,6 +15,12 @@ function Basicdetails() {
   const email = authDataObj.yourEmail;
   const phonenumber = authDataObj.phoneNumber;
 
+  const handleImageChange = (e) => {
+    if (e.target.files && e.target.files[0]) {
+      setImage(e.target.files[0]);
+      // setFile(e.target.files[0])
+    }
+  };
   const basicdata = (e) => {
     e.preventDefault();
     let data = new FormData();
@@ -21,8 +28,8 @@ function Basicdetails() {
     data.append("Gender", gender);
     data.append("DOB", dob);
     data.append("about", about);
-    data.append("image", image);
-
+   data.append("image", image);
+console.log(image);
     axios
       .post("http://localhost:5000/updatedetails", data)
       .then((response) => {
@@ -34,112 +41,128 @@ function Basicdetails() {
       });
   };
   return (
-    <div className="app-content content ">
-      <div className="content-overlay" />
-      {/* <div className="header-navbar-shadow" /> */}
-      <div className="content-wrapper">
-        <div className="content-header row"></div>
-        <div className="content-body">
-          <h1>Basic Details </h1>
-          <div className="auth-wrapper auth-v1 px-2">
-            <div className="auth-inner py-2">
-              {/* Register v1 */}
+    <div className="card-deatils-group">
+      <h1>Basic Details </h1>
+      <div className="form-control-image">
+          <input type="file" id="image" onChange={handleImageChange} />
+          {image && (
+            <img src={image} alt="Uploaded" className="preview-image" />
+          )}
+        </div>
+      <form
+        className="basic-group-from"
+        action="index.html"
+        method="POST"
+      >
+      
+        <p>
+          Name:
+          <br /> {name}
+        </p>
+        <p>
+          yourEmail:
+          <br /> {email}
+        </p>
+        <p>
+          Phone Number: <br />
+          {phonenumber}
+        </p>
 
-              <form
-                className="auth-register-form mt-2"
-                action="index.html"
-                method="POST"
-              >
-                <div className="form-group">
-                  <label>image</label>
-                  <input
-                    type="file"
-                    className="form-control-image"
-                    id="form control file"
-                    // value={image}
-                    onChange={(e) => {
-                      setImage(e.target.files[0]);
-                    }}
-                  />
-                </div>
-                <p>
-                  Name:
-                  <br /> {name}
-                </p>
-                <p>
-                  yourEmail:
-                  <br /> {email}
-                </p>
-                <p>
-                  Phone Number: <br />
-                  {phonenumber}
-                </p>
-
-                <div className="mb-1">
-                  <label htmlFor="register-gender" className="form-label">
-                    Gender
-                  </label>
-                  <select
-                    className="form-select"
-                    id="register-gender"
-                    name="register-gender"
-                    aria-describedby="register-gender"
-                    tabIndex={3}
-                    value={gender}
-                    onChange={(e) => setGender(e.target.value)}
-                  >
-                    <option value="" disabled>
-                      Select Gender
-                    </option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                  </select>
-                </div>
-                <div className="mb-1">
-                  <label htmlFor="register-dob" className="form-label">
-                    DOB
-                  </label>
-                  <input
-                    type="date"
-                    className="form-control"
-                    id="register-dob"
-                    name="register-dob"
-                    tabIndex={3}
-                    value={dob}
-                    onChange={(e) => setDob(e.target.value)}
-                  />
-                </div>
-
-                <div className="mb-1">
-                  <label htmlFor="register-about" className="form-label">
-                    About
-                  </label>
-                  <div className="input-group input-group-merge form-password-toggle">
-                    <textarea
-                      className="form-control form-control-merge"
-                      id="register-about"
-                      name="register-about"
-                      placeholder="Tell us about yourself..."
-                      aria-describedby="register-about"
-                      tabIndex={5}
-                      value={about}
-                      onChange={(e) => setAbout(e.target.value)}
-                    />
-                  </div>
-                </div>
-
-                <button
-                  className="btn btn-primary w-100"
-                  tabIndex={5}
-                  onClick={basicdata}
-                >
-                  Save & Next
-                </button>
-              </form>
+        <div className="input-deatils">
+          <label className="basic-label">
+            Gender
+          </label>
+          <div>
+            <div className="form-check">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="gender"
+                id="genderMale"
+                value="male"
+                checked={gender === "male"}
+                onChange={(e) => setGender(e.target.value)}
+              />
+              <label className="form-check-label" htmlFor="genderMale">
+                Male
+              </label>
+            </div>
+            <div className="form-check">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="gender"
+                id="genderFemale"
+                value="female"
+                checked={gender === "female"}
+                onChange={(e) => setGender(e.target.value)}
+              />
+              <label className="form-check-label" htmlFor="genderFemale">
+                Female
+              </label>
+            </div>
+            <div className="form-check">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="gender"
+                id="genderPreferNotToSay"
+                value="preferNotToSay"
+                checked={gender === "preferNotToSay"}
+                onChange={(e) => setGender(e.target.value)}
+              />
+              <label className="form-check-label" htmlFor="genderPreferNotToSay">
+                Prefer not to say
+              </label>
             </div>
           </div>
         </div>
-      </div>
+
+        <div className="input-deatils">
+          <label htmlFor="register-dob" className="basic-label">
+            DOB
+          </label>
+          <input
+            type="date"
+            className="form-control"
+            id="register-dob"
+            name="register-dob"
+            tabIndex={3}
+            value={dob}
+            onChange={(e) => setDob(e.target.value)}
+          />
+        </div>
+
+        <div className="input-deatils">
+          <label htmlFor="register-about" className="basic-label">
+            About
+          </label>
+          <div className="input-group input-group-merge form-password-toggle">
+            <textarea
+              className="form-control form-control-merge"
+              id="register-about"
+              name="register-about"
+              placeholder="Tell us about yourself..."
+              aria-describedby="register-about"
+              tabIndex={5}
+              value={about}
+              onChange={(e) => setAbout(e.target.value)}
+            />
+          </div>
+        </div><br></br>
+
+        <button
+          className="btn btn-secondary"
+          tabIndex={5}
+          onClick={basicdata}
+        >
+          Save & Next
+        </button>
+      </form>
+      {/* <div className="signup">
+                Don't have an account?
+                <a href="/register">Signup Now</a>
+            </div> */}
     </div>
   );
 }

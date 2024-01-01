@@ -9,7 +9,8 @@ function Login() {
   const router = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const [rememberMe, setRememberMe] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
 
   const loginData = (e) => {
     e.preventDefault();
@@ -40,6 +41,11 @@ function Login() {
         }
       })
       .catch((err) => {
+        if (err.response && err.response.status === 401) {
+          setErrorMessage("Invalid email or password.");
+        } else {
+          setErrorMessage("An error occurred. Please try again later.");
+        }
         console.log("Error =======================> ", err);
       });
   };
@@ -47,7 +53,7 @@ function Login() {
   return (
     <div className="bg-img">
       <div className="card-from-group">
-        <header>Login Form</header>
+        <header><b>Login</b></header>
         <form >
           <div className="field">
             <label htmlFor="login-email">Email</label>
@@ -71,6 +77,7 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
+          {errorMessage && <div className="error-message">{errorMessage}</div>}
           <div className="pass">
             <a href="/forgot">Forgot Password?</a>
           </div>
@@ -78,15 +85,6 @@ function Login() {
             <input type="submit" onClick={loginData} defaultValue="LOGIN" />
           </div>
         </form>
-        {/* <div className="login">Or login with</div> */}
-        {/* <div className="links">
-          <div className="facebook">
-            <span>Facebook</span>
-          </div>
-          <div className="instagram">
-            <span>Instagram</span>
-          </div>
-        </div> */}
         <div className="signup">
           Don't have an account?
           <a href="/register">Signup Now</a>
@@ -99,3 +97,4 @@ function Login() {
 }
 
 export default Login;
+// in this code can u add validation in this when if a user  enter wrong password then error show 

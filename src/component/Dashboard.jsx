@@ -13,7 +13,7 @@ function Dashboard() {
       <section id="dashboard-ecommerce">
         <div className="row match-height">
           {/* Medal Card */}
-          <div className="col-xl-4 col-md-6 col-12">
+          {/* <div className="col-xl-4 col-md-6 col-12">
             <div className="card card-congratulation-medal">
               <div className="card-body">
                 <h5>Congratulations 🎉 John!</h5>
@@ -33,7 +33,7 @@ function Dashboard() {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
           {/*/ Medal Card */}
           {/* Statistics Card */}
           <div className="col-xl-8 col-md-6 col-12">
@@ -112,10 +112,10 @@ function Dashboard() {
           </div>
           {/*/ Statistics Card */}
         </div>
-        <div className="row match-height">
+        {/* <div className="row match-height">
           <div className="col-lg-4 col-12">
             <div className="row match-height">
-              {/* Bar Chart - Orders */}
+
               <div className="col-lg-6 col-md-3 col-6">
                 <div className="card">
                   <div className="card-body pb-50">
@@ -125,8 +125,7 @@ function Dashboard() {
                   </div>
                 </div>
               </div>
-              {/*/ Bar Chart - Orders */}
-              {/* Line Chart - Profit */}
+
               <div className="col-lg-6 col-md-3 col-6">
                 <div className="card card-tiny-line-stats">
                   <div className="card-body pb-50">
@@ -136,8 +135,7 @@ function Dashboard() {
                   </div>
                 </div>
               </div>
-              {/*/ Line Chart - Profit */}
-              {/* Earnings Card */}
+    
               <div className="col-lg-12 col-md-6 col-12">
                 <div className="card earnings-card">
                   <div className="card-body">
@@ -158,10 +156,10 @@ function Dashboard() {
                   </div>
                 </div>
               </div>
-              {/*/ Earnings Card */}
+
             </div>
           </div>
-          {/* Revenue Report Card */}
+
           <div className="col-lg-8 col-12">
             <div className="card card-revenue-budget">
               <div className="row mx-0">
@@ -217,8 +215,8 @@ function Dashboard() {
               </div>
             </div>
           </div>
-          {/*/ Revenue Report Card */}
-        </div>
+      
+        </div> */}
         <div className="row match-height">
           {/* Company Table Card */}
           {/* <div className="col-lg-8 col-12">
