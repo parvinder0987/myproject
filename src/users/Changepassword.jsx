@@ -15,7 +15,7 @@ function Changepassword() {
   useEffect(() => {
 
   }, []);
-
+// c
   const handleSubmit = (e) => {
     e.preventDefault();
     router("/dashboard")
