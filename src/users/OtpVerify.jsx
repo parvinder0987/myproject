@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+import axios from "../apis";
 import * as qs from "qs";
 
 function OtpVerify() {
   const router = useNavigate();
   const [otp, setOtp] = useState();
-  const authData = sessionStorage.getItem("authData");
-  const tokenData = sessionStorage.getItem("tokenData")
-  const tokenobject = JSON.parse(tokenData)
+  const authData = localStorage.getItem("authData");
   const authDataObj = JSON.parse(authData);
   const id = authDataObj.id;
-  const token = tokenobject.token
+ 
 
   const obj = {
     id: id,
@@ -21,7 +19,7 @@ function OtpVerify() {
   const handleOtpVerification = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/verifyotp", qs.stringify(obj))
+      .post("/verifyotp", qs.stringify(obj))
       .then((response) => {
         const role = response?.data?.body?.role;
         console.log("response===========", response);
@@ -44,9 +42,7 @@ function OtpVerify() {
       // token:token
     };
     axios
-      .post("http://localhost:5000/resendotp", qs.stringify(ob), {
-        headers: { Authorization: `Bearer ${token}` },
-      })
+      .post("/resendotp", qs.stringify(ob),)
       // alert(id)
       .then((response) => {
         alert("OTP has been sent to your registered email address");

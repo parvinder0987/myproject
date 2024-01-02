@@ -8,7 +8,7 @@ function EducationDetails() {
   const [stream, setStream] = useState("");
   const [document, setDocument] = useState("");
   const [employmentType, setEmploymentType] = useState("full-time");
-  const authData = sessionStorage.getItem("authData");
+  const authData = localStorage.getItem("authData");
   const authDataObj = JSON.parse(authData);
   const id = authDataObj.id;
 

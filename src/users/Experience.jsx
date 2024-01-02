@@ -6,7 +6,7 @@ function Experience() {
     const [expereince,setExperience] = useState("")
     const [description,setDescription] = useState("")
     const [skills,setSkills] = useState("")
-    const authData =sessionStorage.getItem("authData")
+    const authData =localStorage.getItem("authData")
     const authDataObj = JSON.parse(authData)
     const id = authDataObj.id
 

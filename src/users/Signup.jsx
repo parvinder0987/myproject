@@ -46,8 +46,8 @@ function Signup() {
       .post("http://localhost:5000/signup", qs.stringify(abs))
       .then((response) => {
         console.log("response..", response);
-        sessionStorage.setItem("authData", JSON.stringify(response.data.data));
-        sessionStorage.setItem("tokenData", JSON.stringify(response.data.token));
+        localStorage.setItem("authData", JSON.stringify(response.data.data));
+        // localStorage.setItem("tokenData", JSON.stringify(response.data.token));
         router("/verifyOtp");
       })
       .catch((error) => {

@@ -23,8 +23,7 @@ function Login() {
       .post("http://localhost:5000/login", obj)
       .then((response) => {
         const role = response?.data?.role;
-        localStorage.setItem("userdata", JSON.stringify(response?.data));
-        // sessionStorage.setItem("tokenview",JSON.stringify(response?.token))
+        sessionStorage.setItem("userdata", JSON.stringify(response?.data));
         console.log(
           "response ============================> ",
           response.data,

@@ -10,7 +10,7 @@ function Profile() {
                   <div className="profile-img-container d-flex align-items-center">
                       <div className="profile-img">
                           <img
-                              src="../../../app-assets/images/portrait/small/avatar-s-2.jpg"
+                              src="/app-assets/images/portrait/small/avatar-s-2.jpg"
                               className="rounded img-fluid"
                               alt="Card image"
                           />

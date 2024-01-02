@@ -7,7 +7,7 @@ function Changepassword() {
   const [oldpassword, setOldPassword] = useState('');
   const [newpassword, setNewPassword] = useState('');
   const [confirmpassword, setConfirmPassword] = useState('');
-  const authData = sessionStorage.getItem('authData');
+  const authData = localStorage.getItem('authData');
   const authDataObj = authData ? JSON.parse(authData) : null;
   const id = authDataObj ? authDataObj.id : null;
   const password = authDataObj ? authDataObj.password : null;
@@ -18,6 +18,7 @@ function Changepassword() {
 // c
   const handleSubmit = (e) => {
     e.preventDefault();
+    alert("password change")
     router("/dashboard")
     if (!id || newpassword !== confirmpassword) {
       console.log('Invalid data or passwords do not match');

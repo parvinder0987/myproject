@@ -18,9 +18,8 @@ function Teacherlist() {
     axios
       .post("http://localhost:5000/rolelistening", qs.stringify(abc))
       .then((response) => {
-        const teacherwithstatus = response.data.user.map((userData) => ({
-          ...userData,
-          status: userData.listening,
+        const teacherwithstatus = response.data.user.map((TeacherData) => ({
+          ...TeacherData,
         }));
         setTeacher(teacherwithstatus);
       })
@@ -47,13 +46,14 @@ function Teacherlist() {
   };
 
   const changestatus = (userId, currentStatus) => {
-    axios
-      .put("http://localhost:5000/statuschange")
+    const newStatus = currentStatus === 1 ? "inactive" : "active";
+
+    axios.put("/statuschange", { status: newStatus })
       .then((response) => {
         console.log(response);
         setTeacher((prevTeachers) =>
-          prevTeachers.map((t) =>
-            t.id === userId ? { ...t, status: !currentStatus ? "Active" : "Inactive" } : t
+          prevTeachers.map((teacher) =>
+            teacher.id === userId ? { ...teacher, status: newStatus } : teacher
           )
         );
       })
@@ -69,11 +69,11 @@ function Teacherlist() {
     formOpen();
   };
 
-  const filteredTeacher = teacher.filter((userData) => {
+  const filteredTeacher = teacher.filter((TeacherData) => {
     const searchTerm = searchQuery.toLowerCase();
     return (
-      userData.Name.toLowerCase().includes(searchTerm) ||
-      userData.id.toString().includes(searchTerm)
+      TeacherData.Name.toLowerCase().includes(searchTerm) ||
+      TeacherData.id.toString().includes(searchTerm)
     );
   });
 
@@ -119,36 +119,38 @@ function Teacherlist() {
                       </tr>
                     </thead>
                     <tbody>
-                      {filteredTeacher.map((userData) => (
-                        <tr key={userData?.id}>
-                          <td>{userData?.id}</td>
-                          <td>{userData?.Name}</td>
-                          <td>{userData?.phoneNumber}</td>
-                          <td>{userData?.Gender}</td>
+                      {filteredTeacher.map((TeacherData) => (
+
+                        console.log(TeacherData, '-=--==-=--=-='),
+                        <tr key={TeacherData?.id}>
+                          <td>{TeacherData?.id}</td>
+                          <td>{TeacherData?.Name}</td>
+                          <td>{TeacherData?.phoneNumber}</td>
+                          <td>{TeacherData?.Gender}</td>
                           <td>
-                            <img src={userData?.image} style={{ width: '50px', height: '50px' }} />
+                            <img src={TeacherData?.image} style={{ width: '50px', height: '50px' }} />
                           </td>
-                          <td>{userData?.education}</td>
-                          <td>{userData?.stream}</td>
-                          <td>{userData?.employeType}</td>
+                          <td>{TeacherData?.education}</td>
+                          <td>{TeacherData?.stream}</td>
+                          <td>{TeacherData?.employeType}</td>
                           <td>
-                            <button
-                              className={`btn ${userData.status === 'Active' ? 'btn-success' : 'btn-secondary'}`}
-                              onClick={() => changestatus(userData.id, userData.status === 'Active')}
-                            >
-                              {userData.status === 'Active' ? <FaToggleOn /> : <FaToggleOff />}
-                            </button>
+                              <button
+                                className={`btn ${TeacherData.status === 'active' ? 'btn-success' : 'btn-secondary'}`}
+                                onClick={() => changestatus(TeacherData.id, TeacherData.status === 'active' ? 1 : 0)}
+                              >
+                                {TeacherData.status === 'active' ? <FaToggleOn /> : <FaToggleOff />}
+                              </button>
                           </td>
                           <td>
                             <button
                               className="btn btn-view"
-                              onClick={() => viewData(userData?.id)}
+                              onClick={() => viewData(TeacherData?.id)}
                             >
                               <FaEye />
                             </button>
                             <button
                               className="btn btn-danger"
-                              onClick={() => handleDelete(userData?.id)}
+                              onClick={() => handleDelete(TeacherData?.id)}
                             >
                               <FaTrash />
                             </button>

@@ -7,8 +7,7 @@ function Basicdetails() {
   const [dob, setDob] = useState("");
   const [about, setAbout] = useState("");
   const [image, setImage] = useState("");
-  // const [file, setFile] = useState(null);
-  const authData = sessionStorage.getItem("authData");
+  const authData = localStorage.getItem("authData");
   const authDataObj = JSON.parse(authData);
   const id = authDataObj.id;
   const name = authDataObj.Name;
